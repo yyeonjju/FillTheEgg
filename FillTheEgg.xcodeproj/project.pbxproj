@@ -17,6 +17,9 @@
 		7D9B47FD2B7C4E6C003451A2 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B47FC2B7C4E6C003451A2 /* NameSpace.swift */; };
 		7D9B47FF2B7CC408003451A2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9B47FE2B7CC408003451A2 /* Colors.xcassets */; };
 		7D9B48412B807BCF003451A2 /* Colors+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48402B807BCF003451A2 /* Colors+Generated.swift */; };
+		7D9B48442B80C29C003451A2 /* SwcondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48432B80C29C003451A2 /* SwcondViewController.swift */; };
+		7D9B48462B80C438003451A2 /* CalendarHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48452B80C438003451A2 /* CalendarHomeViewController.swift */; };
+		7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48472B80C470003451A2 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		7D9B47FC2B7C4E6C003451A2 /* NameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		7D9B47FE2B7CC408003451A2 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		7D9B48402B807BCF003451A2 /* Colors+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+Generated.swift"; sourceTree = "<group>"; };
+		7D9B48432B80C29C003451A2 /* SwcondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwcondViewController.swift; sourceTree = "<group>"; };
+		7D9B48452B80C438003451A2 /* CalendarHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHomeViewController.swift; sourceTree = "<group>"; };
+		7D9B48472B80C470003451A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				7D9B47E02B7A2A00003451A2 /* ViewController.swift */,
+				7D9B48432B80C29C003451A2 /* SwcondViewController.swift */,
+				7D9B48452B80C438003451A2 /* CalendarHomeViewController.swift */,
+				7D9B48472B80C470003451A2 /* SettingsViewController.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -263,10 +272,13 @@
 			files = (
 				7D9B47E12B7A2A00003451A2 /* ViewController.swift in Sources */,
 				7D9B47DD2B7A2A00003451A2 /* AppDelegate.swift in Sources */,
+				7D9B48462B80C438003451A2 /* CalendarHomeViewController.swift in Sources */,
 				7D9B47E72B7A2A00003451A2 /* FillTheEgg.xcdatamodeld in Sources */,
 				7D9B47FD2B7C4E6C003451A2 /* NameSpace.swift in Sources */,
+				7D9B48442B80C29C003451A2 /* SwcondViewController.swift in Sources */,
 				7D9B47DF2B7A2A00003451A2 /* SceneDelegate.swift in Sources */,
 				7D9B48412B807BCF003451A2 /* Colors+Generated.swift in Sources */,
+				7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

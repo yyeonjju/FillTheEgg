@@ -13,10 +13,41 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        window = UIWindow(windowScene: windowScene)
+        window?.backgroundColor = .white //전체적 배경색 해줄려면 이렇게해야하네..
+        
+        //⭐️ 네비게이션 컨트롤러 생성
+        let homeView = UINavigationController(rootViewController: HomeViewController())
+        let calendarView = UINavigationController(rootViewController: CalendarHomeViewController())
+        let settingsView = UINavigationController(rootViewController: SettingsViewController())
+        
+        
+//        homeView.navigationBar.backgroundColor = .yellow
+        
+        
+        //⭐️ 탭바 컨트롤러 생성
+        let tabBarVC = UITabBarController()
+        tabBarVC.setViewControllers([homeView,calendarView,settingsView], animated: true)
+        tabBarVC.modalPresentationStyle = .fullScreen
+//        tabBarVC.tabBar.backgroundColor = .gray
+        
+        // 탭바 이름/이미지 설정 (이미지는 애플이 제공하는 것으로 사용)
+        guard let items = tabBarVC.tabBar.items else { return }
+        items[0].title = "Home"
+        items[1].title = "Calendar"
+        items[2].title = "Settings"
+        
+        items[0].image = UIImage(systemName: "house")
+        items[1].image = UIImage(systemName: "calendar")
+        items[2].image = UIImage(systemName: "gearshape")
+        
+        
+        
+        window?.rootViewController = tabBarVC
+        window?.makeKeyAndVisible() //현재 창을 표시하고 같은 수준 이하의 다른 모든 창 앞에 배치하는 편리한 방법
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

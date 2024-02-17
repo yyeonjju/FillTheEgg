@@ -7,16 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
-    let label : UILabel = {
-        var label = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        label.textColor = .black
-//        label.textColor = UIColor(named : "mainYellow")
-        label.textColor = Colors.mainYellow.color
-        label.font = UIFont.systemFont(ofSize: 18)
-        label.text = "----"
-        return label
+    private lazy var nextButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.backgroundColor = .blue
+        button.setTitle("첫번째탭 다음페이지로", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        return button
     }()
 
     override func viewDidLoad() {
@@ -24,15 +25,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        view.addSubview(label)
-        label.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(nextButton)
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            label.widthAnchor.constraint(equalToConstant: 150),
-            label.heightAnchor.constraint(equalToConstant: 80),
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            nextButton.widthAnchor.constraint(equalToConstant: 150),
+            nextButton.heightAnchor.constraint(equalToConstant: 80),
+            nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            nextButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
+    }
+    
+    @objc func nextButtonTapped () {
+        let SwcondVC = SwcondViewController()
+        SwcondVC.modalPresentationStyle = .fullScreen
+        //⭐️⭐️⭐️⭐️⭐️ 네비게이션할려면 present가 아니라 Push⭐️⭐️⭐️⭐️⭐️⭐️⭐️
+//        present(firstViewNextPageController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(SwcondVC, animated:
+        true)
     }
 
 
