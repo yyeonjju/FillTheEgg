@@ -29,18 +29,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //⭐️ 탭바 컨트롤러 생성
         let tabBarVC = UITabBarController()
+        
+        // 탭바로 사용하기 위한 뷰 컨트롤러들 설정
         tabBarVC.setViewControllers([homeView,calendarView,settingsView], animated: true)
         tabBarVC.modalPresentationStyle = .fullScreen
 //        tabBarVC.tabBar.backgroundColor = .gray
         
         // 탭바 이름/이미지 설정 (이미지는 애플이 제공하는 것으로 사용)
         guard let items = tabBarVC.tabBar.items else { return }
-        items[0].title = "Home"
-        items[1].title = "Calendar"
-        items[2].title = "Settings"
         
+        //HomeViewController
+        items[0].title = "Home"
         items[0].image = UIImage(systemName: "house")
+        
+        //CalendarHomeViewController
+        items[1].title = "Calendar"
         items[1].image = UIImage(systemName: "calendar")
+        
+        //SettingsViewController
+        items[2].title = "Settings"
         items[2].image = UIImage(systemName: "gearshape")
         
         
