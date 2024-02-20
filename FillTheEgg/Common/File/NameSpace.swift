@@ -13,19 +13,29 @@ enum Version {
     static let current = "1.0.0"
 }
 
+// MARK: - Font Size
+
+enum FontSize {
+    static let small = 14.0
+    static let regular = 18.0
+    static let big = 25.0
+}
+
+
+
 // MARK: - Fonts
 
-enum Pretendard {
-    static let thin = "Pretendard-Thin"
-    static let extraLight = "Pretendard-ExtraLight"
-    static let light = "Pretendard-Light"
-    static let regular = "Pretendard-Regular"
-    static let medium = "Pretendard-Medium"
-    static let semiBold = "Pretendard-SemiBold"
-    static let bold = "Pretendard-Bold"
-    static let extraBold = "Pretendard-ExtraBold"
-    static let black = "Pretendard-Black"
-}
+//enum Pretendard {
+//    static let thin = "Pretendard-Thin"
+//    static let extraLight = "Pretendard-ExtraLight"
+//    static let light = "Pretendard-Light"
+//    static let regular = "Pretendard-Regular"
+//    static let medium = "Pretendard-Medium"
+//    static let semiBold = "Pretendard-SemiBold"
+//    static let bold = "Pretendard-Bold"
+//    static let extraBold = "Pretendard-ExtraBold"
+//    static let black = "Pretendard-Black"
+//}
 
 
 // MARK: - Colors

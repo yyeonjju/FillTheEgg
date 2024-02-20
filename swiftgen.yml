@@ -1,0 +1,33 @@
+input_dir: FillTheEgg/Resource
+output_dir: FillTheEgg/Common/SwiftGen/Generated
+
+
+
+xcassets:
+    inputs: Colors.xcassets
+    outputs:
+      - templateName: swift5
+        output: Colors+Generated.swift
+        params:
+          enumName: Colors
+
+# 중요한 점! (여러가지 시도해본 결과,,)
+# 폰트 파싱해줄 떄 프로젝트에 한번 가져오고 다른 폴더로 이동시켜줘댜 제대로 파싱됨..
+# 이유는 진짜 모르겠다..
+# copy items if needed 를 체크해야한다.
+
+#( 기존에 String으로 쓸 때와 다르게 info에 추가해주지 않아도 된다??) --> 노노!! info에 추가 해줘야함!!
+#어쨌든 UIFont 생성자 쓸 때 name 파라미터에 String을 전달해주어야하기 때문에!!
+
+#근본적으로 사용안되는 이유.. → 폴더를 이동하면… 폰트 적용이 안됨..
+
+fonts:
+    inputs:
+        - Font/Pretendard
+        - Font/Suit
+    outputs:
+        templateName: swift5
+        output: Fonts+Generated.swift
+
+
+

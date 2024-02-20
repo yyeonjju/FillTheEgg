@@ -14,9 +14,8 @@ class HomeViewController: UIViewController {
         button.backgroundColor = .blue
         button.setTitle("첫번째탭 다음페이지로", for: .normal)
         button.setTitleColor(.white, for: .normal)
-//        button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
-        button.titleLabel?.font = UIFont(name: Pretendard.extraBold, size: 50)
-//        button.titleLabel?.font = UIFont(name: FontFamily.Pretendard.extraBold.name, size: 50)
+        button.titleLabel?.font = UIFont(name: FontFamily.Pretendard.regular.name, size: FontSize.regular)
+//        button.titleLabel?.font = UIFont(name: FontFamily.Suit.regular.name, size: 50)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         return button
