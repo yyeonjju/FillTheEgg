@@ -11,7 +11,7 @@ class SwcondViewController: UIViewController {
 
     let label : UILabel = {
         var label = UILabel()
-        label.textColor = Colors.mainYellow.color
+        label.textColor = Assets.Colors.mainYellow.color
         label.font = UIFont.systemFont(ofSize: 18)
         label.text = "두번째 화면"
         return label

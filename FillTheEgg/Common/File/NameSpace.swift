@@ -19,6 +19,10 @@ enum FontSize {
     static let small = 14.0
     static let regular = 18.0
     static let big = 25.0
+    
+    static let homeViewDate = 30.0
+    static let homeViewTime = 40.0
+    
 }
 
 
