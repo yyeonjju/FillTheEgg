@@ -52,7 +52,6 @@ final class HomeView: UIView {
     let eggRateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: FontFamily.Pretendard.regular.name, size: FontSize.regular)
-        label.textColor = Assets.Colors.mainYellow.color
         label.textColor = Assets.Colors.gray2.color
         label.text = "오늘의 알참지수!"
         return label
@@ -123,14 +122,12 @@ final class HomeView: UIView {
 //            eggRateImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
             eggRateImage.widthAnchor.constraint(equalToConstant: 100),
             eggRateImage.heightAnchor.constraint(equalToConstant: 110),
-            
 
             
         ])
         
         
     }
-
 
 }
 
