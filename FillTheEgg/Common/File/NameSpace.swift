@@ -25,6 +25,14 @@ enum FontSize {
     
 }
 
+// MARK: - Size
+enum Size {
+    static let middleEggWidth = 100.0
+    static let middleEggHeight = middleEggWidth * 1.1
+    
+}
+
+
 
 
 // MARK: - Fonts

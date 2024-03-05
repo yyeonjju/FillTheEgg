@@ -25,6 +25,7 @@
 		7D9007D62B871D76004B6C3C /* TrackingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9007D52B871D76004B6C3C /* TrackingTime.swift */; };
 		7D9007D82B87511E004B6C3C /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9007D72B87511E004B6C3C /* DateFormatter.swift */; };
 		7D9007DB2B8758DA004B6C3C /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9007DA2B8758DA004B6C3C /* TimerManager.swift */; };
+		7D9007DD2B886A06004B6C3C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9007DC2B886A06004B6C3C /* UIImage.swift */; };
 		7D9B47DD2B7A2A00003451A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B47DC2B7A2A00003451A2 /* AppDelegate.swift */; };
 		7D9B47DF2B7A2A00003451A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B47DE2B7A2A00003451A2 /* SceneDelegate.swift */; };
 		7D9B47E12B7A2A00003451A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B47E02B7A2A00003451A2 /* HomeViewController.swift */; };
@@ -37,6 +38,7 @@
 		7D9B48442B80C29C003451A2 /* SwcondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48432B80C29C003451A2 /* SwcondViewController.swift */; };
 		7D9B48462B80C438003451A2 /* CalendarHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48452B80C438003451A2 /* CalendarHomeViewController.swift */; };
 		7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48472B80C470003451A2 /* SettingsViewController.swift */; };
+		7DCE10E02B96F39B00197635 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10DF2B96F39B00197635 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,7 @@
 		7D9007D52B871D76004B6C3C /* TrackingTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingTime.swift; sourceTree = "<group>"; };
 		7D9007D72B87511E004B6C3C /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		7D9007DA2B8758DA004B6C3C /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		7D9007DC2B886A06004B6C3C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		7D9B47D92B7A2A00003451A2 /* FillTheEgg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FillTheEgg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9B47DC2B7A2A00003451A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D9B47DE2B7A2A00003451A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 		7D9B48432B80C29C003451A2 /* SwcondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwcondViewController.swift; sourceTree = "<group>"; };
 		7D9B48452B80C438003451A2 /* CalendarHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHomeViewController.swift; sourceTree = "<group>"; };
 		7D9B48472B80C470003451A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7DCE10DF2B96F39B00197635 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,7 @@
 		7D9B47F52B7C4BDA003451A2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7DCE10DE2B96F37D00197635 /* Inheritance */,
 				7D9B47FA2B7C4E41003451A2 /* File */,
 				7D9B48302B7F7279003451A2 /* SwiftGen */,
 				7D9B47F72B7C4C8E003451A2 /* CoreData */,
@@ -227,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				7D9007D72B87511E004B6C3C /* DateFormatter.swift */,
+				7D9007DC2B886A06004B6C3C /* UIImage.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -273,6 +279,14 @@
 				7D9007CA2B847588004B6C3C /* Fonts+Generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		7DCE10DE2B96F37D00197635 /* Inheritance */ = {
+			isa = PBXGroup;
+			children = (
+				7DCE10DF2B96F39B00197635 /* UIImageView.swift */,
+			);
+			path = Inheritance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,7 +401,9 @@
 				7D9007D22B84B9B2004B6C3C /* Assets+Generated.swift in Sources */,
 				7D9007D82B87511E004B6C3C /* DateFormatter.swift in Sources */,
 				7D9007DB2B8758DA004B6C3C /* TimerManager.swift in Sources */,
+				7D9007DD2B886A06004B6C3C /* UIImage.swift in Sources */,
 				7D9B47E72B7A2A00003451A2 /* FillTheEgg.xcdatamodeld in Sources */,
+				7DCE10E02B96F39B00197635 /* UIImageView.swift in Sources */,
 				7D9B47FD2B7C4E6C003451A2 /* NameSpace.swift in Sources */,
 				7D9007CE2B847E7D004B6C3C /* HomeView.swift in Sources */,
 				7D9B48442B80C29C003451A2 /* SwcondViewController.swift in Sources */,

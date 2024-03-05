@@ -25,7 +25,10 @@ final class HomeView: UIView {
     
     let timeLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: FontFamily.Pretendard.extraBold.name, size: FontSize.homeViewTime)
+//        label.font = UIFont(name: FontFamily.Pretendard.extraBold.name, size: FontSize.homeViewTime)
+        //swiftgen 사용
+        label.font = FontFamily.Pretendard.extraBold.font(size: FontSize.homeViewTime)
+        
         label.textColor = Assets.Colors.gray2.color
         label.textAlignment = .left
         label.text = "20:03"
@@ -41,11 +44,11 @@ final class HomeView: UIView {
         return label
     }()
     
-    let eggRateImage: UIImageView = {
-        let imageView = UIImageView()
+    let eggRateImage: FilledEggImageView = {
+        let imageView = FilledEggImageView()
         //표시될 UIImage 객체 부여
         imageView.image = UIImage(named: Assets.Assets.filledEgg.name)?.withRenderingMode(.alwaysTemplate)
-        imageView.tintColor = Assets.Colors.mainYellow.color
+        imageView.tintColor = Assets.Colors.eggWhite.color
         return imageView
     }()
     
@@ -78,6 +81,19 @@ final class HomeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+//    override func updateConstraints() {
+//        print("updateConstraints")
+//        super.updateConstraints()
+//    }
+    
+    //뷰의 드로잉 주기 중 하위뷰의 레이아웃을 설정하는 단계
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        print("❤️layoutSubviews")
+        eggRateImage.changeFilledRatio(ratio: 0.3)
+    }
+    
+    
     func setupInitial() {
         backgroundColor = .white
     }
@@ -91,6 +107,7 @@ final class HomeView: UIView {
     }
     
     func setupConstraints()  {
+    
         NSLayoutConstraint.activate([
             
             // dateLabel
@@ -120,8 +137,8 @@ final class HomeView: UIView {
 //            eggRateImage.centerYAnchor.constraint(equalTo: timeLabel.centerYAnchor),
             eggRateImage.topAnchor.constraint(equalTo: eggRateLabel.bottomAnchor,constant: 10),
 //            eggRateImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
-            eggRateImage.widthAnchor.constraint(equalToConstant: 100),
-            eggRateImage.heightAnchor.constraint(equalToConstant: 110),
+            eggRateImage.widthAnchor.constraint(equalToConstant: Size.middleEggWidth),
+            eggRateImage.heightAnchor.constraint(equalToConstant: Size.middleEggHeight),
 
             
         ])
