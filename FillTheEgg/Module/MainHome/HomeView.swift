@@ -13,9 +13,27 @@ final class HomeView: UIView {
     
     // MARK: - Component
     
+    let attendCheckSection : AttendanceCheckView = {
+        let view = AttendanceCheckView(frame: .zero)
+
+        return view
+    }()
+    
+    let gratitudeJournalSection : GratitudejournalView = {
+        let view = GratitudejournalView(frame: .zero)
+
+        return view
+    }()
+    
+    let dailyGoalsSection : DailyGoalsView = {
+        let view = DailyGoalsView(frame: .zero)
+
+        return view
+    }()
+    
     let dateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: FontFamily.Pretendard.semiBold.name, size: FontSize.homeViewDate)
+        label.font = FontFamily.Pretendard.semiBold.font(size: FontSize.homeViewDate)
         label.textColor = Assets.Colors.gray2.color
         label.textAlignment = .left
         label.numberOfLines = 2
@@ -99,7 +117,7 @@ final class HomeView: UIView {
     }
     
     func setupAddSubView() {
-        [ dateLabel, timeLabel, motivationLabel, eggRateImage, eggRateLabel]
+        [ dateLabel, timeLabel, motivationLabel, eggRateImage, eggRateLabel, attendCheckSection, gratitudeJournalSection, dailyGoalsSection]
             .forEach {
                 addSubview($0)
                 $0.translatesAutoresizingMaskIntoConstraints = false
@@ -121,12 +139,6 @@ final class HomeView: UIView {
             timeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20), // 시각 보정
             timeLabel.heightAnchor.constraint(equalToConstant: timeLabel.font.pointSize),
             
-            
-            // motivationLabel
-            motivationLabel.topAnchor.constraint(equalTo: eggRateImage.bottomAnchor, constant: 40),
-//            motivationLabel.bottomAnchor.constraint(equalTo: trackingButton.topAnchor),
-            motivationLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            
             //eggRateLabel
             eggRateLabel.topAnchor.constraint(equalTo: dateLabel.topAnchor),
             eggRateLabel.centerXAnchor.constraint(equalTo: eggRateImage.centerXAnchor),
@@ -139,7 +151,27 @@ final class HomeView: UIView {
 //            eggRateImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
             eggRateImage.widthAnchor.constraint(equalToConstant: Size.middleEggWidth),
             eggRateImage.heightAnchor.constraint(equalToConstant: Size.middleEggHeight),
+            
+            
+            // motivationLabel
+            motivationLabel.topAnchor.constraint(equalTo: eggRateImage.bottomAnchor, constant: 40),
+//            motivationLabel.bottomAnchor.constraint(equalTo: trackingButton.topAnchor),
+            motivationLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            
+            attendCheckSection.topAnchor.constraint(equalTo: motivationLabel.bottomAnchor, constant: 30),
+            attendCheckSection.centerXAnchor.constraint(equalTo: centerXAnchor),
+            attendCheckSection.widthAnchor.constraint(equalTo: widthAnchor),
+            
+//            gratitudeJournalSection.topAnchor.constraint(equalTo: attendCheckSection.bottomAnchor, constant: 20),
+//            gratitudeJournalSection.centerXAnchor.constraint(equalTo: centerXAnchor),
+//            gratitudeJournalSection.widthAnchor.constraint(equalTo: widthAnchor),
+//            
+//            dailyGoalsSection.topAnchor.constraint(equalTo: gratitudeJournalSection.bottomAnchor, constant: 20),
+//            dailyGoalsSection.centerXAnchor.constraint(equalTo: centerXAnchor),
+//            dailyGoalsSection.widthAnchor.constraint(equalTo: widthAnchor),
 
+            
             
         ])
         
