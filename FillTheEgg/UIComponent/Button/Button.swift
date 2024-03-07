@@ -15,8 +15,9 @@ final class ButtonWithOutLine : UIButton {
         self.setTitle(title, for: .normal)
         self.setTitleColor(color, for: .normal)
         self.titleLabel?.font = FontFamily.Pretendard.regular.font(size: 15)
+        self.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         
-        self.layer.borderWidth = 1.0
+        self.layer.borderWidth = 1.5
         self.layer.borderColor = borderColor
         
         self.layer.cornerRadius = 10

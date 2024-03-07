@@ -20,9 +20,31 @@ final class AttendanceCheckView : UIView {
     
     let photoView : UIView = {
         let view = UIView()
-        view.backgroundColor = .brown
+        view.backgroundColor = Assets.Colors.eggWhite.color
+        view.layer.cornerRadius = 10
+        
 
         return view
+    }()
+    
+    
+    let photoLabel : UILabel = {
+        let label = UILabel()
+
+        let stringWithImage = NSMutableAttributedString(string: "")
+        let imageAttachment = NSTextAttachment()
+        imageAttachment.image = UIImage(systemName: "photo")?.withRenderingMode(.alwaysTemplate)
+        imageAttachment.image?.withTintColor(.white)
+        let completeImageString = NSAttributedString(attachment: imageAttachment)
+        stringWithImage.append(completeImageString)
+        stringWithImage.append(NSAttributedString(string: "사진추가"))
+        
+
+        label.attributedText = stringWithImage
+        label.font = FontFamily.Pretendard.extraBold.font(size: 15)
+        label.textColor = .white
+        
+        return label
     }()
     
     
@@ -52,7 +74,7 @@ final class AttendanceCheckView : UIView {
     // MARK: - Event Method
     
     func setupAutoLayout () {
-        [mainLabel, addButton, photoView]
+        [mainLabel, addButton, photoView, photoLabel]
             .forEach {
                 addSubview($0)
                 $0.translatesAutoresizingMaskIntoConstraints = false
@@ -69,9 +91,12 @@ final class AttendanceCheckView : UIView {
             
             //photoView
             photoView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 20),
-            photoView.widthAnchor.constraint(equalToConstant: 100),
-            photoView.heightAnchor.constraint(equalToConstant: 100),
-            photoView.centerXAnchor.constraint(equalTo: centerXAnchor)
+            photoView.widthAnchor.constraint(equalToConstant: 130),
+            photoView.heightAnchor.constraint(equalToConstant: 130),
+            photoView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            photoLabel.centerXAnchor.constraint(equalTo: photoView.centerXAnchor),
+            photoLabel.centerYAnchor.constraint(equalTo: photoView.centerYAnchor)
             
             
         ])
