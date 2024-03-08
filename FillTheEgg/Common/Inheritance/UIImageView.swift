@@ -49,12 +49,35 @@ class FilledEggImageView: UIImageView {
             x: 0,
             //밑에서부터 원하는 비율만큼 위의 y축을 기준으로 그려야함
             y: bounds.height - (bounds.height * ratio),
-            width: self.bounds.width,
-            height: self.bounds.height * ratio
+            width: bounds.width,
+            height: bounds.height * ratio
         )
         
         
+        let overlayLabel = UILabel()
+        overlayLabel.text = "\(Int(ratio * 100))%"
+        overlayLabel.frame = ratio >= 1.0
+        ? CGRect(
+            x: 0,
+            //밑에서부터 원하는 비율만큼 위의 y축을 기준으로 그려야함
+            y: bounds.height - (bounds.height * ratio),
+            width: bounds.width,
+            height: bounds.height
+        )
+        : CGRect(
+            x: 0,
+            //밑에서부터 원하는 비율만큼 위의 y축을 기준으로 그려야함
+            y: bounds.height - (bounds.height * ratio) - 10,
+            width: bounds.width,
+            height: 20
+        )
+
+        overlayLabel.textColor = Assets.Colors.white.color
+        overlayLabel.textAlignment = .center
+        overlayLabel.font = FontFamily.Pretendard.extraBold.font(size: 14)
+        
         addSubview(overlayView)
+        addSubview(overlayLabel)
         
     }
     

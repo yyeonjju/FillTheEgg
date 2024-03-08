@@ -65,11 +65,38 @@ final class HomeView: UIView {
         return label
     }()
     
+    private lazy var motivationStackView : UIStackView = {
+        let sv = UIStackView()
+        sv.axis = .horizontal
+        sv.distribution  = .fill
+        sv.alignment = .center
+        sv.spacing = 8
+        sv.addArrangedSubview(quoteLeftIcon)
+        sv.addArrangedSubview(motivationLabel)
+        sv.addArrangedSubview(quoteRightIcon)
+        return sv
+    }()
+    
+    private let quoteLeftIcon : UIImageView = {
+        let ImageView = UIImageView()
+        ImageView.image = Assets.Assets.quoteLeft.image.withRenderingMode(.alwaysTemplate)
+        ImageView.tintColor = Assets.Colors.mainYellow.color
+        return ImageView
+    }()
+    private let quoteRightIcon : UIImageView = {
+        let ImageView = UIImageView()
+        ImageView.image = Assets.Assets.quoteRight.image.withRenderingMode(.alwaysTemplate)
+        ImageView.tintColor = Assets.Colors.mainYellow.color
+        return ImageView
+    }()
+    
     private let motivationLabel : UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: FontFamily.Pretendard.regular.name, size: FontSize.regular)
-        
-        label.text = "오늘 하루도 알찬 아침으로 하루를 시작해보세요!"
+        label.font = FontFamily.Pretendard.semiBold.font(size: FontSize.regular)
+        label.textColor = Assets.Colors.gray2.color
+        label.numberOfLines = 0
+        label.text = "오늘 하루도 알찬 아침으로 하루를 시작해보세요! "
+        label.textAlignment = .center
         
         return label
     }()
@@ -120,8 +147,11 @@ final class HomeView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         print("❤️layoutSubviews")
-        eggRateImage.changeFilledRatio(ratio: 0.3)
+        eggRateImage.changeFilledRatio(ratio: 0.5)
     }
+    
+//    override func draw(_ rect: CGRect) {
+//    }
     
     
     func setupInitial() {
@@ -135,9 +165,32 @@ final class HomeView: UIView {
         scrollView.addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
         
-        [ dateLabel, timeLabel, motivationLabel, eggRateImage, eggRateLabel, attendCheckSection, gratitudeJournalSection, dailyGoalsSection]
+        [dateLabel,
+          timeLabel,
+//          motivationLabel,
+          eggRateImage,
+          eggRateLabel,
+          attendCheckSection,
+          gratitudeJournalSection,
+          dailyGoalsSection,
+          motivationStackView,
+        ]
             .forEach {
                 contentView.addSubview($0)
+            }
+        [dateLabel,
+          timeLabel,
+          motivationLabel,
+          eggRateImage,
+          eggRateLabel,
+          attendCheckSection,
+          gratitudeJournalSection,
+          dailyGoalsSection,
+          motivationStackView,
+         quoteLeftIcon,
+         quoteRightIcon
+        ]
+            .forEach {
                 $0.translatesAutoresizingMaskIntoConstraints = false
             }
     }
@@ -151,29 +204,33 @@ final class HomeView: UIView {
             scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
+//            scrollView.widthAnchor.constraint(equalTo: widthAnchor),
+//            scrollView.heightAnchor.constraint(equalTo: heightAnchor),
             //탭뷰 고려해주어야할때는 이렇게
             //scrollView .bottomAnchor.constraint(equalTo: tabBarStackView.topAnchor),
             
             //스크롤 뷰에 담을 contentView
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+//            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
+            contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            //contentView는 전체적으로 scrollView대비 양옆 간격 주기
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 10),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -10),
             
             
             //실제 뷰
             
             // dateLabel
             dateLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
-            dateLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20), // 시각 보정
+            dateLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             dateLabel.heightAnchor.constraint(equalToConstant: dateLabel.font.pointSize),
             
             
             // timeLabel
             timeLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 5),
-            timeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20), // 시각 보정
+            timeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             timeLabel.heightAnchor.constraint(equalToConstant: timeLabel.font.pointSize),
             
             //eggRateLabel
@@ -190,20 +247,31 @@ final class HomeView: UIView {
             eggRateImage.heightAnchor.constraint(equalToConstant: Size.middleEggHeight),
             
             
-            // motivationLabel
-            motivationLabel.topAnchor.constraint(equalTo: eggRateImage.bottomAnchor, constant: 40),
-//            motivationLabel.bottomAnchor.constraint(equalTo: trackingButton.topAnchor),
-            motivationLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            // motivationStackView
+            quoteLeftIcon.widthAnchor.constraint(equalToConstant: 40),
+            quoteLeftIcon.heightAnchor.constraint(equalToConstant: 40),
+            
+            quoteRightIcon.widthAnchor.constraint(equalToConstant: 40),
+            quoteRightIcon.heightAnchor.constraint(equalToConstant: 40),
+            
+            motivationStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            motivationStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            motivationStackView.topAnchor.constraint(equalTo: eggRateImage.bottomAnchor, constant: 40),
+            motivationStackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+//            motivationStackView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             
             
-            attendCheckSection.topAnchor.constraint(equalTo: motivationLabel.bottomAnchor, constant: 30),
+            //attendCheckSection
+            attendCheckSection.topAnchor.constraint(equalTo: motivationStackView.bottomAnchor, constant: 50),
             attendCheckSection.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             attendCheckSection.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             
+            //gratitudeJournalSection
             gratitudeJournalSection.topAnchor.constraint(equalTo: attendCheckSection.bottomAnchor, constant: 20),
             gratitudeJournalSection.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             gratitudeJournalSection.widthAnchor.constraint(equalTo: contentView.widthAnchor),
 
+            //dailyGoalsSection
             dailyGoalsSection.topAnchor.constraint(equalTo: gratitudeJournalSection.bottomAnchor, constant: 20),
             dailyGoalsSection.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             dailyGoalsSection.widthAnchor.constraint(equalTo: contentView.widthAnchor),

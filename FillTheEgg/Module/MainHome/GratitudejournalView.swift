@@ -16,8 +16,28 @@ final class GratitudejournalView : UIView {
         
         return btn
     }()
-
-    
+//
+//    let numberLabel : UILabel = {
+//       let label = UILabel()
+//        label.text = "1"
+//        label.layer.cornerRadius = 10
+//        label.layer.masksToBounds = true
+//        label.backgroundColor = Assets.Colors.gray3.color
+//        label.textColor = Assets.Colors.white.color
+//        label.textAlignment = .center
+//        return label
+//    }()
+//
+////    let bullet
+//
+//    let listLabel : UILabel = {
+//        let label = UILabel()
+//        label.text = GratitudeJournalList[0]
+//        label.textColor = Assets.Colors.gray3.color
+//        label.numberOfLines = 0
+//
+//        return label
+//    }()
 
     
     // MARK: - Initial Method
@@ -45,7 +65,11 @@ final class GratitudejournalView : UIView {
     // MARK: - Event Method
     
     func setupAutoLayout () {
-        [mainLabel, addButton]
+        [mainLabel,
+         addButton,
+//         numberLabel,
+//         listLabel
+        ]
             .forEach {
                 addSubview($0)
                 $0.translatesAutoresizingMaskIntoConstraints = false
@@ -60,7 +84,16 @@ final class GratitudejournalView : UIView {
             
             
             addButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
-            addButton.centerYAnchor.constraint(equalTo: mainLabel.centerYAnchor)
+            addButton.centerYAnchor.constraint(equalTo: mainLabel.centerYAnchor),
+            
+//            numberLabel.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 20),
+//            numberLabel.widthAnchor.constraint(equalToConstant: 30),
+//            numberLabel.heightAnchor.constraint(equalToConstant: 30),
+//
+//            listLabel.centerYAnchor.constraint(equalTo: numberLabel.centerYAnchor),
+//            listLabel.leadingAnchor.constraint(equalTo: numberLabel.trailingAnchor, constant: 10)
+            
+            
             
         ])
         

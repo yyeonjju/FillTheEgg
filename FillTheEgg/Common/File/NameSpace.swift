@@ -38,6 +38,22 @@ enum Size {
 }
 
 
+// MARK: - MockData
+
+public var GratitudeJournalList : [String] = [
+    "감사일기 1 감사일기 1 감사일기 1 감사일기 1 감사일기 1 감사일기 1",
+    "감사일기 2 감사일기 2 감사일기 2",
+    "감사일기 3"
+    
+]
+
+public var DailyGoalList : [String] = [
+    "목표1목표1목표1목표1",
+    "목표2목표2",
+    "목표3"
+    
+]
+
 
 
 // MARK: - Fonts
