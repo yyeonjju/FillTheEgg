@@ -22,6 +22,7 @@ final class HomeView: UIView {
     
     var contentView: UIView = {
         let view = UIView()
+//        view.backgroundColor = .blue
         return view
     }()
     
@@ -31,9 +32,9 @@ final class HomeView: UIView {
         return view
     }()
     
-    private let gratitudeJournalSection : GratitudejournalView = {
+    lazy var gratitudeJournalSection : GratitudejournalView = {
         let view = GratitudejournalView(frame: .zero)
-
+//        view.backgroundColor = .blue
         return view
     }()
     
@@ -188,7 +189,7 @@ final class HomeView: UIView {
           dailyGoalsSection,
           motivationStackView,
          quoteLeftIcon,
-         quoteRightIcon
+         quoteRightIcon,
         ]
             .forEach {
                 $0.translatesAutoresizingMaskIntoConstraints = false
@@ -270,7 +271,7 @@ final class HomeView: UIView {
             gratitudeJournalSection.topAnchor.constraint(equalTo: attendCheckSection.bottomAnchor, constant: 20),
             gratitudeJournalSection.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             gratitudeJournalSection.widthAnchor.constraint(equalTo: contentView.widthAnchor),
-
+            
             //dailyGoalsSection
             dailyGoalsSection.topAnchor.constraint(equalTo: gratitudeJournalSection.bottomAnchor, constant: 20),
             dailyGoalsSection.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),

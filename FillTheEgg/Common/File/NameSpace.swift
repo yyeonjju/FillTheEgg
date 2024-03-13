@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 // MARK: - Version
 
 enum Version {
@@ -40,19 +41,29 @@ enum Size {
 
 // MARK: - MockData
 
-public var GratitudeJournalList : [String] = [
-    "감사일기 1 감사일기 1 감사일기 1 감사일기 1 감사일기 1 감사일기 1",
-    "감사일기 2 감사일기 2 감사일기 2",
-    "감사일기 3"
-    
+public struct Journal {
+    let id : Int
+    let text : String
+}
+
+public var gratitudeJournalList : [Journal] = [
+    Journal(id: 0, text: "감사일기 1 감사일기 1 "),
+    Journal(id: 1, text:  "감사일기 2 감사일기 2 감사일기 2 gkgkgkgkg 감사일기 2 감사일기 2 감사일기 2 gkgkgkgkg 감사일기 2 감사일기 2 감사일기 2 gkgkgkgkg감사일기 2 감사일기 2 감사일기 2 gkgkgkgkg"),
+    Journal(id: 2, text: "감사일기 3"),
 ]
 
-public var DailyGoalList : [String] = [
+public var dailyGoalList : [String] = [
     "목표1목표1목표1목표1",
     "목표2목표2",
     "목표3"
     
 ]
+
+// MARK: - Cell
+
+enum Cell {
+    static let bulletCell = "bulletCell"
+}
 
 
 
