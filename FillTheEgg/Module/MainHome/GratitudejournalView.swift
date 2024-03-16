@@ -19,13 +19,8 @@ final class GratitudejournalView : UIView {
     
     let bulletTableView : UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
-        table.separatorStyle = .none
-        table.showsVerticalScrollIndicator = true
+
         table.backgroundColor = .brown
-        
-//        table.rowHeight = UITableView.automaticDimension
-//        table.estimatedRowHeight = 100
-        
         return table
     }()
 
@@ -76,8 +71,10 @@ final class GratitudejournalView : UIView {
             addButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
             addButton.centerYAnchor.constraint(equalTo: mainLabel.centerYAnchor),
             
-            bulletTableView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 20),
-            bulletTableView.widthAnchor.constraint(equalTo: widthAnchor),
+            bulletTableView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 10),
+            bulletTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            bulletTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+//            bulletTableView.widthAnchor.constraint(equalTo: widthAnchor),
             bulletTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
             

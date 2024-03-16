@@ -52,7 +52,7 @@ final class DailyGoalsView : UIView {
             }
         
         NSLayoutConstraint.activate([
-            self.heightAnchor.constraint(equalToConstant: 200),
+            self.heightAnchor.constraint(equalToConstant: 500),
             
             
             mainLabel.topAnchor.constraint(equalTo: topAnchor),
@@ -60,8 +60,7 @@ final class DailyGoalsView : UIView {
             
             
             addButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
-            addButton.centerYAnchor.constraint(equalTo: mainLabel.centerYAnchor)
-            
+            addButton.centerYAnchor.constraint(equalTo: mainLabel.centerYAnchor),
         ])
         
     }

@@ -9,7 +9,7 @@ import UIKit
 
 final class BulletTableViewCell : UITableViewCell {
     // MARK: - Components
-    private lazy var stackView : UIStackView = {
+    private lazy var contentsStackView : UIStackView = {
         let sv = UIStackView()
         sv.axis = .horizontal
         sv.spacing = 10
@@ -17,7 +17,7 @@ final class BulletTableViewCell : UITableViewCell {
         sv.distribution = .fill
         sv.addArrangedSubview(bullet)
         sv.addArrangedSubview(label)
-        sv.backgroundColor = .red
+//        sv.backgroundColor = .red
         let _ = print("🍑BulletTableViewCell - stackView")
         return sv
     }()
@@ -36,6 +36,7 @@ final class BulletTableViewCell : UITableViewCell {
         label.text = gratitudeJournalList[0].text
         label.textColor = Assets.Colors.gray1.color
         label.numberOfLines = 0
+//        label.lineBreakMode = .byTruncatingTail
 
         return label
     }()
@@ -47,6 +48,7 @@ final class BulletTableViewCell : UITableViewCell {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         
         setupStackView()
+        setupConstrains() //⭐️ override func updateConstraints() 이 위치가 아니라 override init 여기서 해주어야한다
 
     }
 
@@ -57,9 +59,6 @@ final class BulletTableViewCell : UITableViewCell {
     
     override func updateConstraints() {
         print("🍑BulletTableViewCell - updateConstraints")
-        
-        setupConstrains()
-        
         super.updateConstraints()
     }
 
@@ -67,30 +66,32 @@ final class BulletTableViewCell : UITableViewCell {
     
     // MARK: - layout constraint draw
     
-    
-    
-    // MARK: - method
-    
     func setupStackView() {
-        [stackView]
+        [contentsStackView]
             .forEach{
-                self.addSubview($0)
+                contentView.addSubview($0)
             }
     }
     
     func setupConstrains () {
 
-        [stackView, bullet, label]
+        [contentsStackView, bullet, label]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
             }
         
         NSLayoutConstraint.activate([
-            stackView.widthAnchor.constraint(equalTo: widthAnchor), //label이 자동 개행되기 위해 필요
-//            stackView.heightAnchor.constraint(equalToConstant: 100),
+            //⭐️ label이 자동 개행되기 위해 필요
+            contentsStackView.widthAnchor.constraint(equalTo: widthAnchor),
+            
+            //⭐️ contentView를 기준으로 stackView의 오토레이아웃 조절
+            contentsStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            contentsStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+//            contentsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            contentsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
             
             bullet.widthAnchor.constraint(equalToConstant: 10),
-            bullet.heightAnchor.constraint(equalToConstant: 10)
+            bullet.heightAnchor.constraint(equalToConstant: 10),
         ])
         
         
