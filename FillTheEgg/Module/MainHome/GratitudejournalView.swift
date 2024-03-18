@@ -17,8 +17,8 @@ final class GratitudejournalView : UIView {
         return btn
     }()
     
-    let bulletTableView : UITableView = {
-        let table = UITableView(frame: .zero, style: .grouped)
+    let bulletTableView : AutoResizingTableView = {
+        let table = AutoResizingTableView(frame: .zero, style: .grouped)
 
         table.backgroundColor = .brown
         return table
@@ -61,7 +61,7 @@ final class GratitudejournalView : UIView {
             }
         
         NSLayoutConstraint.activate([
-            self.heightAnchor.constraint(equalToConstant: 400),
+//            self.heightAnchor.constraint(equalToConstant: 400),
             
             
             mainLabel.topAnchor.constraint(equalTo: topAnchor),

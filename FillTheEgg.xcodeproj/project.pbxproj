@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D1CF11D2BA07A0500C1807A /* BulletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */; };
+		7D4CF9F12BA573A000BC7952 /* AutoResizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F02BA573A000BC7952 /* AutoResizingTableView.swift */; };
 		7D9007B62B846FB3004B6C3C /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AD2B846FB3004B6C3C /* Pretendard-Regular.otf */; };
 		7D9007B72B846FB3004B6C3C /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AE2B846FB3004B6C3C /* Pretendard-Medium.otf */; };
 		7D9007B82B846FB3004B6C3C /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AF2B846FB3004B6C3C /* Pretendard-Light.otf */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletTableViewCell.swift; sourceTree = "<group>"; };
+		7D4CF9F02BA573A000BC7952 /* AutoResizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoResizingTableView.swift; sourceTree = "<group>"; };
 		7D9007AD2B846FB3004B6C3C /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		7D9007AE2B846FB3004B6C3C /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		7D9007AF2B846FB3004B6C3C /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 				7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		7D4CF9EF2BA5738C00BC7952 /* UITableVIew */ = {
+			isa = PBXGroup;
+			children = (
+				7D4CF9F02BA573A000BC7952 /* AutoResizingTableView.swift */,
+			);
+			path = UITableVIew;
 			sourceTree = "<group>";
 		};
 		7D90074D2B8361C1004B6C3C /* Pretendard */ = {
@@ -310,6 +320,7 @@
 		7DCE10DE2B96F37D00197635 /* Inheritance */ = {
 			isa = PBXGroup;
 			children = (
+				7D4CF9EF2BA5738C00BC7952 /* UITableVIew */,
 				7DCE10DF2B96F39B00197635 /* UIImageView.swift */,
 			);
 			path = Inheritance;
@@ -443,6 +454,7 @@
 				7D9007D22B84B9B2004B6C3C /* Assets+Generated.swift in Sources */,
 				7D9007D82B87511E004B6C3C /* DateFormatter.swift in Sources */,
 				7D9007DB2B8758DA004B6C3C /* TimerManager.swift in Sources */,
+				7D4CF9F12BA573A000BC7952 /* AutoResizingTableView.swift in Sources */,
 				7DCE10E22B97101600197635 /* AttendanceCheckView.swift in Sources */,
 				7DCE10EC2B9733B500197635 /* Button.swift in Sources */,
 				7DCE10E92B97329700197635 /* DailyGoalsView.swift in Sources */,
