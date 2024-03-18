@@ -37,6 +37,7 @@ final class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewManager.gratitudeJournalSection.bulletTableView.reloadData()
+        viewManager.dailyGoalsSection.bulletChckboxTableView.reloadData()
         
     }
 
@@ -45,6 +46,10 @@ final class HomeViewController: UIViewController {
         viewManager.gratitudeJournalSection.bulletTableView.delegate = self
 //        viewManager.bulletTableView.rowHeight = 40
         viewManager.gratitudeJournalSection.bulletTableView.register(BulletTableViewCell.self, forCellReuseIdentifier: Cell.bulletCell)
+        
+        viewManager.dailyGoalsSection.bulletChckboxTableView.dataSource = self
+        viewManager.dailyGoalsSection.bulletChckboxTableView.delegate = self
+        viewManager.dailyGoalsSection.bulletChckboxTableView.register(BulletCheckboxTableViewCell.self, forCellReuseIdentifier: Cell.bulletCheckboxCell)
     }
     
     // MARK: - Setup Method
@@ -93,16 +98,42 @@ extension HomeViewController {
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("✅numberOfRowsInSection", gratitudeJournalList.count)
-        return gratitudeJournalList.count
+        
+        if tableView == viewManager.gratitudeJournalSection.bulletTableView {
+            return gratitudeJournalList.count
+        }
+        
+        if tableView == viewManager.dailyGoalsSection.bulletChckboxTableView {
+            return dailyGoalList.count
+        }
+        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("✅cellForRowAt")
-        let cell = viewManager.gratitudeJournalSection.bulletTableView.dequeueReusableCell(withIdentifier: Cell.bulletCell, for: indexPath) as! BulletTableViewCell
 
-        cell.label.text = gratitudeJournalList[indexPath.row].text
-        cell.selectionStyle = .none
-        return cell
+        if tableView == viewManager.gratitudeJournalSection.bulletTableView {
+            let cell = tableView.dequeueReusableCell(withIdentifier: Cell.bulletCell, for: indexPath) as! BulletTableViewCell
+            cell.label.text = gratitudeJournalList[indexPath.row].text
+            cell.selectionStyle = .none
+            
+            return cell
+        }
+        
+        if tableView == viewManager.dailyGoalsSection.bulletChckboxTableView {
+            
+            print("✅cellForRowAt  dailyGoalsSection")
+            let cell = tableView.dequeueReusableCell(withIdentifier: Cell.bulletCheckboxCell, for: indexPath) as! BulletCheckboxTableViewCell
+            cell.label.text = dailyGoalList[indexPath.row].text
+            cell.ckeckbox.isChecked = dailyGoalList[indexPath.row].isDone
+            cell.selectionStyle = .none
+            
+            return cell
+        }
+        
+        return UITableViewCell()
+
     }
     
 

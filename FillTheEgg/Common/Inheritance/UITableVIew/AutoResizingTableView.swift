@@ -10,8 +10,8 @@ import UIKit
 class AutoResizingTableView : UITableView {
     
     override public func layoutSubviews() {
-        print("AutoResizingTableView intrinsicContentSize --> ", intrinsicContentSize)
-        print("AutoResizingTableView bounds.size --> ", bounds.size)
+//        print("AutoResizingTableView intrinsicContentSize --> ", intrinsicContentSize)
+//        print("AutoResizingTableView bounds.size --> ", bounds.size)
         
         super.layoutSubviews()
         if bounds.size != intrinsicContentSize {

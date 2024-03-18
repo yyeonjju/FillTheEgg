@@ -1,13 +1,13 @@
 //
-//  BulletTableViewCell.swift
+//  BulletCheckboxTableViewCell.swift
 //  FillTheEgg
 //
-//  Created by 하연주 on 2024/03/12.
+//  Created by 하연주 on 2024/03/18.
 //
 
 import UIKit
 
-final class BulletTableViewCell : UITableViewCell {
+final class BulletCheckboxTableViewCell : UITableViewCell {
     // MARK: - Components
     private lazy var contentsStackView : UIStackView = {
         let sv = UIStackView()
@@ -17,6 +17,7 @@ final class BulletTableViewCell : UITableViewCell {
         sv.distribution = .fill
         sv.addArrangedSubview(bullet)
         sv.addArrangedSubview(label)
+        sv.addArrangedSubview(ckeckbox)
 //        sv.backgroundColor = .red
         let _ = print("🍑BulletTableViewCell - stackView")
         return sv
@@ -39,6 +40,14 @@ final class BulletTableViewCell : UITableViewCell {
 //        label.lineBreakMode = .byTruncatingTail
 
         return label
+    }()
+    
+    let ckeckbox : CheckBoxButton = {
+        let button = CheckBoxButton()
+//        button.backgroundColor = .green
+        
+
+        return button
     }()
     
     
@@ -75,7 +84,7 @@ final class BulletTableViewCell : UITableViewCell {
     
     func setupConstrains () {
 
-        [contentsStackView, bullet, label]
+        [contentsStackView, bullet, label, ckeckbox]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
             }
@@ -92,6 +101,9 @@ final class BulletTableViewCell : UITableViewCell {
             
             bullet.widthAnchor.constraint(equalToConstant: 10),
             bullet.heightAnchor.constraint(equalToConstant: 10),
+            
+            ckeckbox.widthAnchor.constraint(equalToConstant: 30),
+            ckeckbox.heightAnchor.constraint(equalToConstant: 30),
         ])
         
         

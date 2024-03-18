@@ -18,9 +18,8 @@ final class GratitudejournalView : UIView {
     }()
     
     let bulletTableView : AutoResizingTableView = {
-        let table = AutoResizingTableView(frame: .zero, style: .grouped)
-
-        table.backgroundColor = .brown
+        let table = AutoResizingTableView(frame: .zero, style: .plain)
+//        table.backgroundColor = Assets.Colors.white.color
         return table
     }()
 
@@ -35,12 +34,9 @@ final class GratitudejournalView : UIView {
         setupAutoLayout()
     }
     
-    override func draw(_ rect: CGRect) { //내부 컨텐츠(색상, 이미지, 텍스트 등) 다시 그리기
-        
-        super.draw(rect)
-//        clipsToBounds = true
-//        layer.cornerRadius = frame.height / 7
-    }
+//    override func draw(_ rect: CGRect) { //내부 컨텐츠(색상, 이미지, 텍스트 등) 다시 그리기
+//        super.draw(rect)
+//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -68,14 +64,13 @@ final class GratitudejournalView : UIView {
             mainLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             
-            addButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
+            addButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             addButton.centerYAnchor.constraint(equalTo: mainLabel.centerYAnchor),
             
             bulletTableView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 10),
             bulletTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             bulletTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-//            bulletTableView.widthAnchor.constraint(equalTo: widthAnchor),
-            bulletTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            bulletTableView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             
         ])

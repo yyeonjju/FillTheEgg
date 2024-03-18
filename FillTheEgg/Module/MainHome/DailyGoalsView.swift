@@ -17,6 +17,12 @@ final class DailyGoalsView : UIView {
         return btn
     }()
 
+    let bulletChckboxTableView : AutoResizingTableView = {
+        let table = AutoResizingTableView(frame: .zero, style: .plain)
+//        table.backgroundColor = Assets.Colors.white.color
+        return table
+    }()
+
     
 
     
@@ -30,12 +36,9 @@ final class DailyGoalsView : UIView {
         setupAutoLayout()
     }
     
-    override func draw(_ rect: CGRect) { //내부 컨텐츠(색상, 이미지, 텍스트 등) 다시 그리기
-        
-        super.draw(rect)
-//        clipsToBounds = true
-//        layer.cornerRadius = frame.height / 7
-    }
+//    override func draw(_ rect: CGRect) { //내부 컨텐츠(색상, 이미지, 텍스트 등) 다시 그리기
+//        super.draw(rect)
+//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -45,22 +48,29 @@ final class DailyGoalsView : UIView {
     // MARK: - Event Method
     
     func setupAutoLayout () {
-        [mainLabel, addButton]
+        [mainLabel,
+         addButton,
+         bulletChckboxTableView
+        ]
             .forEach {
                 addSubview($0)
                 $0.translatesAutoresizingMaskIntoConstraints = false
             }
         
         NSLayoutConstraint.activate([
-            self.heightAnchor.constraint(equalToConstant: 500),
-            
             
             mainLabel.topAnchor.constraint(equalTo: topAnchor),
             mainLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             
-            addButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
+            addButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             addButton.centerYAnchor.constraint(equalTo: mainLabel.centerYAnchor),
+            
+            bulletChckboxTableView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 10),
+            bulletChckboxTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            bulletChckboxTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            bulletChckboxTableView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
         ])
         
     }

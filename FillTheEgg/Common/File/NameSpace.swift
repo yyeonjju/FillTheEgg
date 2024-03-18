@@ -46,16 +46,22 @@ public struct Journal {
     let text : String
 }
 
+public struct DailyGoal {
+    let id : Int
+    let text : String
+    let isDone : Bool
+}
+
 public var gratitudeJournalList : [Journal] = [
     Journal(id: 0, text: "감사일기 1 감사일기 1 "),
     Journal(id: 1, text:  "감사일기 2 감사일기 2 감사일기 2 gkgkgkgkg 감사일기 2 감사일기 2 감사일기 2 gkgkgkgkg 감사일기 2 감사일기 2 감사일기 2 gkgkgkgkg감사일기 2 감사일기 2 감사일기 2 gkgkgkgkg"),
     Journal(id: 2, text: "감사일기 3"),
 ]
 
-public var dailyGoalList : [String] = [
-    "목표1목표1목표1목표1",
-    "목표2목표2",
-    "목표3"
+public var dailyGoalList : [DailyGoal] = [
+    DailyGoal(id: 0, text: "오늘의 목표1", isDone: false),
+    DailyGoal(id: 1, text: "오늘의 목표2 오늘의 목표2 오늘의 목표2오늘의 목표2 오늘의 목표2오늘의 목표2", isDone: true),
+    DailyGoal(id: 2, text: "오늘의 목표3오늘의 목표3 오늘의 목표3오늘의 목표3", isDone: false),
     
 ]
 
@@ -63,6 +69,7 @@ public var dailyGoalList : [String] = [
 
 enum Cell {
     static let bulletCell = "bulletCell"
+    static let bulletCheckboxCell = "bulletCheckboxCell"
 }
 
 

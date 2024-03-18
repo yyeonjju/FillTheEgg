@@ -38,7 +38,7 @@ final class HomeView: UIView {
         return view
     }()
     
-    private let dailyGoalsSection : DailyGoalsView = {
+    lazy var dailyGoalsSection : DailyGoalsView = {
         let view = DailyGoalsView(frame: .zero)
 
         return view
@@ -205,21 +205,16 @@ final class HomeView: UIView {
             scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
-//            scrollView.widthAnchor.constraint(equalTo: widthAnchor),
-//            scrollView.heightAnchor.constraint(equalTo: heightAnchor),
-            //탭뷰 고려해주어야할때는 이렇게
-            //scrollView .bottomAnchor.constraint(equalTo: tabBarStackView.topAnchor),
             
             //스크롤 뷰에 담을 contentView
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-//            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-            contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
+            contentView.bottomAnchor.constraint(equalTo: dailyGoalsSection.bottomAnchor),
             contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            
             //contentView는 전체적으로 scrollView대비 양옆 간격 주기
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 10),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -10),
-            
             
             //실제 뷰
             
@@ -268,12 +263,12 @@ final class HomeView: UIView {
             attendCheckSection.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             
             //gratitudeJournalSection
-            gratitudeJournalSection.topAnchor.constraint(equalTo: attendCheckSection.bottomAnchor, constant: 20),
+            gratitudeJournalSection.topAnchor.constraint(equalTo: attendCheckSection.bottomAnchor, constant: 50),
             gratitudeJournalSection.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             gratitudeJournalSection.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             
             //dailyGoalsSection
-            dailyGoalsSection.topAnchor.constraint(equalTo: gratitudeJournalSection.bottomAnchor, constant: 20),
+            dailyGoalsSection.topAnchor.constraint(equalTo: gratitudeJournalSection.bottomAnchor, constant: 50),
             dailyGoalsSection.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             dailyGoalsSection.widthAnchor.constraint(equalTo: contentView.widthAnchor),
 
