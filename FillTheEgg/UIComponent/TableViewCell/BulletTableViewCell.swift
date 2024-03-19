@@ -33,7 +33,7 @@ class BulletTableViewCell : UITableViewCell {
     
     let label : UILabel = {
         let label = UILabel()
-        label.text = gratitudeJournalList[0].text
+//        label.text = gratitudeJournalList[0]?.text
         label.textColor = Assets.Colors.gray1.color
         label.numberOfLines = 0
 //        label.lineBreakMode = .byTruncatingTail

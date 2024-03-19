@@ -12,11 +12,6 @@ final class AttendanceCheckView : UIView {
     
     // MARK: - Component
     let mainLabel = MainSectionLabel(text: "출석하기")
-    let addButton : ButtonWithOutLine = {
-        let btn = ButtonWithOutLine(title: "추가", color: Assets.Colors.gray3.color, borderColor: Assets.Colors.gray3.color.cgColor)
-        
-        return btn
-    }()
     
     let photoView : UIView = { //
         let view = UIView()
@@ -74,7 +69,7 @@ final class AttendanceCheckView : UIView {
     // MARK: - Event Method
     
     func setupAutoLayout () {
-        [mainLabel, addButton, photoView, photoLabel]
+        [mainLabel, photoView, photoLabel]
             .forEach {
                 addSubview($0)
                 $0.translatesAutoresizingMaskIntoConstraints = false
@@ -86,8 +81,6 @@ final class AttendanceCheckView : UIView {
             mainLabel.topAnchor.constraint(equalTo: topAnchor),
             mainLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            addButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
-            addButton.centerYAnchor.constraint(equalTo: mainLabel.centerYAnchor),
             
             //photoView
             photoView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 20),

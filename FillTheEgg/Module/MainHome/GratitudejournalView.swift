@@ -10,7 +10,7 @@ import UIKit
 final class GratitudejournalView : UIView {
     
     // MARK: - Component
-    let mainLabel = MainSectionLabel(text: "감사일기")
+    private let mainLabel = MainSectionLabel(text: "감사일기")
     let addButton : ButtonWithOutLine = {
         let btn = ButtonWithOutLine(title: "작성하기", color: Assets.Colors.gray3.color, borderColor: Assets.Colors.gray3.color.cgColor)
         
@@ -22,11 +22,15 @@ final class GratitudejournalView : UIView {
 //        table.backgroundColor = Assets.Colors.white.color
         return table
     }()
+    
+    private let defaultView : BlankView = {
+        let view = BlankView(text: "감사일기 3개 작성하기! \n 사소한 것에도 감사함을 느끼는 것 부터가 \n 행복의 시작입니다 :)")
+        
+        return view
+    }()
 
     
     // MARK: - Initial Method
-
-//    init(frame: CGRect, size : Size){}
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,14 +38,10 @@ final class GratitudejournalView : UIView {
         setupAutoLayout()
     }
     
-//    override func draw(_ rect: CGRect) { //내부 컨텐츠(색상, 이미지, 텍스트 등) 다시 그리기
-//        super.draw(rect)
-//    }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     
     // MARK: - layout
     
@@ -49,7 +49,8 @@ final class GratitudejournalView : UIView {
     func setupAutoLayout () {
         [mainLabel,
          addButton,
-         bulletTableView
+         bulletTableView,
+         defaultView
         ]
             .forEach {
                 addSubview($0)
@@ -57,9 +58,6 @@ final class GratitudejournalView : UIView {
             }
         
         NSLayoutConstraint.activate([
-//            self.heightAnchor.constraint(equalToConstant: 400),
-            
-            
             mainLabel.topAnchor.constraint(equalTo: topAnchor),
             mainLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
@@ -67,13 +65,30 @@ final class GratitudejournalView : UIView {
             addButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             addButton.centerYAnchor.constraint(equalTo: mainLabel.centerYAnchor),
             
-            bulletTableView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 10),
-            bulletTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            bulletTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            bulletTableView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            
         ])
+        
+        
+        // 데이터가 있는지에 따라서 뷰 보여주기
+        if gratitudeJournalList.isEmpty {
+            NSLayoutConstraint.activate([
+                defaultView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 10),
+                defaultView.widthAnchor.constraint(equalTo: widthAnchor),
+                defaultView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            ])
+            
+        } else {
+            defaultView.isHidden = true
+            
+            NSLayoutConstraint.activate([
+                bulletTableView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 10),
+                bulletTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+                bulletTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+                bulletTableView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            ])
+        }
+        
+        
+        
         
     }
     

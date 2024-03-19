@@ -209,7 +209,7 @@ final class HomeView: UIView {
             //스크롤 뷰에 담을 contentView
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            contentView.bottomAnchor.constraint(equalTo: dailyGoalsSection.bottomAnchor),
+            contentView.bottomAnchor.constraint(equalTo: dailyGoalsSection.bottomAnchor, constant: 200),
             contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             
             //contentView는 전체적으로 scrollView대비 양옆 간격 주기
