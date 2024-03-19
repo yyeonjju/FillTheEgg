@@ -18,7 +18,7 @@ final class AttendanceCheckView : UIView {
         return btn
     }()
     
-    let photoView : UIView = {
+    let photoView : UIView = { //
         let view = UIView()
         view.backgroundColor = Assets.Colors.eggWhite.color
         view.layer.cornerRadius = 10

@@ -45,12 +45,24 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Setup Method
     private func setupEvent() {
-        viewManager.gratitudeJournalSection.addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
+        viewManager.gratitudeJournalSection.addButton.addTarget(self, action: #selector(gratitudeJournalAddButtonTapped), for: .touchUpInside)
+        
+        viewManager.dailyGoalsSection.addButton.addTarget(self, action: #selector(dailyGoalAddButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Event Method
-    @objc func addButtonTapped() {
-        print("🌸🌸addButtonTapped🌸🌸")
+    @objc func gratitudeJournalAddButtonTapped() {
+        print("🌸🌸gratitudeJournalAddButtonTapped🌸🌸")
+        
+        let WritingPageVC = WritingPageViewController()
+        navigationController?.pushViewController(WritingPageVC, animated: true)
+    }
+    
+    @objc func dailyGoalAddButtonTapped() {
+        print("🌸🌸dailyGoalAddButtonTapped🌸🌸")
+        
+        let WritingPageVC = WritingPageViewController()
+        navigationController?.pushViewController(WritingPageVC, animated: true)
     }
     
     

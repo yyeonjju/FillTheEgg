@@ -13,6 +13,8 @@
 		7D4CF9F52BA83B2700BC7952 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F42BA83B2700BC7952 /* CheckBox.swift */; };
 		7D4CF9F72BA9280700BC7952 /* HomeVC+Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F62BA9280700BC7952 /* HomeVC+Timer.swift */; };
 		7D4CF9F92BA9294E00BC7952 /* HomeVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F82BA9294E00BC7952 /* HomeVC+TableView.swift */; };
+		7D4CF9FC2BA92C1800BC7952 /* WritingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9FB2BA92C1800BC7952 /* WritingPageViewController.swift */; };
+		7D4CF9FE2BA932CF00BC7952 /* WritingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9FD2BA932CF00BC7952 /* WritingPageView.swift */; };
 		7D9007B62B846FB3004B6C3C /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AD2B846FB3004B6C3C /* Pretendard-Regular.otf */; };
 		7D9007B72B846FB3004B6C3C /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AE2B846FB3004B6C3C /* Pretendard-Medium.otf */; };
 		7D9007B82B846FB3004B6C3C /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AF2B846FB3004B6C3C /* Pretendard-Light.otf */; };
@@ -59,6 +61,8 @@
 		7D4CF9F42BA83B2700BC7952 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		7D4CF9F62BA9280700BC7952 /* HomeVC+Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Timer.swift"; sourceTree = "<group>"; };
 		7D4CF9F82BA9294E00BC7952 /* HomeVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+TableView.swift"; sourceTree = "<group>"; };
+		7D4CF9FB2BA92C1800BC7952 /* WritingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingPageViewController.swift; sourceTree = "<group>"; };
+		7D4CF9FD2BA932CF00BC7952 /* WritingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingPageView.swift; sourceTree = "<group>"; };
 		7D9007AD2B846FB3004B6C3C /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		7D9007AE2B846FB3004B6C3C /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		7D9007AF2B846FB3004B6C3C /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
@@ -126,6 +130,15 @@
 				7D4CF9F02BA573A000BC7952 /* AutoResizingTableView.swift */,
 			);
 			path = UITableVIew;
+			sourceTree = "<group>";
+		};
+		7D4CF9FA2BA92BA300BC7952 /* Writing */ = {
+			isa = PBXGroup;
+			children = (
+				7D4CF9FB2BA92C1800BC7952 /* WritingPageViewController.swift */,
+				7D4CF9FD2BA932CF00BC7952 /* WritingPageView.swift */,
+			);
+			path = Writing;
 			sourceTree = "<group>";
 		};
 		7D90074D2B8361C1004B6C3C /* Pretendard */ = {
@@ -258,6 +271,7 @@
 		7D9B47F62B7C4BE8003451A2 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				7D4CF9FA2BA92BA300BC7952 /* Writing */,
 				7D9007D42B871D49004B6C3C /* TrackingTime */,
 				7D9007CC2B847E63004B6C3C /* MainHome */,
 				7D9B48432B80C29C003451A2 /* SwcondViewController.swift */,
@@ -475,9 +489,11 @@
 				7D1CF11D2BA07A0500C1807A /* BulletTableViewCell.swift in Sources */,
 				7D9007DD2B886A06004B6C3C /* UIImage.swift in Sources */,
 				7D9B47E72B7A2A00003451A2 /* FillTheEgg.xcdatamodeld in Sources */,
+				7D4CF9FE2BA932CF00BC7952 /* WritingPageView.swift in Sources */,
 				7DCE10E02B96F39B00197635 /* UIImageView.swift in Sources */,
 				7DCE10E72B9731C600197635 /* GratitudejournalView.swift in Sources */,
 				7D9B47FD2B7C4E6C003451A2 /* NameSpace.swift in Sources */,
+				7D4CF9FC2BA92C1800BC7952 /* WritingPageViewController.swift in Sources */,
 				7D9007CE2B847E7D004B6C3C /* HomeView.swift in Sources */,
 				7D9B48442B80C29C003451A2 /* SwcondViewController.swift in Sources */,
 				7D4CF9F32BA8269500BC7952 /* BulletCheckboxTableViewCell.swift in Sources */,
