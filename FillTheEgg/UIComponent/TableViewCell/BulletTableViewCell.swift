@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class BulletTableViewCell : UITableViewCell {
+class BulletTableViewCell : UITableViewCell {
     // MARK: - Components
-    private lazy var contentsStackView : UIStackView = {
+    lazy var contentsStackView : UIStackView = {
         let sv = UIStackView()
         sv.axis = .horizontal
         sv.spacing = 10
@@ -23,7 +23,7 @@ final class BulletTableViewCell : UITableViewCell {
     }()
     
     
-    let bullet : UIView = {
+    private let bullet : UIView = {
         let view = UIView()
         view.backgroundColor = Assets.Colors.mainYellow.color
         view.layer.cornerRadius = 5
@@ -49,6 +49,7 @@ final class BulletTableViewCell : UITableViewCell {
         
         setupStackView()
         setupConstrains() //⭐️ override func updateConstraints() 이 위치가 아니라 override init 여기서 해주어야한다
+        
 
     }
 
@@ -66,14 +67,14 @@ final class BulletTableViewCell : UITableViewCell {
     
     // MARK: - layout constraint draw
     
-    func setupStackView() {
+    private func setupStackView() {
         [contentsStackView]
             .forEach{
                 contentView.addSubview($0)
             }
     }
     
-    func setupConstrains () {
+    private func setupConstrains () {
 
         [contentsStackView, bullet, label]
             .forEach{
