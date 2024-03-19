@@ -11,6 +11,8 @@
 		7D4CF9F12BA573A000BC7952 /* AutoResizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F02BA573A000BC7952 /* AutoResizingTableView.swift */; };
 		7D4CF9F32BA8269500BC7952 /* BulletCheckboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F22BA8269500BC7952 /* BulletCheckboxTableViewCell.swift */; };
 		7D4CF9F52BA83B2700BC7952 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F42BA83B2700BC7952 /* CheckBox.swift */; };
+		7D4CF9F72BA9280700BC7952 /* HomeVC+Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F62BA9280700BC7952 /* HomeVC+Timer.swift */; };
+		7D4CF9F92BA9294E00BC7952 /* HomeVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F82BA9294E00BC7952 /* HomeVC+TableView.swift */; };
 		7D9007B62B846FB3004B6C3C /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AD2B846FB3004B6C3C /* Pretendard-Regular.otf */; };
 		7D9007B72B846FB3004B6C3C /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AE2B846FB3004B6C3C /* Pretendard-Medium.otf */; };
 		7D9007B82B846FB3004B6C3C /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AF2B846FB3004B6C3C /* Pretendard-Light.otf */; };
@@ -55,6 +57,8 @@
 		7D4CF9F02BA573A000BC7952 /* AutoResizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoResizingTableView.swift; sourceTree = "<group>"; };
 		7D4CF9F22BA8269500BC7952 /* BulletCheckboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletCheckboxTableViewCell.swift; sourceTree = "<group>"; };
 		7D4CF9F42BA83B2700BC7952 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		7D4CF9F62BA9280700BC7952 /* HomeVC+Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Timer.swift"; sourceTree = "<group>"; };
+		7D4CF9F82BA9294E00BC7952 /* HomeVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+TableView.swift"; sourceTree = "<group>"; };
 		7D9007AD2B846FB3004B6C3C /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		7D9007AE2B846FB3004B6C3C /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		7D9007AF2B846FB3004B6C3C /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 		7D9007CC2B847E63004B6C3C /* MainHome */ = {
 			isa = PBXGroup;
 			children = (
+				7D4CF9F82BA9294E00BC7952 /* HomeVC+TableView.swift */,
+				7D4CF9F62BA9280700BC7952 /* HomeVC+Timer.swift */,
 				7D9B47E02B7A2A00003451A2 /* HomeViewController.swift */,
 				7D9007CD2B847E7D004B6C3C /* HomeView.swift */,
 				7DCE10E12B97101600197635 /* AttendanceCheckView.swift */,
@@ -455,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D9B47E12B7A2A00003451A2 /* HomeViewController.swift in Sources */,
+				7D4CF9F72BA9280700BC7952 /* HomeVC+Timer.swift in Sources */,
 				7D9B47DD2B7A2A00003451A2 /* AppDelegate.swift in Sources */,
 				7D9B48462B80C438003451A2 /* CalendarHomeViewController.swift in Sources */,
 				7D9007D22B84B9B2004B6C3C /* Assets+Generated.swift in Sources */,
@@ -476,6 +483,7 @@
 				7D4CF9F32BA8269500BC7952 /* BulletCheckboxTableViewCell.swift in Sources */,
 				7D9B47DF2B7A2A00003451A2 /* SceneDelegate.swift in Sources */,
 				7DCE10E52B972E2D00197635 /* Label.swift in Sources */,
+				7D4CF9F92BA9294E00BC7952 /* HomeVC+TableView.swift in Sources */,
 				7D9007CB2B847588004B6C3C /* Fonts+Generated.swift in Sources */,
 				7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */,
 				7D9007D62B871D76004B6C3C /* TrackingTime.swift in Sources */,
