@@ -26,7 +26,7 @@ final class HomeView: UIView {
         return view
     }()
     
-    private let attendCheckSection : AttendanceCheckView = {
+    let attendCheckSection : AttendanceCheckView = {
         let view = AttendanceCheckView(frame: .zero)
 
         return view

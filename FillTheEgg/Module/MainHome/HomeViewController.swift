@@ -29,7 +29,10 @@ final class HomeViewController: UIViewController {
         
         setupTableView() //테이블뷰 dataSource,delegate, cell 등록
         setupTimer()
-        setupEvent()
+        
+        setupAddButtonEvent()
+        
+        setupImageViewTapGesture() //출석인증 사진 첨부하는 UIImageView에 탭 제스쳐 추가
 
     }
     
@@ -44,13 +47,15 @@ final class HomeViewController: UIViewController {
 
     
     // MARK: - Setup Method
-    private func setupEvent() {
+    
+    private func setupAddButtonEvent() {
         viewManager.gratitudeJournalSection.addButton.addTarget(self, action: #selector(gratitudeJournalAddButtonTapped), for: .touchUpInside)
         
         viewManager.dailyGoalsSection.addButton.addTarget(self, action: #selector(dailyGoalAddButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Event Method
+    
     @objc func gratitudeJournalAddButtonTapped() {
         print("🌸🌸gratitudeJournalAddButtonTapped🌸🌸")
         

@@ -16,6 +16,7 @@
 		7D4CF9FC2BA92C1800BC7952 /* WritingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9FB2BA92C1800BC7952 /* WritingPageViewController.swift */; };
 		7D4CF9FE2BA932CF00BC7952 /* WritingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9FD2BA932CF00BC7952 /* WritingPageView.swift */; };
 		7D4CFA012BA9667B00BC7952 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CFA002BA9667B00BC7952 /* BlankView.swift */; };
+		7D4CFA062BAA49CC00BC7952 /* HomeVC+PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CFA052BAA49CC00BC7952 /* HomeVC+PHPicker.swift */; };
 		7D9007B62B846FB3004B6C3C /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AD2B846FB3004B6C3C /* Pretendard-Regular.otf */; };
 		7D9007B72B846FB3004B6C3C /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AE2B846FB3004B6C3C /* Pretendard-Medium.otf */; };
 		7D9007B82B846FB3004B6C3C /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AF2B846FB3004B6C3C /* Pretendard-Light.otf */; };
@@ -65,6 +66,7 @@
 		7D4CF9FB2BA92C1800BC7952 /* WritingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingPageViewController.swift; sourceTree = "<group>"; };
 		7D4CF9FD2BA932CF00BC7952 /* WritingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingPageView.swift; sourceTree = "<group>"; };
 		7D4CFA002BA9667B00BC7952 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
+		7D4CFA052BAA49CC00BC7952 /* HomeVC+PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+PHPicker.swift"; sourceTree = "<group>"; };
 		7D9007AD2B846FB3004B6C3C /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		7D9007AE2B846FB3004B6C3C /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		7D9007AF2B846FB3004B6C3C /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		7D9007CC2B847E63004B6C3C /* MainHome */ = {
 			isa = PBXGroup;
 			children = (
+				7D4CFA052BAA49CC00BC7952 /* HomeVC+PHPicker.swift */,
 				7D4CF9F82BA9294E00BC7952 /* HomeVC+TableView.swift */,
 				7D4CF9F62BA9280700BC7952 /* HomeVC+Timer.swift */,
 				7D9B47E02B7A2A00003451A2 /* HomeViewController.swift */,
@@ -506,6 +509,7 @@
 				7DCE10E72B9731C600197635 /* GratitudejournalView.swift in Sources */,
 				7D9B47FD2B7C4E6C003451A2 /* NameSpace.swift in Sources */,
 				7D4CF9FC2BA92C1800BC7952 /* WritingPageViewController.swift in Sources */,
+				7D4CFA062BAA49CC00BC7952 /* HomeVC+PHPicker.swift in Sources */,
 				7D9007CE2B847E7D004B6C3C /* HomeView.swift in Sources */,
 				7D9B48442B80C29C003451A2 /* SwcondViewController.swift in Sources */,
 				7D4CF9F32BA8269500BC7952 /* BulletCheckboxTableViewCell.swift in Sources */,
