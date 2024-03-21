@@ -23,7 +23,7 @@ final class NormalTextFieldView: UIView {
     
     private lazy var backgroundView: UIView = {
         let view = UIView()
-        view.backgroundColor = Assets.Colors.gray4.color
+        view.backgroundColor = Assets.Colors.gray5.color
         view.clipsToBounds = true
 //        view.layer.borderColor = UIColor(rgb: 0xD23939).cgColor
         view.addSubview(contentsStackView)

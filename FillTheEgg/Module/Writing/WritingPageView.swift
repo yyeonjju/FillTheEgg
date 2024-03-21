@@ -29,9 +29,21 @@ final class WritingPageView : UIView {
         return form
     }()
     
+    private let addButton : UIButton = {
+        let button = UIButton()
+        button.setTitle("+", for: .normal)
+        button.setTitleColor(Assets.Colors.gray2.color, for: .normal)
+        button.titleLabel?.font = FontFamily.Pretendard.semiBold.font(size: 20)
+        
+        button.backgroundColor = Assets.Colors.eggWhite.color
+        button.layer.cornerRadius = 15
+
+        
+        return button
+    }()
     
     
-    private let addButton : BasicButton = {
+    private let registerButton : BasicButton = {
         let button = BasicButton(title: "등록하기", backgroundColor: Assets.Colors.mainYellow.color)
         return button
     }()
@@ -62,6 +74,7 @@ final class WritingPageView : UIView {
         
         [
             textFieldView,
+            registerButton,
             addButton
             
         ]
@@ -71,6 +84,7 @@ final class WritingPageView : UIView {
         
         [
             textFieldView,
+            registerButton,
             addButton
             
         ]
@@ -90,7 +104,7 @@ final class WritingPageView : UIView {
             //스크롤 뷰에 담을 contentView
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            contentView.bottomAnchor.constraint(equalTo: addButton.bottomAnchor),
+            contentView.bottomAnchor.constraint(equalTo: registerButton.bottomAnchor),
             contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             
             //contentView는 전체적으로 scrollView대비 양옆 간격 주기
@@ -100,17 +114,18 @@ final class WritingPageView : UIView {
             
             textFieldView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30),
             textFieldView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            textFieldView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            textFieldView.trailingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: -10),
             
+            addButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            addButton.widthAnchor.constraint(equalToConstant: 45),
+            addButton.heightAnchor.constraint(equalToConstant: 45),
+            addButton.centerYAnchor.constraint(equalTo: textFieldView.textField.centerYAnchor),
             
-            
-            
-            addButton.topAnchor.constraint(equalTo: textFieldView.bottomAnchor, constant: 30),
-            addButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
-            addButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
-            addButton.heightAnchor.constraint(equalToConstant: 70)
-            
-            
+            registerButton.topAnchor.constraint(equalTo: textFieldView.bottomAnchor, constant: 30),
+            registerButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
+            registerButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
+            registerButton.heightAnchor.constraint(equalToConstant: 70)
+
             
             
         ])
