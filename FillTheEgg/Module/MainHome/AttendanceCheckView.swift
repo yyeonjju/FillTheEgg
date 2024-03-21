@@ -18,6 +18,7 @@ final class AttendanceCheckView : UIView {
         view.backgroundColor = Assets.Colors.eggWhite.color
         view.layer.cornerRadius = 10
         view.clipsToBounds = true
+        view.contentMode = .scaleAspectFill
 
         return view
     }()
@@ -71,7 +72,6 @@ final class AttendanceCheckView : UIView {
             }
         
         NSLayoutConstraint.activate([
-            self.heightAnchor.constraint(equalToConstant: 200),
             
             mainLabel.topAnchor.constraint(equalTo: topAnchor),
             mainLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -79,9 +79,10 @@ final class AttendanceCheckView : UIView {
             
             //photoView
             photoImageView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 20),
-            photoImageView.widthAnchor.constraint(equalToConstant: 130),
-            photoImageView.heightAnchor.constraint(equalToConstant: 130),
+            photoImageView.widthAnchor.constraint(equalToConstant: 150),
+            photoImageView.heightAnchor.constraint(equalToConstant: 150),
             photoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            photoImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             photoLabel.centerXAnchor.constraint(equalTo: photoImageView.centerXAnchor),
             photoLabel.centerYAnchor.constraint(equalTo: photoImageView.centerYAnchor)
