@@ -73,6 +73,12 @@ enum Cell {
 
 
 
+// etc.
+
+public let textFieldMaxCount = 40
+//public let textFeildLabelText = ""
+
+
 // MARK: - Fonts
 
 //enum Pretendard {

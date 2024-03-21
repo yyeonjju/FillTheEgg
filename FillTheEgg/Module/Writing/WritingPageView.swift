@@ -23,29 +23,16 @@ final class WritingPageView : UIView {
         return view
     }()
     
-    
-    private let emailTextField : UITextField = {
-       let textField = UITextField()
-        textField.frame.size.height = 48
-        textField.backgroundColor = .brown
-        textField.textColor = .white
-        textField.tintColor = .white
-        textField.autocapitalizationType = .none
-        textField.autocorrectionType = .no
-        textField.spellCheckingType = .no
-        textField.keyboardType = .emailAddress
-        
-//        textField.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
-        
-        
-        return textField
+    let textFieldView : NormalTextFieldView = {
+       let form = NormalTextFieldView()
+        form.countLabel.text = "0/\(textFieldMaxCount)"
+        return form
     }()
     
     
-    private let addButton : UIButton = {
-        let button = UIButton()
-        button.setTitle("addButton", for: .normal)
-        button.backgroundColor = .blue
+    
+    private let addButton : BasicButton = {
+        let button = BasicButton(title: "등록하기", backgroundColor: Assets.Colors.mainYellow.color)
         return button
     }()
     
@@ -56,7 +43,6 @@ final class WritingPageView : UIView {
     // MARK: - Method
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupInitial()
         setupSubView()
         setupConstraints()
     }
@@ -65,10 +51,6 @@ final class WritingPageView : UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    func setupInitial() {
-        
-    }
     
     func setupSubView() {
         addSubview(scrollView)
@@ -79,7 +61,7 @@ final class WritingPageView : UIView {
         
         
         [
-            emailTextField,
+            textFieldView,
             addButton
             
         ]
@@ -88,7 +70,7 @@ final class WritingPageView : UIView {
             }
         
         [
-            emailTextField,
+            textFieldView,
             addButton
             
         ]
@@ -108,7 +90,7 @@ final class WritingPageView : UIView {
             //스크롤 뷰에 담을 contentView
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-//            contentView.bottomAnchor.constraint(equalTo: dailyGoalsSection.bottomAnchor),
+            contentView.bottomAnchor.constraint(equalTo: addButton.bottomAnchor),
             contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             
             //contentView는 전체적으로 scrollView대비 양옆 간격 주기
@@ -116,10 +98,17 @@ final class WritingPageView : UIView {
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -10),
             
             
-            emailTextField.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30),
-            emailTextField.widthAnchor.constraint(equalToConstant: 200),
+            textFieldView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30),
+            textFieldView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            textFieldView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             
-            addButton.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 30)
+            
+            
+            
+            addButton.topAnchor.constraint(equalTo: textFieldView.bottomAnchor, constant: 30),
+            addButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
+            addButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
+            addButton.heightAnchor.constraint(equalToConstant: 70)
             
             
             
