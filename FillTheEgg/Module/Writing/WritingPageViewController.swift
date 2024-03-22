@@ -26,6 +26,15 @@ class WritingPageViewController: UIViewController {
         setupAddTarget()
         
         hideKeyboardWhenTappedAround()
+        
+        setupTableView() //테이블뷰 dataSource,delegate, cell 등록
+    }
+    
+    //뷰가 화면에 나타날때마다 계속 호출
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewManager.tableView.reloadData()
+        
     }
     
     func setupDelegate() {

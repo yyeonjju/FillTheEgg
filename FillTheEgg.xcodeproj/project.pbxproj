@@ -19,6 +19,8 @@
 		7D4CFA062BAA49CC00BC7952 /* HomeVC+PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CFA052BAA49CC00BC7952 /* HomeVC+PHPicker.swift */; };
 		7D807EBA2BAC0B6C001E6F3A /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D807EB92BAC0B6C001E6F3A /* TextFieldView.swift */; };
 		7D807EBC2BAC62BD001E6F3A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D807EBB2BAC62BD001E6F3A /* UIViewController.swift */; };
+		7D807EBE2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D807EBD2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift */; };
+		7D807EC02BAD256B001E6F3A /* WritingPageVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D807EBF2BAD256B001E6F3A /* WritingPageVC+TableView.swift */; };
 		7D9007B62B846FB3004B6C3C /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AD2B846FB3004B6C3C /* Pretendard-Regular.otf */; };
 		7D9007B72B846FB3004B6C3C /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AE2B846FB3004B6C3C /* Pretendard-Medium.otf */; };
 		7D9007B82B846FB3004B6C3C /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D9007AF2B846FB3004B6C3C /* Pretendard-Light.otf */; };
@@ -71,6 +73,8 @@
 		7D4CFA052BAA49CC00BC7952 /* HomeVC+PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+PHPicker.swift"; sourceTree = "<group>"; };
 		7D807EB92BAC0B6C001E6F3A /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		7D807EBB2BAC62BD001E6F3A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		7D807EBD2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletWithDeleteButtonTableViewCell.swift; sourceTree = "<group>"; };
+		7D807EBF2BAD256B001E6F3A /* WritingPageVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WritingPageVC+TableView.swift"; sourceTree = "<group>"; };
 		7D9007AD2B846FB3004B6C3C /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		7D9007AE2B846FB3004B6C3C /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		7D9007AF2B846FB3004B6C3C /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 			children = (
 				7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */,
 				7D4CF9F22BA8269500BC7952 /* BulletCheckboxTableViewCell.swift */,
+				7D807EBD2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			children = (
 				7D4CF9FB2BA92C1800BC7952 /* WritingPageViewController.swift */,
 				7D4CF9FD2BA932CF00BC7952 /* WritingPageView.swift */,
+				7D807EBF2BAD256B001E6F3A /* WritingPageVC+TableView.swift */,
 			);
 			path = Writing;
 			sourceTree = "<group>";
@@ -510,6 +516,7 @@
 				7D4CF9F52BA83B2700BC7952 /* CheckBox.swift in Sources */,
 				7D9007D82B87511E004B6C3C /* DateFormatter.swift in Sources */,
 				7D9007DB2B8758DA004B6C3C /* TimerManager.swift in Sources */,
+				7D807EC02BAD256B001E6F3A /* WritingPageVC+TableView.swift in Sources */,
 				7D4CF9F12BA573A000BC7952 /* AutoResizingTableView.swift in Sources */,
 				7DCE10E22B97101600197635 /* AttendanceCheckView.swift in Sources */,
 				7DCE10EC2B9733B500197635 /* Button.swift in Sources */,
@@ -532,6 +539,7 @@
 				7D9B47DF2B7A2A00003451A2 /* SceneDelegate.swift in Sources */,
 				7DCE10E52B972E2D00197635 /* Label.swift in Sources */,
 				7D4CF9F92BA9294E00BC7952 /* HomeVC+TableView.swift in Sources */,
+				7D807EBE2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift in Sources */,
 				7D9007CB2B847588004B6C3C /* Fonts+Generated.swift in Sources */,
 				7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */,
 				7D9007D62B871D76004B6C3C /* TrackingTime.swift in Sources */,

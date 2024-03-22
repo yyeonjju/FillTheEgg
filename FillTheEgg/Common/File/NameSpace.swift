@@ -69,6 +69,17 @@ public var dailyGoalList : [DailyGoal] = [
 enum Cell {
     static let bulletCell = "bulletCell"
     static let bulletCheckboxCell = "bulletCheckboxCell"
+    static let bulletWithDeleteButtonCell = "bulletWithDeleteButtonCell"
+}
+
+// MARK: - homeView blank text & writingPageView blank text
+
+enum BlankViewText {
+    static let gratitudeJournalHomeViewText = "감사일기 3개 작성하기! \n 사소한 것에도 감사함을 느끼는 것 부터가 \n 행복의 시작입니다 :)"
+    static let gratitudeJournalWritingPageText = "행복한 하루를 위한 오전 루틴의 시작!\n감사일기 3가지를 등록해보세요!\n\n ex) \n건강하고 행복하게 하루를 시작할 수 있음에 감사합니다. \n 어제하루 알차게 일하고 운동까지 할 수 있었음에 감사합니다."
+    
+    static let dailyGoalHomeViewText = "오전목표 단 3개! \n 거창한거 노노. 작은거라도 좋아요. \n 작은 목표를 달성하면서 성취감을 맛보세요 :)"
+    static let dailyGoalWritingPageText = "금같은 아침 집중력을 위해\n오전 목표 3가지를 등록해보세요!\n\n ex) \n블로그 초안 작성하기 \n 메신저 답장하기. 연락 쌓이는 거 멈춰!"
 }
 
 

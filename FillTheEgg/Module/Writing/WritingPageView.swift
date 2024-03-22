@@ -32,16 +32,26 @@ final class WritingPageView : UIView {
     private let addButton : UIButton = {
         let button = UIButton()
         button.setTitle("+", for: .normal)
-        button.setTitleColor(Assets.Colors.gray2.color, for: .normal)
-        button.titleLabel?.font = FontFamily.Pretendard.semiBold.font(size: 20)
-        
-        button.backgroundColor = Assets.Colors.eggWhite.color
+        button.setTitleColor(Assets.Colors.white.color, for: .normal)
+        button.titleLabel?.font = FontFamily.Pretendard.semiBold.font(size: 25)
+        button.backgroundColor = Assets.Colors.mainYellow.color
         button.layer.cornerRadius = 15
-
         
         return button
     }()
     
+    
+    let tableView : AutoResizingTableView = {
+        let tableView = AutoResizingTableView()
+
+        return tableView
+    }()
+    
+    private let defaultView : BlankView = {
+        let view = BlankView(text: BlankViewText.gratitudeJournalWritingPageText)
+        
+        return view
+    }()
     
     private let registerButton : BasicButton = {
         let button = BasicButton(title: "등록하기", backgroundColor: Assets.Colors.mainYellow.color)
@@ -75,7 +85,9 @@ final class WritingPageView : UIView {
         [
             textFieldView,
             registerButton,
-            addButton
+            addButton,
+            tableView,
+            defaultView
             
         ]
             .forEach {
@@ -85,7 +97,9 @@ final class WritingPageView : UIView {
         [
             textFieldView,
             registerButton,
-            addButton
+            addButton,
+            tableView,
+            defaultView
             
         ]
             .forEach {
@@ -121,7 +135,8 @@ final class WritingPageView : UIView {
             addButton.heightAnchor.constraint(equalToConstant: 45),
             addButton.centerYAnchor.constraint(equalTo: textFieldView.textField.centerYAnchor),
             
-            registerButton.topAnchor.constraint(equalTo: textFieldView.bottomAnchor, constant: 30),
+
+            //registerButton의 topAnchor 는 defaultView가 뜨냐 tableView가 뜨냐에 따라 다름
             registerButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
             registerButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
             registerButton.heightAnchor.constraint(equalToConstant: 70)
@@ -129,6 +144,28 @@ final class WritingPageView : UIView {
             
             
         ])
+        
+        // 데이터가 있는지에 따라서 뷰 보여주기
+        if gratitudeJournalList.isEmpty {
+            NSLayoutConstraint.activate([
+                defaultView.topAnchor.constraint(equalTo: textFieldView.bottomAnchor, constant: 30),
+                defaultView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+                
+                registerButton.topAnchor.constraint(equalTo: defaultView.bottomAnchor, constant: 30),
+            ])
+            
+        } else {
+            defaultView.isHidden = true
+            
+            NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: textFieldView.bottomAnchor, constant: 30),
+            tableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            
+            registerButton.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 30)
+            
+            ])
+        }
     }
     
 }

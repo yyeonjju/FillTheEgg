@@ -24,7 +24,7 @@ final class DailyGoalsView : UIView {
     }()
     
     private let defaultView : BlankView = {
-        let view = BlankView(text: "오전목표 단 3개! \n 거창한거 노노. 작은거라도 좋아요. \n 작은 목표를 달성하면서 성취감을 맛보세요 :)")
+        let view = BlankView(text: BlankViewText.dailyGoalHomeViewText)
         
         return view
     }()

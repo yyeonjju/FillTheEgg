@@ -24,7 +24,7 @@ final class GratitudejournalView : UIView {
     }()
     
     private let defaultView : BlankView = {
-        let view = BlankView(text: "감사일기 3개 작성하기! \n 사소한 것에도 감사함을 느끼는 것 부터가 \n 행복의 시작입니다 :)")
+        let view = BlankView(text: BlankViewText.gratitudeJournalHomeViewText)
         
         return view
     }()
