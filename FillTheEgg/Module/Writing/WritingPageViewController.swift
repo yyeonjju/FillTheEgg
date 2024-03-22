@@ -9,8 +9,27 @@ import UIKit
 
 class WritingPageViewController: UIViewController {
     
+    enum Mode {
+        case writeGratitudeJournal
+        case writeDailyGoal
+    }
+    
     let viewManager = WritingPageView()
     
+    var mode: Mode = .writeGratitudeJournal {
+        didSet {
+            if mode == .writeGratitudeJournal {
+                title = "감사 일기"
+
+            }
+            
+            if mode == .writeDailyGoal {
+                title = "오전 목표"
+
+            }
+        }
+    }
+
     // MARK: - ViewController LifeCycle
     
     //뷰를 메모리에 올리는 과정에 실행
@@ -40,6 +59,16 @@ class WritingPageViewController: UIViewController {
     
     // MARK: - Setup Method
     
+    func setupGratitudeJournalMode() {
+        mode = .writeGratitudeJournal
+        viewManager.textFieldView.textField.placeholder = "감사일기 작성이야~~"
+
+    }
+    func setupDailyGoalMode() {
+        mode = .writeDailyGoal
+        viewManager.textFieldView.textField.placeholder = "오전 목표 작성이야~~"
+    }
+    
     private func setupButtonEvent() {
         //addButton
         viewManager.addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
@@ -48,11 +77,11 @@ class WritingPageViewController: UIViewController {
         viewManager.registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
     }
     
-    func setupDelegate() {
+    private func setupDelegate() {
         viewManager.textFieldView.textField.delegate = self
     }
     
-    func setupAddTarget() {
+    private func setupAddTarget() {
         // textFieldView - Tap Event
         //// UITextField가 탭됐을 떄 뿐만 아니라 textFieldView라는 UIView 어느 부분이 탭되어도 제스쳐 인식할 수 있도록
         let textFieldViewTap = UITapGestureRecognizer(target: self, action: #selector(textFieldViewTapped(sender:)))
@@ -75,7 +104,13 @@ class WritingPageViewController: UIViewController {
             viewManager.textFieldView.isWarningLabelEnabled(true)
             
         } else {
-            gratitudeJournalList.append(Journal(id: gratitudeJournalList.count, text: text))
+            switch mode {
+            case .writeGratitudeJournal :
+                gratitudeJournalList.append(Journal(id: gratitudeJournalList.count, text: text))
+            case .writeDailyGoal :
+                dailyGoalList.append(DailyGoal(id: dailyGoalList.count, text: text, isDone: false))
+            }
+
             ////데이터 업데이트하고 다시 테이블뷰 리로드
             viewManager.tableView.reloadData()
             ////텍스트필드 & 글자수 초기화

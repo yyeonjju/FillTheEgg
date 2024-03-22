@@ -59,15 +59,21 @@ final class HomeViewController: UIViewController {
     @objc func gratitudeJournalAddButtonTapped() {
         print("🌸🌸gratitudeJournalAddButtonTapped🌸🌸")
         
-        let WritingPageVC = WritingPageViewController()
-        navigationController?.pushViewController(WritingPageVC, animated: true)
+        let writingPageVC = WritingPageViewController()
+        writingPageVC.hidesBottomBarWhenPushed = true
+        writingPageVC.setupGratitudeJournalMode()
+        
+        navigationController?.pushViewController(writingPageVC, animated: true)
     }
     
     @objc func dailyGoalAddButtonTapped() {
         print("🌸🌸dailyGoalAddButtonTapped🌸🌸")
         
-        let WritingPageVC = WritingPageViewController()
-        navigationController?.pushViewController(WritingPageVC, animated: true)
+        let writingPageVC = WritingPageViewController()
+        writingPageVC.hidesBottomBarWhenPushed = true
+        writingPageVC.setupDailyGoalMode()
+        
+        navigationController?.pushViewController(writingPageVC, animated: true)
     }
     
     

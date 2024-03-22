@@ -22,7 +22,13 @@ extension WritingPageViewController {
         cell.deleteCell = { [weak self] _ in
             guard let self else { return }
             
-            gratitudeJournalList.remove(at: index)
+            if mode == .writeGratitudeJournal {
+                gratitudeJournalList.remove(at: index)
+            }
+            if mode == .writeDailyGoal {
+                dailyGoalList.remove(at: index)
+            }
+           
             viewManager.tableView.reloadData()
         }
     }
@@ -35,44 +41,32 @@ extension WritingPageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("✅numberOfRowsInSection", gratitudeJournalList.count)
         
-//        if tableView == viewManager.tableView {
-//            return gratitudeJournalList.count
-//        }
-//
-//        if tableView == viewManager.dailyGoalsSection.bulletChckboxTableView {
-//            return dailyGoalList.count
-//        }
-        
         tableView.isScrollEnabled = false
-        return gratitudeJournalList.count
+        
+        if mode == .writeGratitudeJournal {
+            return gratitudeJournalList.count
+        }
+
+        if mode == .writeDailyGoal {
+            return dailyGoalList.count
+        }
+        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("✅cellForRowAt")
-
-//        if tableView == viewManager.gratitudeJournalSection.bulletTableView {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: Cell.bulletCell, for: indexPath) as! BulletTableViewCell
-//            cell.label.text = gratitudeJournalList[indexPath.row].text
-//            cell.selectionStyle = .none
-//
-//            return cell
-//        }
-//
-//        if tableView == viewManager.dailyGoalsSection.bulletChckboxTableView {
-//
-//            print("✅cellForRowAt  dailyGoalsSection")
-//            let cell = tableView.dequeueReusableCell(withIdentifier: Cell.bulletCheckboxCell, for: indexPath) as! BulletCheckboxTableViewCell
-//            cell.label.text = dailyGoalList[indexPath.row].text
-//            cell.ckeckbox.isChecked = dailyGoalList[indexPath.row].isDone
-//            cell.selectionStyle = .none
-//
-//            return cell
-//        }
-//        return UITableViewCell()
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.bulletWithDeleteButtonCell, for: indexPath) as! BulletWithDeleteButtonTableViewCell
-        cell.label.text = gratitudeJournalList[indexPath.row].text
         cell.selectionStyle = .none
+        
+        if mode == .writeGratitudeJournal {
+            cell.label.text = gratitudeJournalList[indexPath.row].text
+        }
+        
+        if mode == .writeDailyGoal {
+            cell.label.text = dailyGoalList[indexPath.row].text
+        }
         
         //셀 내부의 삭제(휴지통) 버튼 눌렀을 때 실행되는 작업 설정
         configureDeleteButton(cell, index : indexPath.row)
