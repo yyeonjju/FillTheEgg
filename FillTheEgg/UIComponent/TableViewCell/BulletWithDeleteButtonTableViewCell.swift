@@ -8,6 +8,9 @@
 import UIKit
 
 final class BulletWithDeleteButtonTableViewCell : BulletTableViewCell {
+    
+    var deleteCell: (BulletWithDeleteButtonTableViewCell) -> Void = { _ in }
+    
     // MARK: - Components
     
     private let deleteButton : UIButton = {
@@ -19,6 +22,8 @@ final class BulletWithDeleteButtonTableViewCell : BulletTableViewCell {
         button.backgroundColor = Assets.Colors.gray4.color
         button.tintColor = Assets.Colors.gray3.color
         button.layer.cornerRadius = 5
+        
+        button.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
 
         return button
     }()
@@ -58,6 +63,11 @@ final class BulletWithDeleteButtonTableViewCell : BulletTableViewCell {
             deleteButton.heightAnchor.constraint(equalToConstant: 40),
         ])
 
+    }
+    
+    // MARK: - method
+    @objc func deleteButtonTapped() {
+        deleteCell(self)
     }
     
 }

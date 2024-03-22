@@ -43,7 +43,7 @@ final class NormalTextFieldView: UIView {
         let field = UITextField()
         field.placeholder = "감사일기"
         field.font = FontFamily.Pretendard.semiBold.font(size: 16)
-        field.textColor = Assets.Colors.black.color
+        field.textColor = Assets.Colors.gray2.color
 //        field.textColor = .green
         field.autocorrectionType = .no
         field.autocapitalizationType = .none

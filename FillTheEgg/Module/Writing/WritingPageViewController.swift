@@ -24,6 +24,7 @@ class WritingPageViewController: UIViewController {
         
         setupDelegate()
         setupAddTarget()
+        setupButtonEvent()
         
         hideKeyboardWhenTappedAround()
         
@@ -35,6 +36,16 @@ class WritingPageViewController: UIViewController {
         super.viewWillAppear(animated)
         viewManager.tableView.reloadData()
         
+    }
+    
+    // MARK: - Setup Method
+    
+    private func setupButtonEvent() {
+        //addButton
+        viewManager.addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
+        
+        //registerButton
+        viewManager.registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
     }
     
     func setupDelegate() {
@@ -53,6 +64,31 @@ class WritingPageViewController: UIViewController {
             .addTarget(self, action: #selector(taskLabelTextFieldChanged), for: .editingChanged)
     }
     
+    // MARK: - Event Method
+    
+    @objc func addButtonTapped() {
+        
+        guard let text = viewManager.textFieldView.textField.text else {return }
+        
+        if text.isEmpty{
+            viewManager.textFieldView.warningLabel.text = "텍스트를 입력해주세요."
+            viewManager.textFieldView.isWarningLabelEnabled(true)
+            
+        } else {
+            gratitudeJournalList.append(Journal(id: gratitudeJournalList.count, text: text))
+            ////데이터 업데이트하고 다시 테이블뷰 리로드
+            viewManager.tableView.reloadData()
+            ////텍스트필드 & 글자수 초기화
+            viewManager.textFieldView.textField.text = ""
+            self.viewManager.textFieldView.countLabel.text = "0/\(textFieldMaxCount)"
+        }
+        
+    }
+    
+    @objc func registerButtonTapped() {
+        print("작성된 감사일기 저장하기")
+    }
+    
     /// FieldForm 전체 영역 선택 가능
     @objc func textFieldViewTapped(sender: UITapGestureRecognizer) {
         DispatchQueue.main.async {
@@ -64,6 +100,14 @@ class WritingPageViewController: UIViewController {
         guard let text = viewManager.textFieldView.textField.text else { return }
         
         DispatchQueue.main.async {
+            if text.isEmpty {
+                self.viewManager.textFieldView.warningLabel.text = "텍스트를 입력해주세요."
+                self.viewManager.textFieldView.isWarningLabelEnabled(true)
+            }else {
+                self.viewManager.textFieldView.warningLabel.text = ""
+                self.viewManager.textFieldView.isWarningLabelEnabled(false)
+            }
+            
             // 글자수 현황 업데이트
             self.viewManager.textFieldView.countLabel.text = "\(text.count)/\(textFieldMaxCount)"
         }
@@ -102,6 +146,7 @@ extension WritingPageViewController: UITextFieldDelegate {
     // 텍스트필드의 엔터키가 눌러졌을때 호출 (동작할지 말지 물어보는 것)
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        addButtonTapped()
         return true
     }
     

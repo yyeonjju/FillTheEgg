@@ -29,7 +29,7 @@ final class WritingPageView : UIView {
         return form
     }()
     
-    private let addButton : UIButton = {
+    let addButton : UIButton = {
         let button = UIButton()
         button.setTitle("+", for: .normal)
         button.setTitleColor(Assets.Colors.white.color, for: .normal)
@@ -53,7 +53,7 @@ final class WritingPageView : UIView {
         return view
     }()
     
-    private let registerButton : BasicButton = {
+    let registerButton : BasicButton = {
         let button = BasicButton(title: "등록하기", backgroundColor: Assets.Colors.mainYellow.color)
         return button
     }()

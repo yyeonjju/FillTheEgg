@@ -17,6 +17,16 @@ extension WritingPageViewController {
         
     }
     
+    private func configureDeleteButton(_ cell : BulletWithDeleteButtonTableViewCell, index: Int) {
+        
+        cell.deleteCell = { [weak self] _ in
+            guard let self else { return }
+            
+            gratitudeJournalList.remove(at: index)
+            viewManager.tableView.reloadData()
+        }
+    }
+    
 }
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
@@ -63,6 +73,9 @@ extension WritingPageViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.bulletWithDeleteButtonCell, for: indexPath) as! BulletWithDeleteButtonTableViewCell
         cell.label.text = gratitudeJournalList[indexPath.row].text
         cell.selectionStyle = .none
+        
+        //셀 내부의 삭제(휴지통) 버튼 눌렀을 때 실행되는 작업 설정
+        configureDeleteButton(cell, index : indexPath.row)
         
         return cell
 
