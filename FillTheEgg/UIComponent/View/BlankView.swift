@@ -61,7 +61,8 @@ final class BlankView : UIView {
         NSLayoutConstraint.activate([
             
             defaultView.topAnchor.constraint(equalTo: topAnchor),
-            defaultView.widthAnchor.constraint(equalTo: widthAnchor),
+            defaultView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            defaultView.trailingAnchor.constraint(equalTo: trailingAnchor),
             defaultView.heightAnchor.constraint(equalToConstant: 250),
             defaultView.bottomAnchor.constraint(equalTo: bottomAnchor),
             

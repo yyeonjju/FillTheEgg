@@ -40,6 +40,7 @@
 		7D9007D82B87511E004B6C3C /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9007D72B87511E004B6C3C /* DateFormatter.swift */; };
 		7D9007DB2B8758DA004B6C3C /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9007DA2B8758DA004B6C3C /* TimerManager.swift */; };
 		7D9007DD2B886A06004B6C3C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9007DC2B886A06004B6C3C /* UIImage.swift */; };
+		7D99A5872BB033D400C81432 /* GratitudeJournalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99A5862BB033D400C81432 /* GratitudeJournalDataStore.swift */; };
 		7D9B47DD2B7A2A00003451A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B47DC2B7A2A00003451A2 /* AppDelegate.swift */; };
 		7D9B47DF2B7A2A00003451A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B47DE2B7A2A00003451A2 /* SceneDelegate.swift */; };
 		7D9B47E12B7A2A00003451A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B47E02B7A2A00003451A2 /* HomeViewController.swift */; };
@@ -94,6 +95,7 @@
 		7D9007D72B87511E004B6C3C /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		7D9007DA2B8758DA004B6C3C /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		7D9007DC2B886A06004B6C3C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		7D99A5862BB033D400C81432 /* GratitudeJournalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeJournalDataStore.swift; sourceTree = "<group>"; };
 		7D9B47D92B7A2A00003451A2 /* FillTheEgg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FillTheEgg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9B47DC2B7A2A00003451A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D9B47DE2B7A2A00003451A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -241,6 +243,37 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		7D99A5802BB0323100C81432 /* GratitudeJournal */ = {
+			isa = PBXGroup;
+			children = (
+				7D99A5832BB0326C00C81432 /* Model */,
+			);
+			path = GratitudeJournal;
+			sourceTree = "<group>";
+		};
+		7D99A5812BB0323C00C81432 /* DailyGoal */ = {
+			isa = PBXGroup;
+			children = (
+				7D99A5822BB0324F00C81432 /* Model */,
+			);
+			path = DailyGoal;
+			sourceTree = "<group>";
+		};
+		7D99A5822BB0324F00C81432 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D99A5832BB0326C00C81432 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D99A5862BB033D400C81432 /* GratitudeJournalDataStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7D9B47D02B7A2A00003451A2 = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +337,8 @@
 		7D9B47F62B7C4BE8003451A2 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				7D99A5812BB0323C00C81432 /* DailyGoal */,
+				7D99A5802BB0323100C81432 /* GratitudeJournal */,
 				7D4CF9FA2BA92BA300BC7952 /* Writing */,
 				7D9007D42B871D49004B6C3C /* TrackingTime */,
 				7D9007CC2B847E63004B6C3C /* MainHome */,
@@ -541,6 +576,7 @@
 				7D4CF9F92BA9294E00BC7952 /* HomeVC+TableView.swift in Sources */,
 				7D807EBE2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift in Sources */,
 				7D9007CB2B847588004B6C3C /* Fonts+Generated.swift in Sources */,
+				7D99A5872BB033D400C81432 /* GratitudeJournalDataStore.swift in Sources */,
 				7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */,
 				7D9007D62B871D76004B6C3C /* TrackingTime.swift in Sources */,
 			);

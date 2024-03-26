@@ -23,7 +23,7 @@ extension WritingPageViewController {
             guard let self else { return }
             
             if mode == .writeGratitudeJournal {
-                gratitudeJournalList.remove(at: index)
+                gratitudeJournalData.delete(index: index)
             }
             if mode == .writeDailyGoal {
                 dailyGoalList.remove(at: index)
@@ -39,28 +39,33 @@ extension WritingPageViewController {
 
 extension WritingPageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("✅numberOfRowsInSection", gratitudeJournalList.count)
-        
-        tableView.isScrollEnabled = false
         
         if mode == .writeGratitudeJournal {
+            let gratitudeJournalList = gratitudeJournalData.list()
+            
+            //테이블뷰가 리로드될 때 viewManager.dataList를 업데이트해주면?
+            viewManager.dataList = gratitudeJournalList
+            
             return gratitudeJournalList.count
         }
 
         if mode == .writeDailyGoal {
+
             return dailyGoalList.count
         }
+
         
         return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("✅cellForRowAt")
+
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.bulletWithDeleteButtonCell, for: indexPath) as! BulletWithDeleteButtonTableViewCell
         cell.selectionStyle = .none
         
         if mode == .writeGratitudeJournal {
+            let gratitudeJournalList = gratitudeJournalData.list()
             cell.label.text = gratitudeJournalList[indexPath.row].text
         }
         

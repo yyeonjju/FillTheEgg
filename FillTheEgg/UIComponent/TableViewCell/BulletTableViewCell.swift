@@ -18,7 +18,7 @@ class BulletTableViewCell : UITableViewCell {
         sv.addArrangedSubview(bullet)
         sv.addArrangedSubview(label)
 //        sv.backgroundColor = .red
-        let _ = print("🍑BulletTableViewCell - stackView")
+//        let _ = print("🍑BulletTableViewCell - stackView")
         return sv
     }()
     
@@ -59,7 +59,7 @@ class BulletTableViewCell : UITableViewCell {
     }
     
     override func updateConstraints() {
-        print("🍑BulletTableViewCell - updateConstraints")
+//        print("🍑BulletTableViewCell - updateConstraints")
         super.updateConstraints()
     }
 

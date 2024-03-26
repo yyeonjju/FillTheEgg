@@ -15,6 +15,7 @@ class WritingPageViewController: UIViewController {
     }
     
     let viewManager = WritingPageView()
+    let gratitudeJournalData = GratitudeJournalDataStore.shared
     
     var mode: Mode = .writeGratitudeJournal {
         didSet {
@@ -48,13 +49,15 @@ class WritingPageViewController: UIViewController {
         hideKeyboardWhenTappedAround()
         
         setupTableView() //테이블뷰 dataSource,delegate, cell 등록
+        print("🌸WritingPageViewController - viewDidLoad")
     }
     
     //뷰가 화면에 나타날때마다 계속 호출
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    
+        //tableView 리로드
         viewManager.tableView.reloadData()
-        
     }
     
     // MARK: - Setup Method
@@ -74,7 +77,7 @@ class WritingPageViewController: UIViewController {
         viewManager.addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
         
         //registerButton
-        viewManager.registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
+//        viewManager.registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
     }
     
     private func setupDelegate() {
@@ -98,17 +101,17 @@ class WritingPageViewController: UIViewController {
     @objc func addButtonTapped() {
         
         guard let text = viewManager.textFieldView.textField.text else {return }
-        
+
         if text.isEmpty{
             viewManager.textFieldView.warningLabel.text = "텍스트를 입력해주세요."
             viewManager.textFieldView.isWarningLabelEnabled(true)
-            
+
         } else {
             switch mode {
             case .writeGratitudeJournal :
-                gratitudeJournalList.append(Journal(id: gratitudeJournalList.count, text: text))
+                gratitudeJournalData.create(text: text)
             case .writeDailyGoal :
-                dailyGoalList.append(DailyGoal(id: dailyGoalList.count, text: text, isDone: false))
+                dailyGoalList.append(Goal(id: dailyGoalList.count, text: text, isDone: false))
             }
 
             ////데이터 업데이트하고 다시 테이블뷰 리로드
@@ -117,6 +120,10 @@ class WritingPageViewController: UIViewController {
             viewManager.textFieldView.textField.text = ""
             self.viewManager.textFieldView.countLabel.text = "0/\(textFieldMaxCount)"
         }
+        
+//        gratitudeJournalData.create(text: "하하하하")
+////        viewManager.tableView.reloadData()
+//        print("코어데이터 Read -> ",gratitudeJournalData.list())
         
     }
     

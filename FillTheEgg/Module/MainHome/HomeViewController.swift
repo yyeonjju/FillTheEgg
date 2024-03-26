@@ -12,6 +12,7 @@ final class HomeViewController: UIViewController {
     let viewManager = HomeView()
     let trackingTime = TrackingTime.shared
     let timerManager = TimerManager.shared
+    let gratitudeJournalData = GratitudeJournalDataStore.shared
 
     
     // MARK: - ViewController LifeCycle
@@ -33,15 +34,22 @@ final class HomeViewController: UIViewController {
         setupAddButtonEvent()
         
         setupImageViewTapGesture() //출석인증 사진 첨부하는 UIImageView에 탭 제스쳐 추가
-
+        
+//        print("🌸viewDidLoad", gratitudeJournalData.list())
+//        gratitudeJournalData.resetAllData()
     }
     
     //뷰가 화면에 나타날때마다 계속 호출
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        //tableView 리로드
         viewManager.gratitudeJournalSection.bulletTableView.reloadData()
         viewManager.dailyGoalsSection.bulletChckboxTableView.reloadData()
         
+        //defaultView를 위한 데이터 재할당
+        viewManager.gratitudeJournalSection.dataList = gratitudeJournalData.list()
+    
     }
 
 

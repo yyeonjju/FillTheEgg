@@ -147,7 +147,7 @@ final class HomeView: UIView {
     //뷰의 드로잉 주기 중 하위뷰의 레이아웃을 설정하는 단계
     override func layoutSubviews() {
         super.layoutSubviews()
-        print("❤️layoutSubviews")
+//        print("❤️layoutSubviews")
         eggRateImage.changeFilledRatio(ratio: 0.5)
     }
     
@@ -259,18 +259,21 @@ final class HomeView: UIView {
             
             //attendCheckSection
             attendCheckSection.topAnchor.constraint(equalTo: motivationStackView.bottomAnchor, constant: 50),
+            attendCheckSection.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            attendCheckSection.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             attendCheckSection.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            attendCheckSection.widthAnchor.constraint(equalTo: contentView.widthAnchor),
-            
+
             //gratitudeJournalSection
             gratitudeJournalSection.topAnchor.constraint(equalTo: attendCheckSection.bottomAnchor, constant: 50),
+            gratitudeJournalSection.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            gratitudeJournalSection.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             gratitudeJournalSection.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            gratitudeJournalSection.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             
             //dailyGoalsSection
             dailyGoalsSection.topAnchor.constraint(equalTo: gratitudeJournalSection.bottomAnchor, constant: 50),
+            dailyGoalsSection.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            dailyGoalsSection.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             dailyGoalsSection.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            dailyGoalsSection.widthAnchor.constraint(equalTo: contentView.widthAnchor),
 
             
             

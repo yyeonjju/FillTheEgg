@@ -16,6 +16,17 @@ final class WritingPageView : UIView {
         return scrollView
     }()
     
+    var dataList : [AnyObject] = []{
+        didSet{
+            if dataList.isEmpty{
+                defaultView.isHidden = false
+            } else {
+                defaultView.isHidden = true
+            }
+            
+        }
+    }
+    
     
     var contentView: UIView = {
         let view = UIView()
@@ -43,28 +54,26 @@ final class WritingPageView : UIView {
     
     let tableView : AutoResizingTableView = {
         let tableView = AutoResizingTableView()
-
+        tableView.isScrollEnabled = false
+        tableView.backgroundColor = .red
         return tableView
     }()
     
     private let defaultView : BlankView = {
         let view = BlankView(text: BlankViewText.gratitudeJournalWritingPageText)
-        
+
         return view
     }()
     
-    let registerButton : BasicButton = {
-        let button = BasicButton(title: "등록하기", backgroundColor: Assets.Colors.mainYellow.color)
-        return button
-    }()
-    
-    
-    
-    
+//    let registerButton : BasicButton = {
+//        let button = BasicButton(title: "등록하기", backgroundColor: Assets.Colors.mainYellow.color)
+//        return button
+//    }()
     
     // MARK: - Method
     override init(frame: CGRect) {
         super.init(frame: frame)
+
         setupSubView()
         setupConstraints()
     }
@@ -73,22 +82,23 @@ final class WritingPageView : UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - layout
     
     func setupSubView() {
         addSubview(scrollView)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
-        scrollView.addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
+        [contentView, defaultView]
+            .forEach {
+                scrollView.addSubview($0)
+                $0.translatesAutoresizingMaskIntoConstraints = false
+            }
         
         
         [
             textFieldView,
-            registerButton,
             addButton,
             tableView,
-            defaultView
-            
         ]
             .forEach {
                 contentView.addSubview($0)
@@ -96,15 +106,13 @@ final class WritingPageView : UIView {
         
         [
             textFieldView,
-            registerButton,
             addButton,
             tableView,
-            defaultView
-            
         ]
             .forEach {
                 $0.translatesAutoresizingMaskIntoConstraints = false
             }
+        
     }
     
     func setupConstraints() {
@@ -115,11 +123,16 @@ final class WritingPageView : UIView {
             scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            //스크롤 뷰에 담을 contentView
+            //스크롤 뷰의 subView : contentView
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            contentView.bottomAnchor.constraint(equalTo: registerButton.bottomAnchor),
+            contentView.bottomAnchor.constraint(equalTo: tableView.bottomAnchor),
             contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            
+            //스크롤 뷰의 subView : defaultView
+            defaultView.topAnchor.constraint(equalTo: textFieldView.bottomAnchor, constant: 30),
+            defaultView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 10),
+            defaultView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -10),
             
             //contentView는 전체적으로 scrollView대비 양옆 간격 주기
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 10),
@@ -134,38 +147,13 @@ final class WritingPageView : UIView {
             addButton.widthAnchor.constraint(equalToConstant: 45),
             addButton.heightAnchor.constraint(equalToConstant: 45),
             addButton.centerYAnchor.constraint(equalTo: textFieldView.textField.centerYAnchor),
-            
-
-            //registerButton의 topAnchor 는 defaultView가 뜨냐 tableView가 뜨냐에 따라 다름
-            registerButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
-            registerButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
-            registerButton.heightAnchor.constraint(equalToConstant: 70)
 
             
-            
-        ])
-        
-        // 데이터가 있는지에 따라서 뷰 보여주기
-        if gratitudeJournalList.isEmpty {
-            NSLayoutConstraint.activate([
-                defaultView.topAnchor.constraint(equalTo: textFieldView.bottomAnchor, constant: 30),
-                defaultView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
-                
-                registerButton.topAnchor.constraint(equalTo: defaultView.bottomAnchor, constant: 30),
-            ])
-            
-        } else {
-            defaultView.isHidden = true
-            
-            NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: textFieldView.bottomAnchor, constant: 30),
             tableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
-            registerButton.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 30)
-            
-            ])
-        }
+        ])
+        
     }
-    
 }
