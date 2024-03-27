@@ -16,6 +16,7 @@ class WritingPageViewController: UIViewController {
     
     let viewManager = WritingPageView()
     let gratitudeJournalData = GratitudeJournalDataStore.shared
+    let dailyGoalData = DailyGoalDataStore.shared
     
     var mode: Mode = .writeGratitudeJournal {
         didSet {
@@ -111,7 +112,7 @@ class WritingPageViewController: UIViewController {
             case .writeGratitudeJournal :
                 gratitudeJournalData.create(text: text)
             case .writeDailyGoal :
-                dailyGoalList.append(Goal(id: dailyGoalList.count, text: text, isDone: false))
+                dailyGoalData.create(text: text)
             }
 
             ////데이터 업데이트하고 다시 테이블뷰 리로드

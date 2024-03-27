@@ -13,6 +13,7 @@ final class HomeViewController: UIViewController {
     let trackingTime = TrackingTime.shared
     let timerManager = TimerManager.shared
     let gratitudeJournalData = GratitudeJournalDataStore.shared
+    let dailyGoalData = DailyGoalDataStore.shared
 
     
     // MARK: - ViewController LifeCycle
@@ -49,6 +50,8 @@ final class HomeViewController: UIViewController {
         
         //defaultView를 위한 데이터 재할당
         viewManager.gratitudeJournalSection.dataList = gratitudeJournalData.list()
+        viewManager.dailyGoalsSection.dataList = dailyGoalData.list()
+        
     
     }
 

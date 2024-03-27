@@ -11,6 +11,29 @@ final class DailyGoalsView : UIView {
     
     // MARK: - Component
     private let mainLabel = MainSectionLabel(text: "오전목표")
+    var dataList : [DailyGoal] = [] {
+        didSet{
+            if dataList.isEmpty{
+                defaultView.isHidden = false
+                setupDefaultViewConstraints()
+            } else {
+                defaultView.isHidden = true
+                setupTableViewConstraints()
+            }
+            
+        }
+    }
+    
+    lazy var bottomAnchorContraintsEqualToContentView =  self.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+    lazy var bottomAnchorContraintsEqualToDefaultView =  self.bottomAnchor.constraint(equalTo: defaultView.bottomAnchor)
+    
+    var contentView: UIView = {
+        let view = UIView()
+//        view.backgroundColor = .blue
+        return view
+    }()
+    
+    
     let addButton : ButtonWithOutLine = {
         let btn = ButtonWithOutLine(title: "작성하기", color: Assets.Colors.gray3.color, borderColor: Assets.Colors.gray3.color.cgColor)
         
@@ -37,8 +60,9 @@ final class DailyGoalsView : UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        // setupBlockSize()
-        setupAutoLayout()
+        
+        setupSubView()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -46,48 +70,86 @@ final class DailyGoalsView : UIView {
     }
     
     
-    // MARK: - Event Method
-    
-    func setupAutoLayout () {
-        [mainLabel,
-         addButton,
-         bulletChckboxTableView,
-         defaultView
+    // MARK: - layout
+    func setupSubView() {
+        [
+            contentView,
+            defaultView
         ]
             .forEach {
                 addSubview($0)
                 $0.translatesAutoresizingMaskIntoConstraints = false
             }
         
-        NSLayoutConstraint.activate([
-            mainLabel.topAnchor.constraint(equalTo: topAnchor),
-            mainLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+        [
+            mainLabel,
+            addButton,
+            bulletChckboxTableView,
+        ]
+            .forEach {
+                contentView.addSubview($0)
+                $0.translatesAutoresizingMaskIntoConstraints = false
+            }
+    }
+
+    
+    func setupDefaultViewConstraints() {
+        
+        DispatchQueue.main.async{[weak self] in
+            guard let self = self else {return }
+            NSLayoutConstraint.deactivate([
+                self.bottomAnchorContraintsEqualToContentView
+            ])
+            NSLayoutConstraint.activate([
+                self.bottomAnchorContraintsEqualToDefaultView
+            ])
             
-            addButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            //작성페이지로 이동하는 버튼 타이틀 변경
+            self.addButton.setTitle("작성하기", for: .normal)
+        }
+    }
+    
+    func setupTableViewConstraints() {
+        DispatchQueue.main.async{[weak self] in
+            guard let self = self else {return }
+            NSLayoutConstraint.deactivate([
+                self.bottomAnchorContraintsEqualToDefaultView
+            ])
+            NSLayoutConstraint.activate([
+                self.bottomAnchorContraintsEqualToContentView
+            ])
+            
+            //작성페이지로 이동하는 버튼 타이틀 변경
+            self.addButton.setTitle("수정하기", for: .normal)
+        }
+    }
+    
+    func setupConstraints() {
+
+        NSLayoutConstraint.activate([
+            bottomAnchor.constraint(greaterThanOrEqualTo:contentView.bottomAnchor),
+            
+            defaultView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 10),
+            defaultView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            defaultView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            contentView.topAnchor.constraint(equalTo: topAnchor),
+            contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            mainLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            mainLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            
+            
+            addButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             addButton.centerYAnchor.constraint(equalTo: mainLabel.centerYAnchor),
             
+            bulletChckboxTableView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 10),
+            bulletChckboxTableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            bulletChckboxTableView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            bulletChckboxTableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            
         ])
-        
-        
-        // 데이터가 있는지에 따라서 뷰 보여주기
-        if dailyGoalList.isEmpty {
-            NSLayoutConstraint.activate([
-                defaultView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 10),
-                defaultView.widthAnchor.constraint(equalTo: widthAnchor),
-                defaultView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            ])
-            
-        } else {
-            defaultView.isHidden = true
-            
-            NSLayoutConstraint.activate([
-                bulletChckboxTableView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 10),
-                bulletChckboxTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-                bulletChckboxTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-                bulletChckboxTableView.bottomAnchor.constraint(equalTo: bottomAnchor),
-                
-            ])
-        }
         
     }
     

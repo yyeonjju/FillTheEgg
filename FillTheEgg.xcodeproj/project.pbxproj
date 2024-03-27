@@ -53,6 +53,7 @@
 		7D9B48442B80C29C003451A2 /* SwcondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48432B80C29C003451A2 /* SwcondViewController.swift */; };
 		7D9B48462B80C438003451A2 /* CalendarHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48452B80C438003451A2 /* CalendarHomeViewController.swift */; };
 		7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48472B80C470003451A2 /* SettingsViewController.swift */; };
+		7DB186E42BB3A92600CBEEF5 /* DailyGoalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB186E32BB3A92600CBEEF5 /* DailyGoalDataStore.swift */; };
 		7DCE10E02B96F39B00197635 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10DF2B96F39B00197635 /* UIImageView.swift */; };
 		7DCE10E22B97101600197635 /* AttendanceCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10E12B97101600197635 /* AttendanceCheckView.swift */; };
 		7DCE10E52B972E2D00197635 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10E42B972E2D00197635 /* Label.swift */; };
@@ -110,6 +111,7 @@
 		7D9B48432B80C29C003451A2 /* SwcondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwcondViewController.swift; sourceTree = "<group>"; };
 		7D9B48452B80C438003451A2 /* CalendarHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHomeViewController.swift; sourceTree = "<group>"; };
 		7D9B48472B80C470003451A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7DB186E32BB3A92600CBEEF5 /* DailyGoalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalDataStore.swift; sourceTree = "<group>"; };
 		7DCE10DF2B96F39B00197635 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		7DCE10E12B97101600197635 /* AttendanceCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceCheckView.swift; sourceTree = "<group>"; };
 		7DCE10E42B972E2D00197635 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 		7D99A5822BB0324F00C81432 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7DB186E32BB3A92600CBEEF5 /* DailyGoalDataStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				7D807EBE2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift in Sources */,
 				7D9007CB2B847588004B6C3C /* Fonts+Generated.swift in Sources */,
 				7D99A5872BB033D400C81432 /* GratitudeJournalDataStore.swift in Sources */,
+				7DB186E42BB3A92600CBEEF5 /* DailyGoalDataStore.swift in Sources */,
 				7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */,
 				7D9007D62B871D76004B6C3C /* TrackingTime.swift in Sources */,
 			);

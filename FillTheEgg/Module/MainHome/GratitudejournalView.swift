@@ -94,24 +94,34 @@ final class GratitudejournalView : UIView {
         
         DispatchQueue.main.async{[weak self] in
             guard let self = self else {return }
+            
+            //오토레이아웃을 defaultView 기준으로
             NSLayoutConstraint.deactivate([
                 self.bottomAnchorContraintsEqualToContentView
             ])
             NSLayoutConstraint.activate([
                 self.bottomAnchorContraintsEqualToDefaultView
             ])
+            
+            //작성페이지로 이동하는 버튼 타이틀 변경
+            self.addButton.setTitle("작성하기", for: .normal)
         }
     }
     
     func setupTableViewConstraints() {
         DispatchQueue.main.async{[weak self] in
             guard let self = self else {return }
+            
+            //오토레이아웃을 tableView 기준으로
             NSLayoutConstraint.deactivate([
                 self.bottomAnchorContraintsEqualToDefaultView
             ])
             NSLayoutConstraint.activate([
                 self.bottomAnchorContraintsEqualToContentView
             ])
+            
+            //작성페이지로 이동하는 버튼 타이틀 변경
+            self.addButton.setTitle("수정하기", for: .normal)
         }
     }
     

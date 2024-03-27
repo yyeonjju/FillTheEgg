@@ -23,10 +23,10 @@ extension WritingPageViewController {
             guard let self else { return }
             
             if mode == .writeGratitudeJournal {
-                gratitudeJournalData.delete(index: index)
+                self.gratitudeJournalData.delete(index: index)
             }
             if mode == .writeDailyGoal {
-                dailyGoalList.remove(at: index)
+                self.dailyGoalData.delete(index: index)
             }
            
             viewManager.tableView.reloadData()
@@ -50,6 +50,10 @@ extension WritingPageViewController: UITableViewDataSource {
         }
 
         if mode == .writeDailyGoal {
+            let dailyGoalList = dailyGoalData.list()
+            
+            //테이블뷰가 리로드될 때 viewManager.dataList를 업데이트해주면?
+            viewManager.dataList = dailyGoalList
 
             return dailyGoalList.count
         }
@@ -70,6 +74,7 @@ extension WritingPageViewController: UITableViewDataSource {
         }
         
         if mode == .writeDailyGoal {
+            let dailyGoalList = dailyGoalData.list()
             cell.label.text = dailyGoalList[indexPath.row].text
         }
         

@@ -20,6 +20,15 @@ extension HomeViewController {
         viewManager.dailyGoalsSection.bulletChckboxTableView.register(BulletCheckboxTableViewCell.self, forCellReuseIdentifier: Cell.bulletCheckboxCell)
     }
     
+    private func configureCheckboxButton(cell : BulletCheckboxTableViewCell, index : Int) {
+        
+        cell.toggleCheckbox = {  [weak self] _ in
+            guard let self else { return }
+            
+            self.dailyGoalData.update(isDone: cell.ckeckbox.isChecked, index: index)
+            
+        }
+    }
 }
 
 
@@ -35,6 +44,7 @@ extension HomeViewController: UITableViewDataSource {
         }
         
         if tableView == viewManager.dailyGoalsSection.bulletChckboxTableView {
+            let dailyGoalList = dailyGoalData.list()
             return dailyGoalList.count
         }
         
@@ -58,9 +68,14 @@ extension HomeViewController: UITableViewDataSource {
             
 //            print("✅cellForRowAt  dailyGoalsSection")
             let cell = tableView.dequeueReusableCell(withIdentifier: Cell.bulletCheckboxCell, for: indexPath) as! BulletCheckboxTableViewCell
+            let dailyGoalList = dailyGoalData.list()
+            
             cell.label.text = dailyGoalList[indexPath.row].text
             cell.ckeckbox.isChecked = dailyGoalList[indexPath.row].isDone
             cell.selectionStyle = .none
+            
+            //셀 내부의 체크박스 버튼 눌렀을 때 실행되는 작업 설정
+            configureCheckboxButton(cell: cell, index: indexPath.row)
             
             return cell
         }

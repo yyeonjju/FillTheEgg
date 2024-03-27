@@ -41,16 +41,16 @@ enum Size {
 
 // MARK: - MockData
 
-public struct Journal {
-    let id : Int
-    let text : String
-}
-
-public struct Goal {
-    let id : Int
-    let text : String
-    let isDone : Bool
-}
+//public struct Journal {
+//    let id : Int
+//    let text : String
+//}
+//
+//public struct Goal {
+//    let id : Int
+//    let text : String
+//    let isDone : Bool
+//}
 
 //public var gratitudeJournalList : [Journal] = [
 //    Journal(id: 0, text: "건강하고 행복하게 하루를 시작할 수 있음에 감사합니다."),
@@ -58,11 +58,11 @@ public struct Goal {
 //    Journal(id: 2, text: "오늘 하루 알차게 보낼 생각으로 설렐 수 있음에 감사합니다."),
 //]
 
-public var dailyGoalList : [Goal] = [
-    Goal(id: 0, text: "블로그 초안 작성하기", isDone: false),
-    Goal(id: 1, text: "카카오톡 답장하기. 연락 쌓이는 거 멈춰!", isDone: true),
-    Goal(id: 2, text: "책 30페이지 이상 읽기", isDone: false),
-]
+//public var dailyGoalList : [Goal] = [
+//    Goal(id: 0, text: "블로그 초안 작성하기", isDone: false),
+//    Goal(id: 1, text: "카카오톡 답장하기. 연락 쌓이는 거 멈춰!", isDone: true),
+//    Goal(id: 2, text: "책 30페이지 이상 읽기", isDone: false),
+//]
 
 // MARK: - Cell
 

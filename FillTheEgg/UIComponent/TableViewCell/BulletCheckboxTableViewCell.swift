@@ -8,12 +8,16 @@
 import UIKit
 
 final class BulletCheckboxTableViewCell : BulletTableViewCell {
+    
+    var toggleCheckbox : (BulletCheckboxTableViewCell) -> Void = { _ in }
+    
     // MARK: - Components
     
     let ckeckbox : CheckBoxButton = {
         let button = CheckBoxButton()
 //        button.backgroundColor = .green
         
+        button.addTarget(self, action: #selector(checkboxTapped), for: .touchUpInside)
         return button
     }()
     
@@ -54,4 +58,8 @@ final class BulletCheckboxTableViewCell : BulletTableViewCell {
 
     }
     
+    // MARK: - method
+    @objc func checkboxTapped() {
+        toggleCheckbox(self)
+    }
 }

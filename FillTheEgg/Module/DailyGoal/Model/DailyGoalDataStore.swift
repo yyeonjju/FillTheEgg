@@ -1,18 +1,18 @@
 //
-//  GratitudeJournalDataStore.swift
+//  DailyGoalDataStore.swift
 //  FillTheEgg
 //
-//  Created by 하연주 on 2024/03/24.
+//  Created by 하연주 on 2024/03/27.
 //
 
 import UIKit
+import CoreData
 
-// MARK: - properties
 
-final class GratitudeJournalDataStore {
+final class DailyGoalDataStore {
     
     //싱글톤
-    static let shared = GratitudeJournalDataStore()
+    static let shared = DailyGoalDataStore()
     private init () {
         self.fetchEntity()
     }
@@ -21,19 +21,18 @@ final class GratitudeJournalDataStore {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     /// Request
-    let fetchReQuest = GratitudeJournal.fetchRequest()
+    let fetchReQuest = DailyGoal.fetchRequest()
     
     ///엔터티 리스트
-    private var entities: [GratitudeJournal] = []
-    
+    private var entities: [DailyGoal] = []
+
     
 }
 
 
 
 // MARK: - core data method
-extension GratitudeJournalDataStore {
-    
+extension DailyGoalDataStore{
     /// 콘텍스트 저장 및 그룹 엔티티를 다시 패치함 -> create, update, delete할 때 호출된다.
     func saveContext() {
         do {
@@ -46,28 +45,23 @@ extension GratitudeJournalDataStore {
     
     /// 그룹 엔티티 패치를 요청
     private func fetchEntity() {
-//        // order 속성 기준 오름차순 정렬
-//        let sortDescriptor = NSSortDescriptor(key: "order", ascending: true)
-//        fetchReQuest.sortDescriptors = [sortDescriptor]
+
         do {
             entities = try context.fetch(fetchReQuest)
         } catch {
             fatalError(error.localizedDescription)
         }
     }
-    
 }
 
-
-
-
 // MARK: - CRUD
-extension GratitudeJournalDataStore {
+extension DailyGoalDataStore {
     /// Create : 새 데이터를 생성
-    func create(text : String) {
-        let newEntity = GratitudeJournal(context: context)
+    func create(text : String, isDone : Bool = false) {
+        let newEntity = DailyGoal(context: context)
         
         newEntity.text = text
+        newEntity.isDone = isDone
         newEntity.order = Int16(entities.count)
         
 //        print("❤️❤️❤️create -> newGroup", newEntity)
@@ -77,17 +71,17 @@ extension GratitudeJournalDataStore {
     }
     
     /// Read : 리스트를 반환
-    func list() -> [GratitudeJournal] {
+    func list() -> [DailyGoal] {
         return entities
     }
     
-    ///Uodate : 그룹의 이름을 업데이트합니다. ⭐️아직은 수정하는 기능 없음⭐️
-//    func update(text: String, index : Int) {
-//        let journal = entities[index]
-//        journal.text = text
-//
-//        saveContext()
-//    }
+    ///Uodate : 리스트 중 체크박스 체크 여부  업데이트
+    func update(isDone : Bool, index : Int) {
+        let goal = entities[index]
+        goal.isDone = isDone
+        
+        saveContext()
+    }
     
     /// 현재 편집 중인 그룹을 삭제합니다.
     func delete(index : Int) {
@@ -107,5 +101,3 @@ extension GratitudeJournalDataStore {
     }
     
 }
-
-
