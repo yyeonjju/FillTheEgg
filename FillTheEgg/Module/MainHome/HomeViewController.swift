@@ -38,6 +38,7 @@ final class HomeViewController: UIViewController {
         
 //        print("🌸viewDidLoad", gratitudeJournalData.list())
 //        gratitudeJournalData.resetAllData()
+//        dailyGoalData.resetAllData()
     }
     
     //뷰가 화면에 나타날때마다 계속 호출

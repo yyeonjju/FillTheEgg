@@ -54,6 +54,7 @@
 		7D9B48462B80C438003451A2 /* CalendarHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48452B80C438003451A2 /* CalendarHomeViewController.swift */; };
 		7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48472B80C470003451A2 /* SettingsViewController.swift */; };
 		7DB186E42BB3A92600CBEEF5 /* DailyGoalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB186E32BB3A92600CBEEF5 /* DailyGoalDataStore.swift */; };
+		7DB186E62BB3BB8900CBEEF5 /* BasicCoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB186E52BB3BB8900CBEEF5 /* BasicCoreDataStore.swift */; };
 		7DCE10E02B96F39B00197635 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10DF2B96F39B00197635 /* UIImageView.swift */; };
 		7DCE10E22B97101600197635 /* AttendanceCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10E12B97101600197635 /* AttendanceCheckView.swift */; };
 		7DCE10E52B972E2D00197635 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10E42B972E2D00197635 /* Label.swift */; };
@@ -112,6 +113,7 @@
 		7D9B48452B80C438003451A2 /* CalendarHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHomeViewController.swift; sourceTree = "<group>"; };
 		7D9B48472B80C470003451A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7DB186E32BB3A92600CBEEF5 /* DailyGoalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalDataStore.swift; sourceTree = "<group>"; };
+		7DB186E52BB3BB8900CBEEF5 /* BasicCoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCoreDataStore.swift; sourceTree = "<group>"; };
 		7DCE10DF2B96F39B00197635 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		7DCE10E12B97101600197635 /* AttendanceCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceCheckView.swift; sourceTree = "<group>"; };
 		7DCE10E42B972E2D00197635 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				7D9B47E52B7A2A00003451A2 /* FillTheEgg.xcdatamodeld */,
+				7DB186E52BB3BB8900CBEEF5 /* BasicCoreDataStore.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				7D9007D82B87511E004B6C3C /* DateFormatter.swift in Sources */,
 				7D9007DB2B8758DA004B6C3C /* TimerManager.swift in Sources */,
 				7D807EC02BAD256B001E6F3A /* WritingPageVC+TableView.swift in Sources */,
+				7DB186E62BB3BB8900CBEEF5 /* BasicCoreDataStore.swift in Sources */,
 				7D4CF9F12BA573A000BC7952 /* AutoResizingTableView.swift in Sources */,
 				7DCE10E22B97101600197635 /* AttendanceCheckView.swift in Sources */,
 				7DCE10EC2B9733B500197635 /* Button.swift in Sources */,
