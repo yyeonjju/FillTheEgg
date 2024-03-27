@@ -61,6 +61,7 @@
 		7DCE10E72B9731C600197635 /* GratitudejournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10E62B9731C600197635 /* GratitudejournalView.swift */; };
 		7DCE10E92B97329700197635 /* DailyGoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10E82B97329700197635 /* DailyGoalsView.swift */; };
 		7DCE10EC2B9733B500197635 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10EB2B9733B500197635 /* Button.swift */; };
+		7DFF9FE12BB3ECDC0043F360 /* AttendanceCheckDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF9FE02BB3ECDC0043F360 /* AttendanceCheckDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		7DCE10E62B9731C600197635 /* GratitudejournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudejournalView.swift; sourceTree = "<group>"; };
 		7DCE10E82B97329700197635 /* DailyGoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsView.swift; sourceTree = "<group>"; };
 		7DCE10EB2B9733B500197635 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		7DFF9FE02BB3ECDC0043F360 /* AttendanceCheckDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceCheckDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +344,7 @@
 		7D9B47F62B7C4BE8003451A2 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				7DFF9FDF2BB3EC780043F360 /* AttendanceCheck */,
 				7D99A5812BB0323C00C81432 /* DailyGoal */,
 				7D99A5802BB0323100C81432 /* GratitudeJournal */,
 				7D4CF9FA2BA92BA300BC7952 /* Writing */,
@@ -441,6 +444,22 @@
 				7D4CF9F42BA83B2700BC7952 /* CheckBox.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		7DFF9FDF2BB3EC780043F360 /* AttendanceCheck */ = {
+			isa = PBXGroup;
+			children = (
+				7DFF9FE22BB3ED650043F360 /* Model */,
+			);
+			path = AttendanceCheck;
+			sourceTree = "<group>";
+		};
+		7DFF9FE22BB3ED650043F360 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7DFF9FE02BB3ECDC0043F360 /* AttendanceCheckDataStore.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -575,6 +594,7 @@
 				7D9B47FD2B7C4E6C003451A2 /* NameSpace.swift in Sources */,
 				7D4CF9FC2BA92C1800BC7952 /* WritingPageViewController.swift in Sources */,
 				7D4CFA062BAA49CC00BC7952 /* HomeVC+PHPicker.swift in Sources */,
+				7DFF9FE12BB3ECDC0043F360 /* AttendanceCheckDataStore.swift in Sources */,
 				7D9007CE2B847E7D004B6C3C /* HomeView.swift in Sources */,
 				7D9B48442B80C29C003451A2 /* SwcondViewController.swift in Sources */,
 				7D4CF9F32BA8269500BC7952 /* BulletCheckboxTableViewCell.swift in Sources */,

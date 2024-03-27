@@ -36,6 +36,8 @@ enum Size {
     static let middleEggWidth = 100.0
     static let middleEggHeight = middleEggWidth * 1.1
     
+    static let largePhotoImageWidth = 150.0
+    
 }
 
 

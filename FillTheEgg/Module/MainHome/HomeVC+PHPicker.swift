@@ -56,13 +56,16 @@ extension HomeViewController : PHPickerViewControllerDelegate {
            itemProvider.canLoadObject(ofClass: UIImage.self) { // 3
             itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, error) in // 4
                 guard let self else { return }
-                
+
                 DispatchQueue.main.async {
                     //UI관련된 업데이트를 하고싶으면 꼭 main에서 돌려줘야한다.
                     self.viewManager.attendCheckSection.photoImageView.image = image as? UIImage // 5
-                    self.viewManager.attendCheckSection.photoLabel.isHidden = true
-                    
+                    self.viewManager.attendCheckSection.photoLabel.alpha = 0
+                    self.viewManager.attendCheckSection.deletePhotoButton.alpha = 1
                 }
+                
+                guard let image else { return }
+                self.attendanceCheckData.create(image: image as! UIImage)
             }
         } else {
             // TODO: Handle empty results or item provider not being able load UIImage

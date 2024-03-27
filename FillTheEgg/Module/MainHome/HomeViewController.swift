@@ -14,6 +14,7 @@ final class HomeViewController: UIViewController {
     let timerManager = TimerManager.shared
     let gratitudeJournalData = GratitudeJournalDataStore.shared
     let dailyGoalData = DailyGoalDataStore.shared
+    let attendanceCheckData = AttendanceCheckDataStore.shared
 
     
     // MARK: - ViewController LifeCycle
@@ -39,6 +40,7 @@ final class HomeViewController: UIViewController {
 //        print("🌸viewDidLoad", gratitudeJournalData.list())
 //        gratitudeJournalData.resetAllData()
 //        dailyGoalData.resetAllData()
+//        attendanceCheckData.resetAllData()
     }
     
     //뷰가 화면에 나타날때마다 계속 호출
@@ -53,7 +55,14 @@ final class HomeViewController: UIViewController {
         viewManager.gratitudeJournalSection.dataList = gratitudeJournalData.list()
         viewManager.dailyGoalsSection.dataList = dailyGoalData.list()
         
-    
+        //출석 체크 이미지 로딩
+        if !attendanceCheckData.list().isEmpty {
+            guard let imageData = attendanceCheckData.list()[0].imageData else {return}
+            viewManager.attendCheckSection.photoImageView.image = UIImage(data: imageData)
+            viewManager.attendCheckSection.photoLabel.alpha = 0
+            viewManager.attendCheckSection.deletePhotoButton.alpha = 1
+        }
+
     }
 
 
@@ -64,6 +73,8 @@ final class HomeViewController: UIViewController {
         viewManager.gratitudeJournalSection.addButton.addTarget(self, action: #selector(gratitudeJournalAddButtonTapped), for: .touchUpInside)
         
         viewManager.dailyGoalsSection.addButton.addTarget(self, action: #selector(dailyGoalAddButtonTapped), for: .touchUpInside)
+        
+        viewManager.attendCheckSection.deletePhotoButton.addTarget(self, action: #selector(deletePhotoButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Event Method
@@ -88,6 +99,19 @@ final class HomeViewController: UIViewController {
         navigationController?.pushViewController(writingPageVC, animated: true)
     }
     
+    @objc func deletePhotoButtonTapped(){
+        attendanceCheckData.resetAllData()
+        resetAttendanceCheck()
+    }
     
+    func resetAttendanceCheck () {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else{return}
+            self.viewManager.attendCheckSection.photoLabel.alpha = 1
+            self.viewManager.attendCheckSection.deletePhotoButton.alpha = 0
+            self.viewManager.attendCheckSection.photoImageView.image = nil
+        }
+    }
+
 }
 

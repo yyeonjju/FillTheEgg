@@ -43,6 +43,15 @@ final class AttendanceCheckView : UIView {
         return label
     }()
     
+    let deletePhotoButton : ButtonWithOutLine = {
+        let btn = ButtonWithOutLine(title: "", color: Assets.Colors.gray3.color, borderColor: Assets.Colors.gray3.color.cgColor)
+        let trashImage = UIImage(systemName: "trash")?.withRenderingMode(.alwaysTemplate)
+        btn.setImage(trashImage, for: .normal)
+        btn.tintColor = Assets.Colors.gray3.color
+        btn.alpha = 0
+        return btn
+    }()
+    
     
     
     // MARK: - Initial Method
@@ -64,8 +73,7 @@ final class AttendanceCheckView : UIView {
     
     func setupAutoLayout () {
         
-//        print("❤️❤️❤️❤️언제언제 불려 setupAutoLayout❤️❤️❤️")
-        [mainLabel, photoImageView, photoLabel]
+        [mainLabel, photoImageView, photoLabel, deletePhotoButton]
             .forEach {
                 addSubview($0)
                 $0.translatesAutoresizingMaskIntoConstraints = false
@@ -76,11 +84,13 @@ final class AttendanceCheckView : UIView {
             mainLabel.topAnchor.constraint(equalTo: topAnchor),
             mainLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
+            deletePhotoButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            deletePhotoButton.centerYAnchor.constraint(equalTo: mainLabel.centerYAnchor),
             
             //photoView
             photoImageView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 20),
-            photoImageView.widthAnchor.constraint(equalToConstant: 150),
-            photoImageView.heightAnchor.constraint(equalToConstant: 150),
+            photoImageView.widthAnchor.constraint(equalToConstant: Size.largePhotoImageWidth),
+            photoImageView.heightAnchor.constraint(equalToConstant: Size.largePhotoImageWidth),
             photoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             photoImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
