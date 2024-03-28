@@ -91,7 +91,7 @@ final class HomeView: UIView {
         return ImageView
     }()
     
-    private let motivationLabel : UILabel = {
+    let motivationLabel : UILabel = {
         let label = UILabel()
         label.font = FontFamily.Pretendard.semiBold.font(size: FontSize.regular)
         label.textColor = Assets.Colors.gray2.color
@@ -101,8 +101,8 @@ final class HomeView: UIView {
         
         return label
     }()
-    
-    private let eggRateImage: FilledEggImageView = {
+   
+    let eggRateImage: FilledEggImageView = {
         let imageView = FilledEggImageView()
         //표시될 UIImage 객체 부여
         imageView.image = UIImage(named: Assets.Assets.filledEgg.name)?.withRenderingMode(.alwaysTemplate)
@@ -147,13 +147,7 @@ final class HomeView: UIView {
     //뷰의 드로잉 주기 중 하위뷰의 레이아웃을 설정하는 단계
     override func layoutSubviews() {
         super.layoutSubviews()
-//        print("❤️layoutSubviews")
-        eggRateImage.changeFilledRatio(ratio: 0.5)
     }
-    
-//    override func draw(_ rect: CGRect) {
-//    }
-    
     
     func setupInitial() {
         backgroundColor = .white

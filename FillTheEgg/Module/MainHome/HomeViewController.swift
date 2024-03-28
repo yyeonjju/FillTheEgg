@@ -62,7 +62,10 @@ final class HomeViewController: UIViewController {
             viewManager.attendCheckSection.photoLabel.alpha = 0
             viewManager.attendCheckSection.deletePhotoButton.alpha = 1
         }
-
+        
+        //알참지수 이미지와 동기부여 코멘트 업데이트
+        updateEggRateImage()
+        updateMotivationLabel()
     }
 
 
@@ -111,7 +114,23 @@ final class HomeViewController: UIViewController {
             self.viewManager.attendCheckSection.deletePhotoButton.alpha = 0
             self.viewManager.attendCheckSection.photoImageView.image = nil
         }
+        
+        //알참지수 이미지와 동기부여 코멘트 업데이트
+        updateEggRateImage()
+        updateMotivationLabel()
     }
 
+    //알참지수 이미지 업데이트
+    func updateEggRateImage () {
+        let ratio = CGFloat(calculateEggRate())/100
+        viewManager.eggRateImage.ratio = ratio
+    }
+    
+    //동기부여 코멘트 업데이트
+    func updateMotivationLabel () {
+        let text = returnMotivationText()
+        viewManager.motivationLabel.text = text
+    }
+    
 }
 

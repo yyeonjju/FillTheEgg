@@ -41,6 +41,15 @@ enum Size {
 }
 
 
+// MARK: - Additional Point
+
+enum AdditionalPoint {
+    static let attendancePoint = 10 //출석1개당점수
+    static let gratitudeJournalPoint = 10 //감사일기1개당점수
+    static let completedGoalPoint = 20 //목표 1개완료당 점수
+}
+
+
 // MARK: - MockData
 
 //public struct Journal {

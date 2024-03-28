@@ -27,6 +27,10 @@ extension HomeViewController {
             
             self.dailyGoalData.update(isDone: cell.ckeckbox.isChecked, index: index)
             
+            //알참지수 이미지와 동기부여 코멘트 업데이트
+            updateEggRateImage()
+            updateMotivationLabel()
+            
         }
     }
 }

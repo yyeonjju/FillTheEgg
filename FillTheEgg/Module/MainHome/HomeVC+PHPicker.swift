@@ -66,6 +66,13 @@ extension HomeViewController : PHPickerViewControllerDelegate {
                 
                 guard let image else { return }
                 self.attendanceCheckData.create(image: image as! UIImage)
+                
+                DispatchQueue.main.async {
+                    //알참지수 이미지와 동기부여 코멘트 업데이트
+                    self.updateEggRateImage()
+                    self.updateMotivationLabel()
+                }
+
             }
         } else {
             // TODO: Handle empty results or item provider not being able load UIImage

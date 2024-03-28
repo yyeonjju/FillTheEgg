@@ -55,13 +55,14 @@
 		7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48472B80C470003451A2 /* SettingsViewController.swift */; };
 		7DB186E42BB3A92600CBEEF5 /* DailyGoalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB186E32BB3A92600CBEEF5 /* DailyGoalDataStore.swift */; };
 		7DB186E62BB3BB8900CBEEF5 /* BasicCoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB186E52BB3BB8900CBEEF5 /* BasicCoreDataStore.swift */; };
-		7DCE10E02B96F39B00197635 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10DF2B96F39B00197635 /* UIImageView.swift */; };
+		7DCE10E02B96F39B00197635 /* FilledEggImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10DF2B96F39B00197635 /* FilledEggImageView.swift */; };
 		7DCE10E22B97101600197635 /* AttendanceCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10E12B97101600197635 /* AttendanceCheckView.swift */; };
 		7DCE10E52B972E2D00197635 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10E42B972E2D00197635 /* Label.swift */; };
 		7DCE10E72B9731C600197635 /* GratitudejournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10E62B9731C600197635 /* GratitudejournalView.swift */; };
 		7DCE10E92B97329700197635 /* DailyGoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10E82B97329700197635 /* DailyGoalsView.swift */; };
 		7DCE10EC2B9733B500197635 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10EB2B9733B500197635 /* Button.swift */; };
 		7DFF9FE12BB3ECDC0043F360 /* AttendanceCheckDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF9FE02BB3ECDC0043F360 /* AttendanceCheckDataStore.swift */; };
+		7DFF9FE52BB55F580043F360 /* UtilFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF9FE42BB55F580043F360 /* UtilFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,13 +116,14 @@
 		7D9B48472B80C470003451A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7DB186E32BB3A92600CBEEF5 /* DailyGoalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalDataStore.swift; sourceTree = "<group>"; };
 		7DB186E52BB3BB8900CBEEF5 /* BasicCoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCoreDataStore.swift; sourceTree = "<group>"; };
-		7DCE10DF2B96F39B00197635 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		7DCE10DF2B96F39B00197635 /* FilledEggImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledEggImageView.swift; sourceTree = "<group>"; };
 		7DCE10E12B97101600197635 /* AttendanceCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceCheckView.swift; sourceTree = "<group>"; };
 		7DCE10E42B972E2D00197635 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		7DCE10E62B9731C600197635 /* GratitudejournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudejournalView.swift; sourceTree = "<group>"; };
 		7DCE10E82B97329700197635 /* DailyGoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsView.swift; sourceTree = "<group>"; };
 		7DCE10EB2B9733B500197635 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		7DFF9FE02BB3ECDC0043F360 /* AttendanceCheckDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceCheckDataStore.swift; sourceTree = "<group>"; };
+		7DFF9FE42BB55F580043F360 /* UtilFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,8 @@
 		7D9007D32B871CFC004B6C3C /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				7D4CF9EF2BA5738C00BC7952 /* UITableVIew */,
+				7DFF9FE32BB536E90043F360 /* ImageView */,
 				7D807EB82BAC0B4D001E6F3A /* TextField */,
 				7D4CF9FF2BA9666100BC7952 /* View */,
 				7D1CF11B2BA079D200C1807A /* TableViewCell */,
@@ -390,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				7D9B47FC2B7C4E6C003451A2 /* NameSpace.swift */,
+				7DFF9FE42BB55F580043F360 /* UtilFunction.swift */,
 			);
 			path = File;
 			sourceTree = "<group>";
@@ -423,8 +428,6 @@
 		7DCE10DE2B96F37D00197635 /* Inheritance */ = {
 			isa = PBXGroup;
 			children = (
-				7D4CF9EF2BA5738C00BC7952 /* UITableVIew */,
-				7DCE10DF2B96F39B00197635 /* UIImageView.swift */,
 			);
 			path = Inheritance;
 			sourceTree = "<group>";
@@ -460,6 +463,14 @@
 				7DFF9FE02BB3ECDC0043F360 /* AttendanceCheckDataStore.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7DFF9FE32BB536E90043F360 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				7DCE10DF2B96F39B00197635 /* FilledEggImageView.swift */,
+			);
+			path = ImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -588,7 +599,7 @@
 				7D9B47E72B7A2A00003451A2 /* FillTheEgg.xcdatamodeld in Sources */,
 				7D4CF9FE2BA932CF00BC7952 /* WritingPageView.swift in Sources */,
 				7D4CFA012BA9667B00BC7952 /* BlankView.swift in Sources */,
-				7DCE10E02B96F39B00197635 /* UIImageView.swift in Sources */,
+				7DCE10E02B96F39B00197635 /* FilledEggImageView.swift in Sources */,
 				7DCE10E72B9731C600197635 /* GratitudejournalView.swift in Sources */,
 				7D807EBA2BAC0B6C001E6F3A /* TextFieldView.swift in Sources */,
 				7D9B47FD2B7C4E6C003451A2 /* NameSpace.swift in Sources */,
@@ -601,6 +612,7 @@
 				7D9B47DF2B7A2A00003451A2 /* SceneDelegate.swift in Sources */,
 				7DCE10E52B972E2D00197635 /* Label.swift in Sources */,
 				7D4CF9F92BA9294E00BC7952 /* HomeVC+TableView.swift in Sources */,
+				7DFF9FE52BB55F580043F360 /* UtilFunction.swift in Sources */,
 				7D807EBE2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift in Sources */,
 				7D9007CB2B847588004B6C3C /* Fonts+Generated.swift in Sources */,
 				7D99A5872BB033D400C81432 /* GratitudeJournalDataStore.swift in Sources */,
