@@ -8,6 +8,15 @@
 import UIKit
 
 class FilledEggImageView: UIImageView {
+    
+    enum EggImageMode {
+        case withLabel
+        case withoutLabel
+        
+    }
+    
+    // MARK: - Properties
+
     var ratio : CGFloat = 0.0 {
         didSet {
             DispatchQueue.main.async {[weak self] in
@@ -17,6 +26,27 @@ class FilledEggImageView: UIImageView {
 
         }
     }
+    
+    var mode : EggImageMode?
+    
+    
+    // MARK: - Initializer
+
+    
+    init(mode : EggImageMode = .withLabel) {
+        super.init(frame: .zero)
+        
+        self.image = UIImage(named: Assets.Assets.filledEgg.name)?.withRenderingMode(.alwaysTemplate)
+        self.tintColor = Assets.Colors.eggWhite.color
+        self.mode = mode
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    
+    // MARK: - Method
 
     //UIImageView 위에 addSubView해서 일정 비율로 색이 채워질 수 있도록 하기 위한 메서드
     private func changeFilledRatio(ratio : CGFloat) {
@@ -87,7 +117,9 @@ class FilledEggImageView: UIImageView {
         overlayLabel.textAlignment = .center
         overlayLabel.font = FontFamily.Pretendard.extraBold.font(size: 14)
         
-        addSubview(overlayLabel)
+        if mode == .withLabel {
+            addSubview(overlayLabel)
+        }
         
     }
 }

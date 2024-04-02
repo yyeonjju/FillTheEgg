@@ -102,13 +102,7 @@ final class HomeView: UIView {
         return label
     }()
    
-    let eggRateImage: FilledEggImageView = {
-        let imageView = FilledEggImageView()
-        //표시될 UIImage 객체 부여
-        imageView.image = UIImage(named: Assets.Assets.filledEgg.name)?.withRenderingMode(.alwaysTemplate)
-        imageView.tintColor = Assets.Colors.eggWhite.color
-        return imageView
-    }()
+    let eggRateImage = FilledEggImageView()
     
     private let eggRateLabel: UILabel = {
         let label = UILabel()

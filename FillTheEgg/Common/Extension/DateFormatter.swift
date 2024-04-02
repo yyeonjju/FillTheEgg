@@ -9,33 +9,40 @@ import Foundation
 
 extension DateFormatter {
     
-    static var year: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY"
-        return formatter
-    }
-    static var month: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "M"
-        return formatter
-    }
+//    static var year: DateFormatter {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "YYYY"
+//        return formatter
+//    }
+//    static var month: DateFormatter {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "M"
+//        return formatter
+//    }
+    
     static var day: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = "d"
+        formatter.dateFormat = "dd"
         return formatter
     }
-    
+
     static var homeDate : DateFormatter {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko_KR")
         formatter.dateFormat = "M월 d일 E요일"
         return formatter
     }
-    
+
     static var homeTime : DateFormatter {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko_KR")
         formatter.dateFormat = "HH:mm"
+        return formatter
+    }
+    
+    static var yearDotMonth : DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy.MM"
         return formatter
     }
 

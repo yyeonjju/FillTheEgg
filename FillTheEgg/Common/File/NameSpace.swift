@@ -30,13 +30,16 @@ enum FontSize {
 
 // MARK: - Size
 enum Size {
-//    case eggMiddle
-//    case eggBig
+    
+    static let microEggWidth = 30.0
+    static let microEggHeight = microEggWidth * 1.1
     
     static let middleEggWidth = 100.0
     static let middleEggHeight = middleEggWidth * 1.1
     
     static let largePhotoImageWidth = 150.0
+    
+    static let calendarHeight = 400.0
     
 }
 
@@ -78,9 +81,14 @@ enum AdditionalPoint {
 // MARK: - Cell
 
 enum Cell {
+    
+    //TableViewCell
     static let bulletCell = "bulletCell"
     static let bulletCheckboxCell = "bulletCheckboxCell"
     static let bulletWithDeleteButtonCell = "bulletWithDeleteButtonCell"
+    
+    //CalendarCell
+    static let fsCalendarCell = "fsCalendarCell"
 }
 
 // MARK: - homeView blank text & writingPageView blank text

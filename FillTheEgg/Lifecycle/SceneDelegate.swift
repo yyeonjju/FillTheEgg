@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //⭐️ 네비게이션 컨트롤러 생성
         let homeView = UINavigationController(rootViewController: HomeViewController())
-        let calendarView = UINavigationController(rootViewController: CalendarHomeViewController())
+        let repositoryView = UINavigationController(rootViewController: RepositoryViewController())
         let settingsView = UINavigationController(rootViewController: SettingsViewController())
         
         
@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarVC = UITabBarController()
         
         // 탭바로 사용하기 위한 뷰 컨트롤러들 설정
-        tabBarVC.setViewControllers([homeView,calendarView,settingsView], animated: true)
+        tabBarVC.setViewControllers([homeView,repositoryView,settingsView], animated: true)
         tabBarVC.modalPresentationStyle = .fullScreen
 //        tabBarVC.tabBar.backgroundColor = .gray
         
