@@ -9,6 +9,8 @@ import UIKit
 
 final class GratitudejournalView : UIView {
     
+    var operation : EOperation?
+    
     // MARK: - Component
     private let mainLabel = MainSectionLabel(text: "감사일기")
     var dataList : [GratitudeJournal] = [] {
@@ -54,16 +56,25 @@ final class GratitudejournalView : UIView {
 
     
     // MARK: - Initial Method
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
 
+    
+    init(operation : EOperation = .create) {
+        super.init(frame: .zero)
+        
         setupSubView()
         setupConstraints()
+        self.operation = operation
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        if operation == .read {
+            self.addButton.alpha = 0
+        }
     }
 
     

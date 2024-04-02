@@ -27,19 +27,19 @@ final class HomeView: UIView {
     }()
     
     let attendCheckSection : AttendanceCheckView = {
-        let view = AttendanceCheckView(frame: .zero)
+        let view = AttendanceCheckView()
 
         return view
     }()
     
     lazy var gratitudeJournalSection : GratitudejournalView = {
-        let view = GratitudejournalView(frame: .zero)
+        let view = GratitudejournalView()
 //        view.backgroundColor = .blue
         return view
     }()
     
     lazy var dailyGoalsSection : DailyGoalsView = {
-        let view = DailyGoalsView(frame: .zero)
+        let view = DailyGoalsView()
 
         return view
     }()

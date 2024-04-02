@@ -10,6 +10,8 @@ import UIKit
 
 final class AttendanceCheckView : UIView {
     
+    var operation : EOperation?
+    
     // MARK: - Component
     let mainLabel = MainSectionLabel(text: "출석하기")
     
@@ -58,16 +60,22 @@ final class AttendanceCheckView : UIView {
     
     //    init(frame: CGRect, size : Size){}
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        // setupBlockSize()
+    init(operation : EOperation = .create) {
+        super.init(frame: .zero)
+
         setupAutoLayout()
+        self.operation = operation
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        if operation == .read {
+            self.deletePhotoButton.alpha = 0
+        }
+    }
     
     // MARK: - Event Method
     

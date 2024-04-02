@@ -70,6 +70,8 @@ final class CalendarView : UIView {
         setupAddSubView()
         setupConstraints()
         
+        self.backgroundColor = Assets.Colors.white.color
+        
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -93,7 +95,7 @@ final class CalendarView : UIView {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-//            self.bottomAnchor.constraint(equalTo: calendar.bottomAnchor),
+            self.bottomAnchor.constraint(equalTo: calendar.bottomAnchor),
             
             calendarDateLabel.topAnchor.constraint(equalTo: topAnchor),
             calendarDateLabel.centerXAnchor.constraint(equalTo: centerXAnchor),

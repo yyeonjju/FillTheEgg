@@ -9,6 +9,8 @@ import UIKit
 
 final class DailyGoalsView : UIView {
     
+    var operation : EOperation?
+    
     // MARK: - Component
     private let mainLabel = MainSectionLabel(text: "오전목표")
     var dataList : [DailyGoal] = [] {
@@ -56,17 +58,23 @@ final class DailyGoalsView : UIView {
 
     
     // MARK: - Initial Method
-
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+    init(operation : EOperation = .create) {
+        super.init(frame: .zero)
+
         setupSubView()
         setupConstraints()
+        self.operation = operation
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        if operation == .read {
+            self.addButton.alpha = 0
+        }
     }
     
     

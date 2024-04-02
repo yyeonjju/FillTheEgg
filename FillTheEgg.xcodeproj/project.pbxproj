@@ -40,6 +40,9 @@
 		7D9007D82B87511E004B6C3C /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9007D72B87511E004B6C3C /* DateFormatter.swift */; };
 		7D9007DB2B8758DA004B6C3C /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9007DA2B8758DA004B6C3C /* TimerManager.swift */; };
 		7D9007DD2B886A06004B6C3C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9007DC2B886A06004B6C3C /* UIImage.swift */; };
+		7D9299702BBBCFAE00FFF86C /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D92996F2BBBCFAE00FFF86C /* HistoryDetailViewController.swift */; };
+		7D9299722BBBCFF400FFF86C /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9299712BBBCFF400FFF86C /* HistoryDetailView.swift */; };
+		7D9299742BBBDBBC00FFF86C /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9299732BBBDBBC00FFF86C /* Enum.swift */; };
 		7D99A5872BB033D400C81432 /* GratitudeJournalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99A5862BB033D400C81432 /* GratitudeJournalDataStore.swift */; };
 		7D9B47DD2B7A2A00003451A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B47DC2B7A2A00003451A2 /* AppDelegate.swift */; };
 		7D9B47DF2B7A2A00003451A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B47DE2B7A2A00003451A2 /* SceneDelegate.swift */; };
@@ -68,6 +71,7 @@
 		7DFF9FF32BB692F10043F360 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 7DFF9FF22BB692F10043F360 /* FSCalendar */; };
 		7DFF9FF52BBA93AA0043F360 /* UIDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF9FF42BBA93AA0043F360 /* UIDate.swift */; };
 		7DFF9FF72BBBA0960043F360 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF9FF62BBBA0960043F360 /* CalendarCell.swift */; };
+		7DFF9FF92BBBB6740043F360 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF9FF82BBBB6740043F360 /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +108,9 @@
 		7D9007D72B87511E004B6C3C /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		7D9007DA2B8758DA004B6C3C /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		7D9007DC2B886A06004B6C3C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		7D92996F2BBBCFAE00FFF86C /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
+		7D9299712BBBCFF400FFF86C /* HistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
+		7D9299732BBBDBBC00FFF86C /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		7D99A5862BB033D400C81432 /* GratitudeJournalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeJournalDataStore.swift; sourceTree = "<group>"; };
 		7D9B47D92B7A2A00003451A2 /* FillTheEgg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FillTheEgg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9B47DC2B7A2A00003451A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +140,7 @@
 		7DFF9FEF2BB68D650043F360 /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
 		7DFF9FF42BBA93AA0043F360 /* UIDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDate.swift; sourceTree = "<group>"; };
 		7DFF9FF62BBBA0960043F360 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		7DFF9FF82BBBB6740043F360 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +271,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		7D92996E2BBBCF7E00FFF86C /* HistoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7D92996F2BBBCFAE00FFF86C /* HistoryDetailViewController.swift */,
+				7D9299712BBBCFF400FFF86C /* HistoryDetailView.swift */,
+			);
+			path = HistoryDetail;
+			sourceTree = "<group>";
+		};
 		7D99A5802BB0323100C81432 /* GratitudeJournal */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +375,7 @@
 		7D9B47F62B7C4BE8003451A2 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				7D92996E2BBBCF7E00FFF86C /* HistoryDetail */,
 				7DFF9FE62BB688890043F360 /* Repository */,
 				7DFF9FDF2BB3EC780043F360 /* AttendanceCheck */,
 				7D99A5812BB0323C00C81432 /* DailyGoal */,
@@ -406,6 +424,7 @@
 			children = (
 				7D9B47FC2B7C4E6C003451A2 /* NameSpace.swift */,
 				7DFF9FE42BB55F580043F360 /* UtilFunction.swift */,
+				7D9299732BBBDBBC00FFF86C /* Enum.swift */,
 			);
 			path = File;
 			sourceTree = "<group>";
@@ -491,6 +510,7 @@
 				7DFF9FEB2BB689D30043F360 /* CalendarView.swift */,
 				7DFF9FEF2BB68D650043F360 /* RepositoryView.swift */,
 				7DFF9FF62BBBA0960043F360 /* CalendarCell.swift */,
+				7DFF9FF82BBBB6740043F360 /* HistoryView.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -609,11 +629,13 @@
 			files = (
 				7D9B47E12B7A2A00003451A2 /* HomeViewController.swift in Sources */,
 				7D4CF9F72BA9280700BC7952 /* HomeVC+Timer.swift in Sources */,
+				7D9299702BBBCFAE00FFF86C /* HistoryDetailViewController.swift in Sources */,
 				7D9B47DD2B7A2A00003451A2 /* AppDelegate.swift in Sources */,
 				7D9007D22B84B9B2004B6C3C /* Assets+Generated.swift in Sources */,
 				7D4CF9F52BA83B2700BC7952 /* CheckBox.swift in Sources */,
 				7D9007D82B87511E004B6C3C /* DateFormatter.swift in Sources */,
 				7D9007DB2B8758DA004B6C3C /* TimerManager.swift in Sources */,
+				7DFF9FF92BBBB6740043F360 /* HistoryView.swift in Sources */,
 				7DFF9FEC2BB689D30043F360 /* CalendarView.swift in Sources */,
 				7D807EC02BAD256B001E6F3A /* WritingPageVC+TableView.swift in Sources */,
 				7DB186E62BB3BB8900CBEEF5 /* BasicCoreDataStore.swift in Sources */,
@@ -631,6 +653,7 @@
 				7DCE10E02B96F39B00197635 /* FilledEggImageView.swift in Sources */,
 				7DCE10E72B9731C600197635 /* GratitudejournalView.swift in Sources */,
 				7D807EBA2BAC0B6C001E6F3A /* TextFieldView.swift in Sources */,
+				7D9299742BBBDBBC00FFF86C /* Enum.swift in Sources */,
 				7D9B47FD2B7C4E6C003451A2 /* NameSpace.swift in Sources */,
 				7D4CF9FC2BA92C1800BC7952 /* WritingPageViewController.swift in Sources */,
 				7D4CFA062BAA49CC00BC7952 /* HomeVC+PHPicker.swift in Sources */,
@@ -651,6 +674,7 @@
 				7DFF9FF52BBA93AA0043F360 /* UIDate.swift in Sources */,
 				7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */,
 				7D9007D62B871D76004B6C3C /* TrackingTime.swift in Sources */,
+				7D9299722BBBCFF400FFF86C /* HistoryDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ final class RepositoryViewController: UIViewController {
     
     let viewManager = RepositoryView()
     lazy var calendarView = viewManager.calendarView
+    lazy var historyView = viewManager.historyView
     
     
     override func loadView() {
@@ -45,6 +46,8 @@ final class RepositoryViewController: UIViewController {
     func setupEvent() {
         calendarView.previousButton.addTarget(self, action: #selector(prevCurrentPage), for: .touchUpInside)
         calendarView.nextButton.addTarget(self, action: #selector(nextCurrentPage), for: .touchUpInside)
+        
+        historyView.showDetailButton.addTarget(self, action: #selector(showDetailButtonTapped), for: .touchUpInside)
     }
     
     // 이전 달로 이동 함수
@@ -72,6 +75,14 @@ final class RepositoryViewController: UIViewController {
                     to: calendarView.calendar.currentPage) else { return }
         calendarView.calendar.setCurrentPage(nextDate, animated: true)
 
+    }
+    
+    //자세히 보기 버튼
+    @objc private func showDetailButtonTapped(){
+        
+        let historyDetailVC = HistoryDetailViewController()
+        historyDetailVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(historyDetailVC, animated: true)
     }
 }
 
