@@ -50,7 +50,7 @@ public func returnMotivationText() -> String {
             
             ///3개 미만으로 작성했다면
             if journalEntities.count<3 || goalEntities.count<3 {
-                return "감사일기와 오전목표를 각각 3개 이상씩 작성해보세요! \n 열흘이면 30개가 쌓여요!"
+                return "감사일기와 오전목표를 각각 3개 이상씩 작성해보세요! \n 열흘이면 30개씩 쌓여요!"
             } else {
                 ///감사일기와 목표 모두 3개 이상으로 작성
                 

@@ -44,6 +44,7 @@
 		7D9299722BBBCFF400FFF86C /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9299712BBBCFF400FFF86C /* HistoryDetailView.swift */; };
 		7D9299742BBBDBBC00FFF86C /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9299732BBBDBBC00FFF86C /* Enum.swift */; };
 		7D9299802BBCE8D200FFF86C /* DailyDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D92997F2BBCE8D200FFF86C /* DailyDataStore.swift */; };
+		7D9299822BBD47FF00FFF86C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9299812BBD47FF00FFF86C /* UserDefaults.swift */; };
 		7D99A5872BB033D400C81432 /* GratitudeJournalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99A5862BB033D400C81432 /* GratitudeJournalDataStore.swift */; };
 		7D9B47DD2B7A2A00003451A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B47DC2B7A2A00003451A2 /* AppDelegate.swift */; };
 		7D9B47DF2B7A2A00003451A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B47DE2B7A2A00003451A2 /* SceneDelegate.swift */; };
@@ -113,6 +114,7 @@
 		7D9299712BBBCFF400FFF86C /* HistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
 		7D9299732BBBDBBC00FFF86C /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		7D92997F2BBCE8D200FFF86C /* DailyDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDataStore.swift; sourceTree = "<group>"; };
+		7D9299812BBD47FF00FFF86C /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		7D99A5862BB033D400C81432 /* GratitudeJournalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeJournalDataStore.swift; sourceTree = "<group>"; };
 		7D9B47D92B7A2A00003451A2 /* FillTheEgg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FillTheEgg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9B47DC2B7A2A00003451A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 				7D9007DC2B886A06004B6C3C /* UIImage.swift */,
 				7D807EBB2BAC62BD001E6F3A /* UIViewController.swift */,
 				7DFF9FF42BBA93AA0043F360 /* UIDate.swift */,
+				7D9299812BBD47FF00FFF86C /* UserDefaults.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				7D9B47DD2B7A2A00003451A2 /* AppDelegate.swift in Sources */,
 				7D9007D22B84B9B2004B6C3C /* Assets+Generated.swift in Sources */,
 				7D4CF9F52BA83B2700BC7952 /* CheckBox.swift in Sources */,
+				7D9299822BBD47FF00FFF86C /* UserDefaults.swift in Sources */,
 				7D9007D82B87511E004B6C3C /* DateFormatter.swift in Sources */,
 				7D9007DB2B8758DA004B6C3C /* TimerManager.swift in Sources */,
 				7DFF9FF92BBBB6740043F360 /* HistoryView.swift in Sources */,
