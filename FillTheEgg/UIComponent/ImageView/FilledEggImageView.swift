@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FilledEggImageView: UIImageView {
+final class FilledEggImageView: UIImageView {
     
     enum EggImageMode {
         case withLabel

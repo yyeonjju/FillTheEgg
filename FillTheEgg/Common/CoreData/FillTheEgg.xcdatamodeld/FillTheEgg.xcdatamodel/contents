@@ -2,14 +2,24 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22G74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="AttendanceCheck" representedClassName="AttendanceCheck" syncable="YES" codeGenerationType="class">
         <attribute name="imageData" optional="YES" attributeType="Binary"/>
+        <relationship name="superStorage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyDataStorage" inverseName="attendanceList" inverseEntity="DailyDataStorage"/>
+    </entity>
+    <entity name="DailyDataStorage" representedClassName="DailyDataStorage" syncable="YES" codeGenerationType="class">
+        <attribute name="dateString" optional="YES" attributeType="String"/>
+        <attribute name="eggRate" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="attendanceList" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="AttendanceCheck" inverseName="superStorage" inverseEntity="AttendanceCheck"/>
+        <relationship name="goalList" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="DailyGoal" inverseName="superStorage" inverseEntity="DailyGoal"/>
+        <relationship name="gratitudeJournalList" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="GratitudeJournal" inverseName="superStorage" inverseEntity="GratitudeJournal"/>
     </entity>
     <entity name="DailyGoal" representedClassName="DailyGoal" syncable="YES" codeGenerationType="class">
         <attribute name="isDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="superStorage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyDataStorage" inverseName="goalList" inverseEntity="DailyDataStorage"/>
     </entity>
     <entity name="GratitudeJournal" representedClassName="GratitudeJournal" syncable="YES" codeGenerationType="class">
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="superStorage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyDataStorage" inverseName="gratitudeJournalList" inverseEntity="DailyDataStorage"/>
     </entity>
 </model>

@@ -9,6 +9,11 @@ import Foundation
 
 extension DateFormatter {
     
+    static var forSavingDate : DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy.MM.dd"
+        return formatter
+    }
 //    static var year: DateFormatter {
 //        let formatter = DateFormatter()
 //        formatter.dateFormat = "YYYY"

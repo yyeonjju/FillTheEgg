@@ -32,6 +32,8 @@ class BasicCoreDataStore<T : NSManagedObject> {
         do {
             try context.save()
             fetchEntity()
+            
+            print("🍑DailyDataStore.shared.list() -> ", DailyDataStore.shared.list())
         } catch {
             fatalError(error.localizedDescription)
         }

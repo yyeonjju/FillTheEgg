@@ -15,6 +15,7 @@ final class HomeViewController: UIViewController {
     let gratitudeJournalData = GratitudeJournalDataStore.shared
     let dailyGoalData = DailyGoalDataStore.shared
     let attendanceCheckData = AttendanceCheckDataStore.shared
+    let dailyData = DailyDataStore.shared
 
     
     // MARK: - ViewController LifeCycle
@@ -124,12 +125,20 @@ final class HomeViewController: UIViewController {
     func updateEggRateImage () {
         let ratio = CGFloat(calculateEggRate())/100
         viewManager.eggRateImage.ratio = ratio
+        
+        //비율 업데이트될 때마다 DailyData도 업데이트해서 저장시켜주기
+        updateDailyData(eggRate: ratio)
     }
     
     //동기부여 코멘트 업데이트
     func updateMotivationLabel () {
         let text = returnMotivationText()
         viewManager.motivationLabel.text = text
+    }
+    
+    //DailyData 업데이트해서 저장
+    func updateDailyData (eggRate : CGFloat) {
+        dailyData.create(eggRate : eggRate)
     }
     
 }
