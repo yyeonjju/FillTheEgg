@@ -18,7 +18,7 @@ final class BlankView : UIView {
         return view
     }()
 
-    private let defaultLabel : UILabel = {
+    let defaultLabel : UILabel = {
         let label = UILabel()
         label.font = FontFamily.Pretendard.extraBold.font(size: 15)
         label.textColor = Assets.Colors.white.color
@@ -30,12 +30,16 @@ final class BlankView : UIView {
 
     // MARK: - init
 
-    init(frame: CGRect = .zero, text : String) {
+    init(frame: CGRect = .zero, text : String, height : CGFloat = 250) {
         super.init(frame:frame)
         
         defaultLabel.text = text
-        
+
         setupAutoLayout()
+        
+        NSLayoutConstraint.activate([
+            defaultView.heightAnchor.constraint(equalToConstant: height),
+        ])
     }
     
     required init?(coder: NSCoder) {
@@ -63,7 +67,7 @@ final class BlankView : UIView {
             defaultView.topAnchor.constraint(equalTo: topAnchor),
             defaultView.leadingAnchor.constraint(equalTo: leadingAnchor),
             defaultView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            defaultView.heightAnchor.constraint(equalToConstant: 250),
+//            defaultView.heightAnchor.constraint(equalToConstant: 170),
             defaultView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             defaultLabel.centerXAnchor.constraint(equalTo: defaultView.centerXAnchor),

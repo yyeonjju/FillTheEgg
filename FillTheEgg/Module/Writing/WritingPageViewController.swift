@@ -65,12 +65,14 @@ class WritingPageViewController: UIViewController {
     
     func setupGratitudeJournalMode() {
         mode = .writeGratitudeJournal
-        viewManager.textFieldView.textField.placeholder = "감사일기 작성이야~~"
+        viewManager.textFieldView.textField.placeholder = "감사일기"
+        viewManager.defaultView.defaultLabel.text = BlankViewText.gratitudeJournalWritingPageText
 
     }
     func setupDailyGoalMode() {
         mode = .writeDailyGoal
-        viewManager.textFieldView.textField.placeholder = "오전 목표 작성이야~~"
+        viewManager.textFieldView.textField.placeholder = "오전 목표"
+        viewManager.defaultView.defaultLabel.text = BlankViewText.dailyGoalWritingPageText
     }
     
     private func setupButtonEvent() {

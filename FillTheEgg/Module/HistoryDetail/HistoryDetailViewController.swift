@@ -71,6 +71,8 @@ extension HistoryDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        print("✅numberOfRowsInSection", gratitudeJournalList.count)
         
+        tableView.isScrollEnabled = false
+        
         if tableView == viewManager.gratitudeJournalSection.bulletTableView {
             let gratitudeJournalList = gratitudeJournalData.list()
             return gratitudeJournalList.count

@@ -10,7 +10,7 @@ import UIKit
 
 final class AttendanceCheckView : UIView {
     
-    var operation : EOperation?
+    var page : Page?
     
     // MARK: - Component
     let mainLabel = MainSectionLabel(text: "출석하기")
@@ -60,11 +60,11 @@ final class AttendanceCheckView : UIView {
     
     //    init(frame: CGRect, size : Size){}
     
-    init(operation : EOperation = .create) {
+    init(page : Page = .home) {
         super.init(frame: .zero)
 
         setupAutoLayout()
-        self.operation = operation
+        self.page = page
     }
     
     required init?(coder: NSCoder) {
@@ -72,7 +72,9 @@ final class AttendanceCheckView : UIView {
     }
     
     override func layoutSubviews() {
-        if operation == .read {
+        super.layoutSubviews()
+        
+        if page == .historyDetailView {
             self.deletePhotoButton.alpha = 0
         }
     }

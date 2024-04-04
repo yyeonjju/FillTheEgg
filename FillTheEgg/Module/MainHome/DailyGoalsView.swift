@@ -9,7 +9,7 @@ import UIKit
 
 final class DailyGoalsView : UIView {
     
-    var operation : EOperation?
+    var page : Page?
     
     // MARK: - Component
     private let mainLabel = MainSectionLabel(text: "오전목표")
@@ -49,7 +49,7 @@ final class DailyGoalsView : UIView {
     }()
     
     private let defaultView : BlankView = {
-        let view = BlankView(text: BlankViewText.dailyGoalHomeViewText)
+        let view = BlankView(text: "", height: 120)
         
         return view
     }()
@@ -59,12 +59,21 @@ final class DailyGoalsView : UIView {
     
     // MARK: - Initial Method
     
-    init(operation : EOperation = .create) {
+    init(page : Page = .home) {
         super.init(frame: .zero)
 
         setupSubView()
         setupConstraints()
-        self.operation = operation
+        
+        self.page = page
+        
+        switch page {
+        case .home :
+            defaultView.defaultLabel.text = BlankViewText.dailyGoalHomeViewText
+            
+        case.historyDetailView :
+            defaultView.defaultLabel.text = BlankViewText.dailyGoalHistoryDetailPageText
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -72,7 +81,9 @@ final class DailyGoalsView : UIView {
     }
     
     override func layoutSubviews() {
-        if operation == .read {
+        super.layoutSubviews()
+        
+        if page == .historyDetailView {
             self.addButton.alpha = 0
         }
     }

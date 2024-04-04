@@ -23,18 +23,18 @@ final class HistoryDetailView : UIView {
     }()
     
     let attendCheckSection : AttendanceCheckView = {
-        let view = AttendanceCheckView(operation: .read)
+        let view = AttendanceCheckView(page: .historyDetailView)
 
         return view
     }()
     
     lazy var gratitudeJournalSection : GratitudejournalView = {
-        let view = GratitudejournalView(operation: .read)
+        let view = GratitudejournalView(page: .historyDetailView)
         return view
     }()
     
     lazy var dailyGoalsSection : DailyGoalsView = {
-        let view = DailyGoalsView(operation: .read)
+        let view = DailyGoalsView(page: .historyDetailView)
 
         return view
     }()
@@ -88,8 +88,8 @@ final class HistoryDetailView : UIView {
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             contentView.bottomAnchor.constraint(equalTo: dailyGoalsSection.bottomAnchor, constant: 100),
             contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
-            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 10),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 10),
             
             //attendCheckSection
             attendCheckSection.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),

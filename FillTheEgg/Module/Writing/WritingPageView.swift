@@ -59,8 +59,8 @@ final class WritingPageView : UIView {
         return tableView
     }()
     
-    private let defaultView : BlankView = {
-        let view = BlankView(text: BlankViewText.gratitudeJournalWritingPageText)
+    let defaultView : BlankView = {
+        let view = BlankView(text: "")
 
         return view
     }()

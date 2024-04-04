@@ -9,7 +9,7 @@ import UIKit
 
 final class GratitudejournalView : UIView {
     
-    var operation : EOperation?
+    var page : Page?
     
     // MARK: - Component
     private let mainLabel = MainSectionLabel(text: "감사일기")
@@ -49,7 +49,7 @@ final class GratitudejournalView : UIView {
     }()
     
     private let defaultView : BlankView = {
-        let view = BlankView(text: BlankViewText.gratitudeJournalHomeViewText)
+        let view = BlankView(text: "" , height: 120)
         
         return view
     }()
@@ -58,12 +58,20 @@ final class GratitudejournalView : UIView {
     // MARK: - Initial Method
 
     
-    init(operation : EOperation = .create) {
+    init(page : Page = .home) {
         super.init(frame: .zero)
         
         setupSubView()
         setupConstraints()
-        self.operation = operation
+        self.page = page
+        
+        switch page {
+        case .home :
+            defaultView.defaultLabel.text = BlankViewText.gratitudeJournalHomeViewText
+            
+        case.historyDetailView :
+            defaultView.defaultLabel.text = BlankViewText.gratitudeJournalHistoryDetailPageText
+        }
         
     }
     
@@ -72,7 +80,9 @@ final class GratitudejournalView : UIView {
     }
     
     override func layoutSubviews() {
-        if operation == .read {
+        super.layoutSubviews()
+        
+        if page == .historyDetailView {
             self.addButton.alpha = 0
         }
     }

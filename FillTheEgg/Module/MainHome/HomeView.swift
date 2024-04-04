@@ -50,7 +50,6 @@ final class HomeView: UIView {
         label.textColor = Assets.Colors.gray2.color
         label.textAlignment = .left
         label.numberOfLines = 2
-        label.text = "2월 20일 화요일"
         return label
     }()
     
@@ -62,7 +61,6 @@ final class HomeView: UIView {
         
         label.textColor = Assets.Colors.gray2.color
         label.textAlignment = .left
-        label.text = "20:03"
         return label
     }()
     
@@ -197,7 +195,7 @@ final class HomeView: UIView {
             //스크롤 뷰에 담을 contentView
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            contentView.bottomAnchor.constraint(equalTo: dailyGoalsSection.bottomAnchor, constant: 200),
+            contentView.bottomAnchor.constraint(equalTo: dailyGoalsSection.bottomAnchor, constant: 100),
             contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             
             //contentView는 전체적으로 scrollView대비 양옆 간격 주기
@@ -240,7 +238,7 @@ final class HomeView: UIView {
             
             motivationStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             motivationStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            motivationStackView.topAnchor.constraint(equalTo: eggRateImage.bottomAnchor, constant: 40),
+            motivationStackView.topAnchor.constraint(equalTo: eggRateImage.bottomAnchor, constant: 30),
             motivationStackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
 //            motivationStackView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             
@@ -252,13 +250,13 @@ final class HomeView: UIView {
             attendCheckSection.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
 
             //gratitudeJournalSection
-            gratitudeJournalSection.topAnchor.constraint(equalTo: attendCheckSection.bottomAnchor, constant: 50),
+            gratitudeJournalSection.topAnchor.constraint(equalTo: attendCheckSection.bottomAnchor, constant: 40),
             gratitudeJournalSection.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             gratitudeJournalSection.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             gratitudeJournalSection.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
             //dailyGoalsSection
-            dailyGoalsSection.topAnchor.constraint(equalTo: gratitudeJournalSection.bottomAnchor, constant: 50),
+            dailyGoalsSection.topAnchor.constraint(equalTo: gratitudeJournalSection.bottomAnchor, constant: 40),
             dailyGoalsSection.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             dailyGoalsSection.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             dailyGoalsSection.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),

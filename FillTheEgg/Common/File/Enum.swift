@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EOperation {
-    case create
-    case read
+enum Page {
+    case home
+    case historyDetailView
 }
