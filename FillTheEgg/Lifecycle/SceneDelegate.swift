@@ -75,34 +75,42 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
+//        let attendanceCheckData = AttendanceCheckDataStore.shared
+//        let gratitudeJournalData = GratitudeJournalDataStore.shared
+//        let dailyGoalData = DailyGoalDataStore.shared
+//
+//        attendanceCheckData.resetAllData()
+//        gratitudeJournalData.resetAllData()
+//        dailyGoalData.resetAllData()
+        
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
-        let attendanceCheckData = AttendanceCheckDataStore.shared
-        let gratitudeJournalData = GratitudeJournalDataStore.shared
-        let dailyGoalData = DailyGoalDataStore.shared
-        
-        let todayDateString = DateFormatter.forSavingDate.string(from: Date())
-        
-        print("🎀sceneWillEnterForeground🎀 UserDefaults.standard.lastVisitDate", UserDefaults.standard.lastVisitDate)
-        
-        guard let lastVisitDate = UserDefaults.standard.lastVisitDate else {
-            UserDefaults.standard.lastVisitDate = todayDateString
-            print("🎀sceneWillEnterForeground🎀 lastVisitDate 가 nil일 경우 오늘 날짜 저장", UserDefaults.standard.lastVisitDate)
-            return
-        }
-        
-        /// 마지막 방문날짜가 오늘보다 이전 날짜일 경우
-        /// 모든 데이터를 리셋시켜주고 UserDefaults의 lastVisitDate를 업데이트 시켜준다
-        if todayDateString > lastVisitDate {
-            attendanceCheckData.resetAllData()
-            gratitudeJournalData.resetAllData()
-            dailyGoalData.resetAllData()
-            
-            UserDefaults.standard.lastVisitDate = todayDateString
-            print("🎀sceneWillEnterForeground🎀 todayDateString > lastVisitDate", todayDateString)
-            
-            
-        }
+//        let attendanceCheckData = AttendanceCheckDataStore.shared
+//        let gratitudeJournalData = GratitudeJournalDataStore.shared
+//        let dailyGoalData = DailyGoalDataStore.shared
+//
+//        let todayDateString = DateFormatter.forSavingDate.string(from: Date())
+//
+//        print("🎀sceneWillEnterForeground🎀 UserDefaults.standard.lastVisitDate", UserDefaults.standard.lastVisitDate)
+//
+//        guard let lastVisitDate = UserDefaults.standard.lastVisitDate else {
+//            UserDefaults.standard.lastVisitDate = todayDateString
+//            print("🎀sceneWillEnterForeground🎀 lastVisitDate 가 nil일 경우 오늘 날짜 저장", UserDefaults.standard.lastVisitDate)
+//            return
+//        }
+//
+//        /// 마지막 방문날짜가 오늘보다 이전 날짜일 경우
+//        /// 모든 데이터를 리셋시켜주고 UserDefaults의 lastVisitDate를 업데이트 시켜준다
+//        if todayDateString > lastVisitDate {
+//            attendanceCheckData.resetAllData()
+//            gratitudeJournalData.resetAllData()
+//            dailyGoalData.resetAllData()
+//
+//            UserDefaults.standard.lastVisitDate = todayDateString
+//            print("🎀sceneWillEnterForeground🎀 todayDateString > lastVisitDate", todayDateString)
+//
+//
+//        }
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {

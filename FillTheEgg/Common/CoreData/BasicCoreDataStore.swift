@@ -22,6 +22,7 @@ class BasicCoreDataStore<T : NSManagedObject> {
     
     ///엔터티 리스트
     var entities: [T] = []
+    var todayEntities : [T] = []
     
     
     
@@ -32,15 +33,13 @@ class BasicCoreDataStore<T : NSManagedObject> {
         do {
             try context.save()
             fetchEntity()
-            
-            print("🍑DailyDataStore.shared.list() -> ", DailyDataStore.shared.list())
         } catch {
             fatalError(error.localizedDescription)
         }
     }
     
     /// 그룹 엔티티 패치를 요청
-    private func fetchEntity() {
+    func fetchEntity() {
         do {
             entities = try context.fetch(fetchReQuest) as! [T]
         } catch {
@@ -54,11 +53,14 @@ class BasicCoreDataStore<T : NSManagedObject> {
     func list() -> [T] {
         return entities
     }
+    func todayList() -> [T] {
+        return todayEntities
+    }
     
     
-    /// 현재 편집 중인 그룹을 삭제합니다.
+    /// 오늘데이터 중 특정 인덱스를 삭제합니다
     func delete(index : Int) {
-        context.delete(entities[index])
+        context.delete(todayEntities[index])
         saveContext()
     }
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D1CF11D2BA07A0500C1807A /* BulletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */; };
+		7D2C0C602BC2A412009583E3 /* EggRateDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C0C5F2BC2A412009583E3 /* EggRateDataStore.swift */; };
 		7D4CF9F12BA573A000BC7952 /* AutoResizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F02BA573A000BC7952 /* AutoResizingTableView.swift */; };
 		7D4CF9F32BA8269500BC7952 /* BulletCheckboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F22BA8269500BC7952 /* BulletCheckboxTableViewCell.swift */; };
 		7D4CF9F52BA83B2700BC7952 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F42BA83B2700BC7952 /* CheckBox.swift */; };
@@ -78,6 +79,7 @@
 
 /* Begin PBXFileReference section */
 		7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletTableViewCell.swift; sourceTree = "<group>"; };
+		7D2C0C5F2BC2A412009583E3 /* EggRateDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggRateDataStore.swift; sourceTree = "<group>"; };
 		7D4CF9F02BA573A000BC7952 /* AutoResizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoResizingTableView.swift; sourceTree = "<group>"; };
 		7D4CF9F22BA8269500BC7952 /* BulletCheckboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletCheckboxTableViewCell.swift; sourceTree = "<group>"; };
 		7D4CF9F42BA83B2700BC7952 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
@@ -167,6 +169,22 @@
 				7D807EBD2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		7D2C0C5D2BC2A3F2009583E3 /* EggRate */ = {
+			isa = PBXGroup;
+			children = (
+				7D2C0C5E2BC2A3FC009583E3 /* Model */,
+			);
+			path = EggRate;
+			sourceTree = "<group>";
+		};
+		7D2C0C5E2BC2A3FC009583E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D2C0C5F2BC2A412009583E3 /* EggRateDataStore.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7D4CF9EF2BA5738C00BC7952 /* UITableVIew */ = {
@@ -395,6 +413,7 @@
 		7D9B47F62B7C4BE8003451A2 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				7D2C0C5D2BC2A3F2009583E3 /* EggRate */,
 				7D92997D2BBCE87400FFF86C /* DailyDataStorage */,
 				7D92996E2BBBCF7E00FFF86C /* HistoryDetail */,
 				7DFF9FE62BB688890043F360 /* Repository */,
@@ -650,6 +669,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D9B47E12B7A2A00003451A2 /* HomeViewController.swift in Sources */,
+				7D2C0C602BC2A412009583E3 /* EggRateDataStore.swift in Sources */,
 				7D4CF9F72BA9280700BC7952 /* HomeVC+Timer.swift in Sources */,
 				7D9299702BBBCFAE00FFF86C /* HistoryDetailViewController.swift in Sources */,
 				7D9B47DD2B7A2A00003451A2 /* AppDelegate.swift in Sources */,

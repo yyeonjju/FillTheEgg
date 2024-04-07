@@ -12,10 +12,11 @@ final class HomeViewController: UIViewController {
     let viewManager = HomeView()
     let trackingTime = TrackingTime.shared
     let timerManager = TimerManager.shared
+    
     let gratitudeJournalData = GratitudeJournalDataStore.shared
     let dailyGoalData = DailyGoalDataStore.shared
     let attendanceCheckData = AttendanceCheckDataStore.shared
-    let dailyData = DailyDataStore.shared
+    let eggRateData = EggRateDataStore.shared
 
     
     // MARK: - ViewController LifeCycle
@@ -53,12 +54,12 @@ final class HomeViewController: UIViewController {
         viewManager.dailyGoalsSection.bulletChckboxTableView.reloadData()
         
         //defaultView를 위한 데이터 재할당
-        viewManager.gratitudeJournalSection.dataList = gratitudeJournalData.list()
-        viewManager.dailyGoalsSection.dataList = dailyGoalData.list()
+        viewManager.gratitudeJournalSection.dataList = gratitudeJournalData.todayList()
+        viewManager.dailyGoalsSection.dataList = dailyGoalData.todayList()
         
         //출석 체크 이미지 로딩
-        if !attendanceCheckData.list().isEmpty {
-            guard let imageData = attendanceCheckData.list()[0].imageData else {return}
+        if !attendanceCheckData.todayList().isEmpty {
+            guard let imageData = attendanceCheckData.todayList()[0].imageData else {return}
             viewManager.attendCheckSection.photoImageView.image = UIImage(data: imageData)
             viewManager.attendCheckSection.photoLabel.alpha = 0
             viewManager.attendCheckSection.deletePhotoButton.alpha = 1
@@ -126,19 +127,14 @@ final class HomeViewController: UIViewController {
         let ratio = CGFloat(calculateEggRate())/100
         viewManager.eggRateImage.ratio = ratio
         
-        //비율 업데이트될 때마다 DailyData도 업데이트해서 저장시켜주기
-        updateDailyData(eggRate: ratio)
+        //비율 업데이트될 때마다 eggRateData도 업데이트해서 저장시켜주기
+        eggRateData.create(rate: ratio)
     }
     
     //동기부여 코멘트 업데이트
     func updateMotivationLabel () {
         let text = returnMotivationText()
         viewManager.motivationLabel.text = text
-    }
-    
-    //DailyData 업데이트해서 저장
-    func updateDailyData (eggRate : CGFloat) {
-        dailyData.create(eggRate : eggRate)
     }
     
 }

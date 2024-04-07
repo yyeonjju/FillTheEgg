@@ -9,10 +9,15 @@ import Foundation
 
 // MARK: - Calculate Egg Rate
 
+public func getTodayDateString() -> String {
+    return DateFormatter.forSavingDate.string(from: Date())
+//    return "2024.04.05"
+}
+
 public func calculateEggRate () -> Int {
-    let attendanceEntities = AttendanceCheckDataStore.shared.list()
-    let journalEntities = GratitudeJournalDataStore.shared.list()
-    let goalEntities = DailyGoalDataStore.shared.list()
+    let attendanceEntities = AttendanceCheckDataStore.shared.todayList()
+    let journalEntities = GratitudeJournalDataStore.shared.todayList()
+    let goalEntities = DailyGoalDataStore.shared.todayList()
     
     
     /// 출석체크 전체 점수
@@ -32,9 +37,9 @@ public func calculateEggRate () -> Int {
 // MARK: - motivationText
 
 public func returnMotivationText() -> String {
-    let attendanceEntities = AttendanceCheckDataStore.shared.list()
-    let journalEntities = GratitudeJournalDataStore.shared.list()
-    let goalEntities = DailyGoalDataStore.shared.list()
+    let attendanceEntities = AttendanceCheckDataStore.shared.todayList()
+    let journalEntities = GratitudeJournalDataStore.shared.todayList()
+    let goalEntities = DailyGoalDataStore.shared.todayList()
     
     ///출석X
     if attendanceEntities.isEmpty {

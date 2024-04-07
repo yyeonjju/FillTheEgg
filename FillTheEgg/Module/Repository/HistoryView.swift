@@ -27,31 +27,28 @@ class HistoryView : UIView{
         return btn
     }()
     
-    private lazy var attendanceLabel : UILabel = {
+    let attendanceLabel : UILabel = {
         let label = UILabel ()
-        label.text = attendance.isEmpty ? "- 출석 실패!" :  "- 출석 완료!"
         label.font = FontFamily.Pretendard.bold.font(size: FontSize.regular)
         label.textColor = Assets.Colors.gray3.color
         return label
     }()
     
-    private lazy var graititudeJournalLabel : UILabel = {
+    let graititudeJournalLabel : UILabel = {
         let label = UILabel ()
-        label.text = "- 감사일기 \(gratitudeJournal.count)개 작성!"
         label.font = FontFamily.Pretendard.bold.font(size: FontSize.regular)
         label.textColor = Assets.Colors.gray3.color
         return label
     }()
     
-    private lazy var dailyGoalLabel : UILabel = {
+    let dailyGoalLabel : UILabel = {
         let label = UILabel ()
-        label.text = "- 오전 목표 \(dailyGoal.count)개 완료!"
         label.font = FontFamily.Pretendard.bold.font(size: FontSize.regular)
         label.textColor = Assets.Colors.gray3.color
         return label
     }()
     
-    private let eggRateImage = FilledEggImageView()
+    let eggRateImage = FilledEggImageView()
     
     
     // MARK: - init

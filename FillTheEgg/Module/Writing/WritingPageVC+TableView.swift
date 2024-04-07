@@ -41,7 +41,7 @@ extension WritingPageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if mode == .writeGratitudeJournal {
-            let gratitudeJournalList = gratitudeJournalData.list()
+            let gratitudeJournalList = gratitudeJournalData.todayList()
             
             //테이블뷰가 리로드될 때 viewManager.dataList를 업데이트해주면?
             viewManager.dataList = gratitudeJournalList
@@ -50,7 +50,7 @@ extension WritingPageViewController: UITableViewDataSource {
         }
 
         if mode == .writeDailyGoal {
-            let dailyGoalList = dailyGoalData.list()
+            let dailyGoalList = dailyGoalData.todayList()
             
             //테이블뷰가 리로드될 때 viewManager.dataList를 업데이트해주면?
             viewManager.dataList = dailyGoalList
@@ -69,12 +69,12 @@ extension WritingPageViewController: UITableViewDataSource {
         cell.selectionStyle = .none
         
         if mode == .writeGratitudeJournal {
-            let gratitudeJournalList = gratitudeJournalData.list()
+            let gratitudeJournalList = gratitudeJournalData.todayList()
             cell.label.text = gratitudeJournalList[indexPath.row].text
         }
         
         if mode == .writeDailyGoal {
-            let dailyGoalList = dailyGoalData.list()
+            let dailyGoalList = dailyGoalData.todayList()
             cell.label.text = dailyGoalList[indexPath.row].text
         }
         

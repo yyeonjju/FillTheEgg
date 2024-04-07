@@ -16,7 +16,14 @@ final class DailyGoalDataStore: BasicCoreDataStore<DailyGoal> {
     private override init () {
         super.init()
     }
-
+    
+    override func fetchEntity() {
+        super.fetchEntity()
+        
+        self.todayEntities = entities.filter{$0.dateString == getTodayDateString()}
+        print("🍑🍑🍑DailyGoalDataStore entities", entities)
+        print("🍑🍑🍑DailyGoalDataStore todayEntities", todayEntities)
+    }
 }
 
 
@@ -31,6 +38,7 @@ extension DailyGoalDataStore {
         newEntity.text = text
         newEntity.isDone = isDone
         newEntity.order = Int16(entities.count)
+        newEntity.dateString = getTodayDateString()
         
         // 콘텍스트 저장
         saveContext()
@@ -38,7 +46,7 @@ extension DailyGoalDataStore {
     
     ///Uodate : 리스트 중 체크박스 체크 여부  업데이트
     func update(isDone : Bool, index : Int) {
-        let goal = entities[index]
+        let goal = todayEntities[index]
         goal.isDone = isDone
         
         saveContext()

@@ -17,6 +17,13 @@ final class GratitudeJournalDataStore : BasicCoreDataStore<GratitudeJournal> {
         super.init()
     }
 
+    override func fetchEntity() {
+        super.fetchEntity()
+        
+        self.todayEntities = entities.filter{$0.dateString == getTodayDateString()}
+        print("🍑🍑GratitudeJournalDataStore entities", entities)
+        print("🍑🍑GratitudeJournalDataStore todayEntities", todayEntities)
+    }
 }
 
 // MARK: - Create
@@ -29,6 +36,7 @@ extension GratitudeJournalDataStore {
         
         newEntity.text = text
         newEntity.order = Int16(entities.count)
+        newEntity.dateString = getTodayDateString()
         
         print("newEntity ==> ", newEntity)
         

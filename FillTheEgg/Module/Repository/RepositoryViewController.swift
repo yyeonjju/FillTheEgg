@@ -14,6 +14,11 @@ final class RepositoryViewController: UIViewController {
     lazy var calendarView = viewManager.calendarView
     lazy var historyView = viewManager.historyView
     
+    let attendanceCheckData = AttendanceCheckDataStore.shared
+    let gratitudeJournalData = GratitudeJournalDataStore.shared
+    let dailyGoalData = DailyGoalDataStore.shared
+    let eggRateData = EggRateDataStore.shared
+    
     
     override func loadView() {
         view = viewManager
@@ -84,6 +89,29 @@ final class RepositoryViewController: UIViewController {
         historyDetailVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(historyDetailVC, animated: true)
     }
+    
+    //날짜 선택에 따른
+    private func calendarCellSelected(dateString : String) {
+        
+        let attendanceArray = attendanceCheckData.list().filter{$0.dateString == dateString}
+        historyView.attendanceLabel.text = attendanceArray.isEmpty ?  "- 출석 실패!" :  "- 출석 완료!"
+        
+        let journalArray = gratitudeJournalData.list().filter{$0.dateString == dateString}
+        historyView.graititudeJournalLabel.text = "- 감사일기 \(journalArray.count)개 작성!"
+        
+        let goalArray = dailyGoalData.list().filter{$0.dateString == dateString && $0.isDone}
+        historyView.dailyGoalLabel.text = "- 오전 목표 \(goalArray.count)개 완료!"
+        
+        let eggRateArray = eggRateData.list().filter{$0.dateString == dateString}
+        if eggRateArray.isEmpty {
+            historyView.eggRateImage.ratio = 0.0
+        }else {
+            historyView.eggRateImage.ratio =  CGFloat(eggRateArray[0].rate)
+
+        }
+       
+    }
+    
 }
 
 extension RepositoryViewController : FSCalendarDataSource, FSCalendarDelegate {
@@ -99,11 +127,23 @@ extension RepositoryViewController : FSCalendarDataSource, FSCalendarDelegate {
     /// FSCalendar 셀을 반환합니다.
     func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
         let cell = calendar.dequeueReusableCell(withIdentifier: Cell.fsCalendarCell, for: date, at: position) as! CalendarCell
-        let dayText = DateFormatter.day.string(from: date)
+        let dayOnlyString = DateFormatter.day.string(from: date)
+        let dateString = DateFormatter.forSavingDate.string(from: date)
+        let eggRateEntireData = eggRateData.list()
+
+        if let index = eggRateEntireData.firstIndex(where: {$0.dateString == dateString}){
+            cell.eggRateImage.ratio = CGFloat(eggRateEntireData[index].rate)
+        } else {
+            cell.eggRateImage.ratio = 0.0
+        }
         
-        cell.eggRateImage.ratio = 0.7
-        cell.dateLabel.text = dayText
-        cell.selectedDateLabel.text = dayText
+        cell.dateLabel.text = dayOnlyString
+        cell.selectedDateLabel.text = dayOnlyString
+        cell.cellIsTapped = { [weak self] in
+            guard let self else { return }
+            self.calendarCellSelected(dateString: dateString)
+            
+        }
 
         return cell
     }

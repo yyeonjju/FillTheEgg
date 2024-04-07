@@ -11,6 +11,7 @@ import FSCalendar
 class CalendarCell : FSCalendarCell {
     
     let eggRateImage = FilledEggImageView(mode: .withoutLabel)
+    var cellIsTapped : () -> Void = {}
 
     //선택되지 않은 날짜
     let dateLabel: UILabel = {
@@ -65,6 +66,7 @@ class CalendarCell : FSCalendarCell {
         didSet {
             if isSelected {
                 selectedDateCircle.alpha = 1
+                cellIsTapped()
             }
 
             else {

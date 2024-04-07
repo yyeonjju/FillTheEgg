@@ -43,12 +43,12 @@ extension HomeViewController: UITableViewDataSource {
 //        print("✅numberOfRowsInSection", gratitudeJournalList.count)
         
         if tableView == viewManager.gratitudeJournalSection.bulletTableView {
-            let gratitudeJournalList = gratitudeJournalData.list()
+            let gratitudeJournalList = gratitudeJournalData.todayList()
             return gratitudeJournalList.count
         }
         
         if tableView == viewManager.dailyGoalsSection.bulletChckboxTableView {
-            let dailyGoalList = dailyGoalData.list()
+            let dailyGoalList = dailyGoalData.todayList()
             return dailyGoalList.count
         }
         
@@ -60,7 +60,7 @@ extension HomeViewController: UITableViewDataSource {
 
         if tableView == viewManager.gratitudeJournalSection.bulletTableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: Cell.bulletCell, for: indexPath) as! BulletTableViewCell
-            let gratitudeJournalList = gratitudeJournalData.list()
+            let gratitudeJournalList = gratitudeJournalData.todayList()
             
             cell.label.text = gratitudeJournalList[indexPath.row].text
             cell.selectionStyle = .none
@@ -72,7 +72,7 @@ extension HomeViewController: UITableViewDataSource {
             
 //            print("✅cellForRowAt  dailyGoalsSection")
             let cell = tableView.dequeueReusableCell(withIdentifier: Cell.bulletCheckboxCell, for: indexPath) as! BulletCheckboxTableViewCell
-            let dailyGoalList = dailyGoalData.list()
+            let dailyGoalList = dailyGoalData.todayList()
             
             cell.label.text = dailyGoalList[indexPath.row].text
             cell.ckeckbox.isChecked = dailyGoalList[indexPath.row].isDone

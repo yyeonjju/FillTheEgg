@@ -1,18 +1,16 @@
 //
-//  AttendanceCheckDataStore.swift
+//  EggRateDataStore.swift
 //  FillTheEgg
 //
-//  Created by 하연주 on 2024/03/27.
+//  Created by 하연주 on 2024/04/07.
 //
 
-import UIKit
-import CoreData
+import Foundation
 
-
-final class AttendanceCheckDataStore : BasicCoreDataStore<AttendanceCheck>{
+final class EggRateDataStore : BasicCoreDataStore<EggRate>{
     
     //싱글톤
-    static let shared = AttendanceCheckDataStore()
+    static let shared = EggRateDataStore()
     private override init () {
         super.init()
     }
@@ -22,32 +20,32 @@ final class AttendanceCheckDataStore : BasicCoreDataStore<AttendanceCheck>{
         
         self.todayEntities = entities.filter{$0.dateString == getTodayDateString()}
         
-        print("🍑AttendanceCheckDataStore entities", entities)
-        print("🍑AttendanceCheckDataStore todayEntities", todayEntities)
+        print("🍑EggRateDataStore entities", entities)
+        print("🍑EggRateDataStore todayEntities", todayEntities)
     }
     
 }
 
 
-extension AttendanceCheckDataStore {
+extension EggRateDataStore {
     
     /// Create : 새 데이터를 생성
-    func create(image : UIImage) {
+    func create(rate : CGFloat) {
         if todayEntities.isEmpty {
-            let newEntity = AttendanceCheck(context: context)
-            newEntity.imageData = image.pngData()
+            let newEntity = EggRate(context: context)
+            newEntity.rate = Float(rate)
             newEntity.dateString = getTodayDateString()
 
             // 콘텍스트 저장
             saveContext()
         } else {
-            update(image: image)
+            update(rate: rate)
         }
     }
     
     ///Uodate  : 출석체크 데이터는 하나의 요소만 있으면 되므로 index 0에 접근해서 수정
-    private func update(image: UIImage) {
-        todayEntities[0].imageData = image.pngData()
+    private func update(rate : CGFloat) {
+        todayEntities[0].rate = Float(rate)
         todayEntities[0].dateString = getTodayDateString()
         saveContext()
     }
