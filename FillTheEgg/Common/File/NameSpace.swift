@@ -100,7 +100,7 @@ enum BlankViewText {
     
     static let dailyGoalHomeViewText = "오전목표 단 3개! \n 거창한거 노노. 작은거라도 좋아요. \n 작은 목표를 달성하면서 성취감을 맛보세요 :)"
     static let dailyGoalWritingPageText = "금같은 아침 집중력을 위해\n오전 목표 3가지를 등록해보세요!\n\n ex) \n블로그 초안 작성하기 \n 메신저 답장하기. 연락 쌓이는 거 멈춰!"
-    static let dailyGoalHistoryDetailPageText = "이 날 작성한 오전 목표가 없습니다."
+    static let dailyGoalHistoryDetailPageText = "이 날 완료한 오전 목표가 없습니다."
 }
 
 

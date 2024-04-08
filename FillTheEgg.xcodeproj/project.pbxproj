@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D1CF11D2BA07A0500C1807A /* BulletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */; };
 		7D2C0C602BC2A412009583E3 /* EggRateDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C0C5F2BC2A412009583E3 /* EggRateDataStore.swift */; };
+		7D2C0C632BC39345009583E3 /* HistoryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C0C622BC39344009583E3 /* HistoryContent.swift */; };
 		7D4CF9F12BA573A000BC7952 /* AutoResizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F02BA573A000BC7952 /* AutoResizingTableView.swift */; };
 		7D4CF9F32BA8269500BC7952 /* BulletCheckboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F22BA8269500BC7952 /* BulletCheckboxTableViewCell.swift */; };
 		7D4CF9F52BA83B2700BC7952 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F42BA83B2700BC7952 /* CheckBox.swift */; };
@@ -80,6 +81,7 @@
 /* Begin PBXFileReference section */
 		7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletTableViewCell.swift; sourceTree = "<group>"; };
 		7D2C0C5F2BC2A412009583E3 /* EggRateDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggRateDataStore.swift; sourceTree = "<group>"; };
+		7D2C0C622BC39344009583E3 /* HistoryContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryContent.swift; sourceTree = "<group>"; };
 		7D4CF9F02BA573A000BC7952 /* AutoResizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoResizingTableView.swift; sourceTree = "<group>"; };
 		7D4CF9F22BA8269500BC7952 /* BulletCheckboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletCheckboxTableViewCell.swift; sourceTree = "<group>"; };
 		7D4CF9F42BA83B2700BC7952 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
@@ -183,6 +185,14 @@
 			isa = PBXGroup;
 			children = (
 				7D2C0C5F2BC2A412009583E3 /* EggRateDataStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D2C0C612BC392E1009583E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D2C0C622BC39344009583E3 /* HistoryContent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -296,6 +306,7 @@
 		7D92996E2BBBCF7E00FFF86C /* HistoryDetail */ = {
 			isa = PBXGroup;
 			children = (
+				7D2C0C612BC392E1009583E3 /* Model */,
 				7D92996F2BBBCFAE00FFF86C /* HistoryDetailViewController.swift */,
 				7D9299712BBBCFF400FFF86C /* HistoryDetailView.swift */,
 			);
@@ -704,6 +715,7 @@
 				7D9007CE2B847E7D004B6C3C /* HomeView.swift in Sources */,
 				7D9B48442B80C29C003451A2 /* SwcondViewController.swift in Sources */,
 				7D4CF9F32BA8269500BC7952 /* BulletCheckboxTableViewCell.swift in Sources */,
+				7D2C0C632BC39345009583E3 /* HistoryContent.swift in Sources */,
 				7D9B47DF2B7A2A00003451A2 /* SceneDelegate.swift in Sources */,
 				7DCE10E52B972E2D00197635 /* Label.swift in Sources */,
 				7D4CF9F92BA9294E00BC7952 /* HomeVC+TableView.swift in Sources */,

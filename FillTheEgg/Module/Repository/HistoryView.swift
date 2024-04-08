@@ -69,7 +69,7 @@ class HistoryView : UIView{
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        eggRateImage.ratio = 0.3
+//        eggRateImage.ratio = 0.3
     }
     
     // MARK: - layout

@@ -10,9 +10,7 @@ import UIKit
 final class HistoryDetailViewController: UIViewController {
     let viewManager = HistoryDetailView()
     
-    let gratitudeJournalData = GratitudeJournalDataStore.shared
-    let dailyGoalData = DailyGoalDataStore.shared
-    let attendanceCheckData = AttendanceCheckDataStore.shared
+    var historyContent : HistoryContent = HistoryContent(attendanceCheckData: [], gratitudeJournalData: [], dailyGoalData: [])
     
     
     override func loadView() {
@@ -23,6 +21,7 @@ final class HistoryDetailViewController: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
+        print("HistoryDetailViewController - historyContent ->", historyContent)
 
     }
     
@@ -35,12 +34,12 @@ final class HistoryDetailViewController: UIViewController {
         viewManager.dailyGoalsSection.bulletChckboxTableView.reloadData()
         
         //defaultView를 위한 데이터 재할당
-        viewManager.gratitudeJournalSection.dataList = gratitudeJournalData.todayList()
-        viewManager.dailyGoalsSection.dataList = dailyGoalData.todayList()
+        viewManager.gratitudeJournalSection.dataList = historyContent.gratitudeJournalData
+        viewManager.dailyGoalsSection.dataList = historyContent.dailyGoalData
         
         //출석 체크 이미지 로딩
-        if !attendanceCheckData.todayList().isEmpty {
-            guard let imageData = attendanceCheckData.todayList()[0].imageData else {return}
+        if !historyContent.attendanceCheckData.isEmpty {
+            guard let imageData = historyContent.attendanceCheckData[0].imageData else {return}
             viewManager.attendCheckSection.photoImageView.image = UIImage(data: imageData)
             viewManager.attendCheckSection.photoLabel.alpha = 0
             viewManager.attendCheckSection.deletePhotoButton.alpha = 1
@@ -74,12 +73,12 @@ extension HistoryDetailViewController: UITableViewDataSource {
         tableView.isScrollEnabled = false
         
         if tableView == viewManager.gratitudeJournalSection.bulletTableView {
-            let gratitudeJournalList = gratitudeJournalData.todayList()
+            let gratitudeJournalList = historyContent.gratitudeJournalData
             return gratitudeJournalList.count
         }
         
         if tableView == viewManager.dailyGoalsSection.bulletChckboxTableView {
-            let dailyGoalList = dailyGoalData.todayList()
+            let dailyGoalList = historyContent.dailyGoalData
             return dailyGoalList.count
         }
         
@@ -91,7 +90,7 @@ extension HistoryDetailViewController: UITableViewDataSource {
 
         if tableView == viewManager.gratitudeJournalSection.bulletTableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: Cell.bulletCell, for: indexPath) as! BulletTableViewCell
-            let gratitudeJournalList = gratitudeJournalData.todayList()
+            let gratitudeJournalList = historyContent.gratitudeJournalData
             
             cell.label.text = gratitudeJournalList[indexPath.row].text
             cell.selectionStyle = .none
@@ -103,7 +102,7 @@ extension HistoryDetailViewController: UITableViewDataSource {
             
 //            print("✅cellForRowAt  dailyGoalsSection")
             let cell = tableView.dequeueReusableCell(withIdentifier: Cell.bulletCheckboxCell, for: indexPath) as! BulletCheckboxTableViewCell
-            let dailyGoalList = dailyGoalData.todayList()
+            let dailyGoalList = historyContent.dailyGoalData
             
             cell.label.text = dailyGoalList[indexPath.row].text
             cell.ckeckbox.isChecked = dailyGoalList[indexPath.row].isDone

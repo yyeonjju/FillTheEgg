@@ -19,6 +19,8 @@ final class RepositoryViewController: UIViewController {
     let dailyGoalData = DailyGoalDataStore.shared
     let eggRateData = EggRateDataStore.shared
     
+    var historyContent : HistoryContent = HistoryContent(attendanceCheckData: [], gratitudeJournalData: [], dailyGoalData: [])
+    
     
     override func loadView() {
         view = viewManager
@@ -30,7 +32,13 @@ final class RepositoryViewController: UIViewController {
         
         setupCalendar()
         setupEvent()
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //캘린더 reloadData
+        calendarView.calendar.reloadData()
     }
     
     // MARK: - methhod
@@ -87,6 +95,7 @@ final class RepositoryViewController: UIViewController {
         
         let historyDetailVC = HistoryDetailViewController()
         historyDetailVC.hidesBottomBarWhenPushed = true
+        historyDetailVC.historyContent = self.historyContent
         navigationController?.pushViewController(historyDetailVC, animated: true)
     }
     
@@ -107,9 +116,17 @@ final class RepositoryViewController: UIViewController {
             historyView.eggRateImage.ratio = 0.0
         }else {
             historyView.eggRateImage.ratio =  CGFloat(eggRateArray[0].rate)
+            print("historyView.eggRateImage.ratio = ", eggRateArray[0].rate)
+            print("historyView.eggRateImage.ratio = ", String(eggRateArray[0].rate))
 
         }
-       
+        
+        //HistoryDetailViewController로 넘어갈 데이터 세팅
+        self.historyContent = HistoryContent(
+            attendanceCheckData: attendanceArray,
+            gratitudeJournalData: journalArray,
+            dailyGoalData: goalArray
+        )
     }
     
 }
