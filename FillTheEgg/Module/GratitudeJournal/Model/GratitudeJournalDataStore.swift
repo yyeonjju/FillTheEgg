@@ -35,7 +35,6 @@ extension GratitudeJournalDataStore {
         let newEntity = GratitudeJournal(context: context)
         
         newEntity.text = text
-        newEntity.order = Int16(entities.count)
         newEntity.dateString = getTodayDateString()
         
         print("newEntity ==> ", newEntity)

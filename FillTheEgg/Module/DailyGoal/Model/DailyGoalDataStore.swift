@@ -37,7 +37,6 @@ extension DailyGoalDataStore {
         
         newEntity.text = text
         newEntity.isDone = isDone
-        newEntity.order = Int16(entities.count)
         newEntity.dateString = getTodayDateString()
         
         // 콘텍스트 저장
