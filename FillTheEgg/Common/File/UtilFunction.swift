@@ -7,12 +7,25 @@
 
 import Foundation
 
-// MARK: - Calculate Egg Rate
+// MARK: - Convert Type
+
+public func convertFloatToCGFloat(_ float : Float) -> CGFloat{
+    ///두 가지 방법
+    let cgFloat = CGFloat(((String(float)) as NSString).doubleValue)
+//    let cgFloat = CGFloat(Double(String(float)) ?? 0)
+    return cgFloat
+}
+
+
+// MARK: - Date
 
 public func getTodayDateString() -> String {
     return DateFormatter.forSavingDate.string(from: Date())
 //    return "2024.04.05"
 }
+
+
+// MARK: - Calculate Egg Rate
 
 public func calculateEggRate () -> Int {
     let attendanceEntities = AttendanceCheckDataStore.shared.todayList()

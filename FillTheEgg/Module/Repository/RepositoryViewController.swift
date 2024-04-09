@@ -37,7 +37,8 @@ final class RepositoryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //캘린더 reloadData
+        ///캘린더 reloadData -> viewWillAppear 때마다 리로드 되면서 calendar.select 동작
+        ///-> calendarCellSelected 메서드 동작하면서 historyView도 다시 세팅됨
         calendarView.calendar.reloadData()
     }
     
@@ -108,17 +109,15 @@ final class RepositoryViewController: UIViewController {
         let journalArray = gratitudeJournalData.list().filter{$0.dateString == dateString}
         historyView.graititudeJournalLabel.text = "- 감사일기 \(journalArray.count)개 작성!"
         
-        let goalArray = dailyGoalData.list().filter{$0.dateString == dateString && $0.isDone}
-        historyView.dailyGoalLabel.text = "- 오전 목표 \(goalArray.count)개 완료!"
+        let goalArray = dailyGoalData.list().filter{$0.dateString == dateString}
+        let completedGoalArray = goalArray.filter{$0.isDone}
+        historyView.dailyGoalLabel.text = "- 오전 목표 \(completedGoalArray.count)개 완료!"
         
         let eggRateArray = eggRateData.list().filter{$0.dateString == dateString}
         if eggRateArray.isEmpty {
             historyView.eggRateImage.ratio = 0.0
         }else {
-            historyView.eggRateImage.ratio =  CGFloat(eggRateArray[0].rate)
-            print("historyView.eggRateImage.ratio = ", eggRateArray[0].rate)
-            print("historyView.eggRateImage.ratio = ", String(eggRateArray[0].rate))
-
+            historyView.eggRateImage.ratio =  convertFloatToCGFloat(eggRateArray[0].rate)
         }
         
         //HistoryDetailViewController로 넘어갈 데이터 세팅
@@ -149,7 +148,7 @@ extension RepositoryViewController : FSCalendarDataSource, FSCalendarDelegate {
         let eggRateEntireData = eggRateData.list()
 
         if let index = eggRateEntireData.firstIndex(where: {$0.dateString == dateString}){
-            cell.eggRateImage.ratio = CGFloat(eggRateEntireData[index].rate)
+            cell.eggRateImage.ratio = convertFloatToCGFloat(eggRateEntireData[index].rate)
         } else {
             cell.eggRateImage.ratio = 0.0
         }
