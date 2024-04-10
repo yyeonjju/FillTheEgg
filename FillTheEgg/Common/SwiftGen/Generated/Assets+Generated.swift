@@ -33,15 +33,16 @@ internal enum Assets {
     internal static let quoteRight = ImageAsset(name: "quoteRight")
   }
   internal enum Colors {
-    internal static let gray1 = ColorAsset(name: "Gray1")
     internal static let black = ColorAsset(name: "black")
     internal static let eggWhite = ColorAsset(name: "eggWhite")
+    internal static let gray1 = ColorAsset(name: "gray1")
     internal static let gray2 = ColorAsset(name: "gray2")
     internal static let gray3 = ColorAsset(name: "gray3")
     internal static let gray4 = ColorAsset(name: "gray4")
     internal static let gray5 = ColorAsset(name: "gray5")
     internal static let gray6 = ColorAsset(name: "gray6")
     internal static let gray7 = ColorAsset(name: "gray7")
+    internal static let lightBeige = ColorAsset(name: "lightBeige")
     internal static let mainYellow = ColorAsset(name: "mainYellow")
     internal static let normalGreen = ColorAsset(name: "normalGreen")
     internal static let softRed = ColorAsset(name: "softRed")

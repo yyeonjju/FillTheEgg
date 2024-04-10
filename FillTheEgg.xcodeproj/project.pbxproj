@@ -860,7 +860,7 @@
 				DEVELOPMENT_TEAM = 5B4DDA3JD6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FillTheEgg/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "알찬하루";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -890,7 +890,7 @@
 				DEVELOPMENT_TEAM = 5B4DDA3JD6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FillTheEgg/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "알찬하루";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

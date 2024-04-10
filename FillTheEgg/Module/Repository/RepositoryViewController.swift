@@ -30,6 +30,8 @@ final class RepositoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "History"
+        
         setupCalendar()
         setupEvent()
     }

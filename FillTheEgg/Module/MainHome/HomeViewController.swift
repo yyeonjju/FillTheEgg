@@ -32,6 +32,8 @@ final class HomeViewController: UIViewController {
 
         super.viewDidLoad()
         
+        title = "Home"
+        
         setupTableView() //테이블뷰 dataSource,delegate, cell 등록
         setupTimer()
         

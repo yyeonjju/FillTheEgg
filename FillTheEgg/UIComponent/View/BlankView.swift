@@ -12,9 +12,9 @@ final class BlankView : UIView {
     // MARK: - Component
     private lazy var defaultView : UIView = {
         let view = UIView()
-        view.backgroundColor = Assets.Colors.eggWhite.color
+        view.backgroundColor = Assets.Colors.lightBeige.color
         view.layer.cornerRadius = 20
-        view.layer.opacity = 0.7
+        view.layer.opacity = 0.8
         return view
     }()
 

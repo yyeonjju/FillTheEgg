@@ -17,7 +17,7 @@ final class AttendanceCheckView : UIView {
     
     let photoImageView : UIImageView = { //
         let view = UIImageView()
-        view.backgroundColor = Assets.Colors.eggWhite.color
+        view.backgroundColor = Assets.Colors.lightBeige.color
         view.layer.cornerRadius = 10
         view.clipsToBounds = true
         view.contentMode = .scaleAspectFill
