@@ -10,6 +10,18 @@
 		7D1CF11D2BA07A0500C1807A /* BulletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */; };
 		7D2C0C602BC2A412009583E3 /* EggRateDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C0C5F2BC2A412009583E3 /* EggRateDataStore.swift */; };
 		7D2C0C632BC39345009583E3 /* HistoryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C0C622BC39344009583E3 /* HistoryContent.swift */; };
+		7D2E027A2BC66D7A0033CF3E /* FirstOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E02792BC66D790033CF3E /* FirstOnboardingViewController.swift */; };
+		7D2E027C2BC66D890033CF3E /* SecondOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E027B2BC66D890033CF3E /* SecondOnboardingViewController.swift */; };
+		7D2E027E2BC66D9D0033CF3E /* ThirdOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E027D2BC66D9D0033CF3E /* ThirdOnboardingViewController.swift */; };
+		7D2E02802BC66DB50033CF3E /* FourthOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E027F2BC66DB50033CF3E /* FourthOnboardingViewController.swift */; };
+		7D2E02822BC66DC60033CF3E /* FifthOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E02812BC66DC60033CF3E /* FifthOnboardingViewController.swift */; };
+		7D2E02842BC670020033CF3E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E02832BC670020033CF3E /* OnboardingView.swift */; };
+		7D2E02902BC794DD0033CF3E /* FirstOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E028F2BC794DD0033CF3E /* FirstOnboardingView.swift */; };
+		7D2E02922BC795430033CF3E /* SecondOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E02912BC795430033CF3E /* SecondOnboardingView.swift */; };
+		7D2E02942BC7955C0033CF3E /* ThirdOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E02932BC7955C0033CF3E /* ThirdOnboardingView.swift */; };
+		7D2E02962BC795790033CF3E /* FourthOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E02952BC795790033CF3E /* FourthOnboardingView.swift */; };
+		7D2E02982BC7959D0033CF3E /* FifthOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E02972BC7959D0033CF3E /* FifthOnboardingView.swift */; };
+		7D2E029A2BC79F3C0033CF3E /* SimpleOnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E02992BC79F3C0033CF3E /* SimpleOnboardingPageView.swift */; };
 		7D4CF9F12BA573A000BC7952 /* AutoResizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F02BA573A000BC7952 /* AutoResizingTableView.swift */; };
 		7D4CF9F32BA8269500BC7952 /* BulletCheckboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F22BA8269500BC7952 /* BulletCheckboxTableViewCell.swift */; };
 		7D4CF9F52BA83B2700BC7952 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9F42BA83B2700BC7952 /* CheckBox.swift */; };
@@ -66,6 +78,9 @@
 		7DCE10E72B9731C600197635 /* GratitudejournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10E62B9731C600197635 /* GratitudejournalView.swift */; };
 		7DCE10E92B97329700197635 /* DailyGoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10E82B97329700197635 /* DailyGoalsView.swift */; };
 		7DCE10EC2B9733B500197635 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10EB2B9733B500197635 /* Button.swift */; };
+		7DE878A12BC65058001AFA29 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE878A02BC65058001AFA29 /* OnboardingViewController.swift */; };
+		7DE878A32BC65532001AFA29 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE878A22BC65532001AFA29 /* StartViewController.swift */; };
+		7DE878A52BC65681001AFA29 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE878A42BC65681001AFA29 /* StartView.swift */; };
 		7DFF9FE12BB3ECDC0043F360 /* AttendanceCheckDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF9FE02BB3ECDC0043F360 /* AttendanceCheckDataStore.swift */; };
 		7DFF9FE52BB55F580043F360 /* UtilFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF9FE42BB55F580043F360 /* UtilFunction.swift */; };
 		7DFF9FEA2BB688D10043F360 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF9FE92BB688D10043F360 /* RepositoryViewController.swift */; };
@@ -81,6 +96,18 @@
 		7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletTableViewCell.swift; sourceTree = "<group>"; };
 		7D2C0C5F2BC2A412009583E3 /* EggRateDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggRateDataStore.swift; sourceTree = "<group>"; };
 		7D2C0C622BC39344009583E3 /* HistoryContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryContent.swift; sourceTree = "<group>"; };
+		7D2E02792BC66D790033CF3E /* FirstOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnboardingViewController.swift; sourceTree = "<group>"; };
+		7D2E027B2BC66D890033CF3E /* SecondOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnboardingViewController.swift; sourceTree = "<group>"; };
+		7D2E027D2BC66D9D0033CF3E /* ThirdOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdOnboardingViewController.swift; sourceTree = "<group>"; };
+		7D2E027F2BC66DB50033CF3E /* FourthOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthOnboardingViewController.swift; sourceTree = "<group>"; };
+		7D2E02812BC66DC60033CF3E /* FifthOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthOnboardingViewController.swift; sourceTree = "<group>"; };
+		7D2E02832BC670020033CF3E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		7D2E028F2BC794DD0033CF3E /* FirstOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnboardingView.swift; sourceTree = "<group>"; };
+		7D2E02912BC795430033CF3E /* SecondOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnboardingView.swift; sourceTree = "<group>"; };
+		7D2E02932BC7955C0033CF3E /* ThirdOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdOnboardingView.swift; sourceTree = "<group>"; };
+		7D2E02952BC795790033CF3E /* FourthOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthOnboardingView.swift; sourceTree = "<group>"; };
+		7D2E02972BC7959D0033CF3E /* FifthOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthOnboardingView.swift; sourceTree = "<group>"; };
+		7D2E02992BC79F3C0033CF3E /* SimpleOnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOnboardingPageView.swift; sourceTree = "<group>"; };
 		7D4CF9F02BA573A000BC7952 /* AutoResizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoResizingTableView.swift; sourceTree = "<group>"; };
 		7D4CF9F22BA8269500BC7952 /* BulletCheckboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletCheckboxTableViewCell.swift; sourceTree = "<group>"; };
 		7D4CF9F42BA83B2700BC7952 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
@@ -139,6 +166,9 @@
 		7DCE10E62B9731C600197635 /* GratitudejournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudejournalView.swift; sourceTree = "<group>"; };
 		7DCE10E82B97329700197635 /* DailyGoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsView.swift; sourceTree = "<group>"; };
 		7DCE10EB2B9733B500197635 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		7DE878A02BC65058001AFA29 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		7DE878A22BC65532001AFA29 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		7DE878A42BC65681001AFA29 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		7DFF9FE02BB3ECDC0043F360 /* AttendanceCheckDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceCheckDataStore.swift; sourceTree = "<group>"; };
 		7DFF9FE42BB55F580043F360 /* UtilFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilFunction.swift; sourceTree = "<group>"; };
 		7DFF9FE92BB688D10043F360 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +225,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7D2E02782BC66D5E0033CF3E /* OnboardingContents */ = {
+			isa = PBXGroup;
+			children = (
+				7D2E02792BC66D790033CF3E /* FirstOnboardingViewController.swift */,
+				7D2E027B2BC66D890033CF3E /* SecondOnboardingViewController.swift */,
+				7D2E027D2BC66D9D0033CF3E /* ThirdOnboardingViewController.swift */,
+				7D2E027F2BC66DB50033CF3E /* FourthOnboardingViewController.swift */,
+				7D2E02812BC66DC60033CF3E /* FifthOnboardingViewController.swift */,
+				7D2E028F2BC794DD0033CF3E /* FirstOnboardingView.swift */,
+				7D2E02912BC795430033CF3E /* SecondOnboardingView.swift */,
+				7D2E02932BC7955C0033CF3E /* ThirdOnboardingView.swift */,
+				7D2E02952BC795790033CF3E /* FourthOnboardingView.swift */,
+				7D2E02972BC7959D0033CF3E /* FifthOnboardingView.swift */,
+			);
+			path = OnboardingContents;
+			sourceTree = "<group>";
+		};
 		7D4CF9EF2BA5738C00BC7952 /* UITableVIew */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +265,7 @@
 			children = (
 				7D807EB92BAC0B6C001E6F3A /* TextFieldView.swift */,
 				7D4CFA002BA9667B00BC7952 /* BlankView.swift */,
+				7D2E02992BC79F3C0033CF3E /* SimpleOnboardingPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -406,6 +454,7 @@
 		7D9B47F62B7C4BE8003451A2 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				7DE8789F2BC64F50001AFA29 /* Onboarding */,
 				7D2C0C5D2BC2A3F2009583E3 /* EggRate */,
 				7D92996E2BBBCF7E00FFF86C /* HistoryDetail */,
 				7DFF9FE62BB688890043F360 /* Repository */,
@@ -510,6 +559,18 @@
 				7D4CF9F42BA83B2700BC7952 /* CheckBox.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		7DE8789F2BC64F50001AFA29 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				7D2E02782BC66D5E0033CF3E /* OnboardingContents */,
+				7DE878A02BC65058001AFA29 /* OnboardingViewController.swift */,
+				7DE878A22BC65532001AFA29 /* StartViewController.swift */,
+				7DE878A42BC65681001AFA29 /* StartView.swift */,
+				7D2E02832BC670020033CF3E /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		7DFF9FDF2BB3EC780043F360 /* AttendanceCheck */ = {
@@ -661,18 +722,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D9B47E12B7A2A00003451A2 /* HomeViewController.swift in Sources */,
+				7D2E027E2BC66D9D0033CF3E /* ThirdOnboardingViewController.swift in Sources */,
 				7D2C0C602BC2A412009583E3 /* EggRateDataStore.swift in Sources */,
 				7D4CF9F72BA9280700BC7952 /* HomeVC+Timer.swift in Sources */,
 				7D9299702BBBCFAE00FFF86C /* HistoryDetailViewController.swift in Sources */,
+				7DE878A32BC65532001AFA29 /* StartViewController.swift in Sources */,
+				7D2E02942BC7955C0033CF3E /* ThirdOnboardingView.swift in Sources */,
+				7D2E02902BC794DD0033CF3E /* FirstOnboardingView.swift in Sources */,
 				7D9B47DD2B7A2A00003451A2 /* AppDelegate.swift in Sources */,
 				7D9007D22B84B9B2004B6C3C /* Assets+Generated.swift in Sources */,
 				7D4CF9F52BA83B2700BC7952 /* CheckBox.swift in Sources */,
+				7D2E02962BC795790033CF3E /* FourthOnboardingView.swift in Sources */,
 				7D9299822BBD47FF00FFF86C /* UserDefaults.swift in Sources */,
 				7D9007D82B87511E004B6C3C /* DateFormatter.swift in Sources */,
 				7D9007DB2B8758DA004B6C3C /* TimerManager.swift in Sources */,
 				7DFF9FF92BBBB6740043F360 /* HistoryView.swift in Sources */,
 				7DFF9FEC2BB689D30043F360 /* CalendarView.swift in Sources */,
+				7D2E02982BC7959D0033CF3E /* FifthOnboardingView.swift in Sources */,
 				7D807EC02BAD256B001E6F3A /* WritingPageVC+TableView.swift in Sources */,
+				7D2E02802BC66DB50033CF3E /* FourthOnboardingViewController.swift in Sources */,
 				7DB186E62BB3BB8900CBEEF5 /* BasicCoreDataStore.swift in Sources */,
 				7DFF9FF02BB68D650043F360 /* RepositoryView.swift in Sources */,
 				7D4CF9F12BA573A000BC7952 /* AutoResizingTableView.swift in Sources */,
@@ -681,6 +749,9 @@
 				7DCE10E92B97329700197635 /* DailyGoalsView.swift in Sources */,
 				7D1CF11D2BA07A0500C1807A /* BulletTableViewCell.swift in Sources */,
 				7D9007DD2B886A06004B6C3C /* UIImage.swift in Sources */,
+				7D2E029A2BC79F3C0033CF3E /* SimpleOnboardingPageView.swift in Sources */,
+				7D2E027A2BC66D7A0033CF3E /* FirstOnboardingViewController.swift in Sources */,
+				7D2E02822BC66DC60033CF3E /* FifthOnboardingViewController.swift in Sources */,
 				7D807EBC2BAC62BD001E6F3A /* UIViewController.swift in Sources */,
 				7D9B47E72B7A2A00003451A2 /* FillTheEgg.xcdatamodeld in Sources */,
 				7D4CF9FE2BA932CF00BC7952 /* WritingPageView.swift in Sources */,
@@ -688,6 +759,7 @@
 				7DCE10E02B96F39B00197635 /* FilledEggImageView.swift in Sources */,
 				7DCE10E72B9731C600197635 /* GratitudejournalView.swift in Sources */,
 				7D807EBA2BAC0B6C001E6F3A /* TextFieldView.swift in Sources */,
+				7D2E02842BC670020033CF3E /* OnboardingView.swift in Sources */,
 				7D9299742BBBDBBC00FFF86C /* Enum.swift in Sources */,
 				7D9B47FD2B7C4E6C003451A2 /* NameSpace.swift in Sources */,
 				7D4CF9FC2BA92C1800BC7952 /* WritingPageViewController.swift in Sources */,
@@ -699,18 +771,22 @@
 				7D2C0C632BC39345009583E3 /* HistoryContent.swift in Sources */,
 				7D9B47DF2B7A2A00003451A2 /* SceneDelegate.swift in Sources */,
 				7DCE10E52B972E2D00197635 /* Label.swift in Sources */,
+				7DE878A12BC65058001AFA29 /* OnboardingViewController.swift in Sources */,
 				7D4CF9F92BA9294E00BC7952 /* HomeVC+TableView.swift in Sources */,
 				7DFF9FE52BB55F580043F360 /* UtilFunction.swift in Sources */,
 				7DFF9FEA2BB688D10043F360 /* RepositoryViewController.swift in Sources */,
 				7D807EBE2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift in Sources */,
+				7DE878A52BC65681001AFA29 /* StartView.swift in Sources */,
 				7D9007CB2B847588004B6C3C /* Fonts+Generated.swift in Sources */,
 				7D99A5872BB033D400C81432 /* GratitudeJournalDataStore.swift in Sources */,
 				7DFF9FF72BBBA0960043F360 /* CalendarCell.swift in Sources */,
 				7DB186E42BB3A92600CBEEF5 /* DailyGoalDataStore.swift in Sources */,
 				7DFF9FF52BBA93AA0043F360 /* UIDate.swift in Sources */,
 				7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */,
+				7D2E027C2BC66D890033CF3E /* SecondOnboardingViewController.swift in Sources */,
 				7D9007D62B871D76004B6C3C /* TrackingTime.swift in Sources */,
 				7D9299722BBBCFF400FFF86C /* HistoryDetailView.swift in Sources */,
+				7D2E02922BC795430033CF3E /* SecondOnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -215,22 +215,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3619CE85-FCD1-4682-A9E2-E4DBFE80FEA9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FillTheEgg/Common/Extension/UserDefaults.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "lastVisitDate"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3CE73119-ECB0-431E-9A64-FA9189CF4CD3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -247,16 +231,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "482DD736-CDE4-43B9-82FA-D50F5756FDE1"
+            uuid = "D3D137E3-D81F-4552-AC25-AC2CAB4CC2F6"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FillTheEgg/Lifecycle/SceneDelegate.swift"
+            filePath = "FillTheEgg/Module/Onboarding/StartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "scene(_:willConnectTo:options:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "buttonTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEB14259-1DCA-4DD1-99A8-6DF98F2ABB65"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FillTheEgg/Module/Onboarding/StartView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "setupAddSubView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -27,10 +27,13 @@ internal enum Assets {
   internal enum Assets {
     internal static let accentColor = ColorAsset(name: "AccentColor")
     internal static let filledEgg = ImageAsset(name: "filledEgg")
+    internal static let mockImageAttendanceCheck = ImageAsset(name: "mockImage-attendanceCheck")
+    internal static let mockImageCalendar = ImageAsset(name: "mockImage-calendar")
     internal static let mockImageDailyGoal = ImageAsset(name: "mockImage-dailyGoal")
     internal static let mockImageGratitudeJournal = ImageAsset(name: "mockImage-gratitudeJournal")
     internal static let quoteLeft = ImageAsset(name: "quoteLeft")
     internal static let quoteRight = ImageAsset(name: "quoteRight")
+    internal static let startAppImage = ImageAsset(name: "startAppImage")
   }
   internal enum Colors {
     internal static let black = ColorAsset(name: "black")

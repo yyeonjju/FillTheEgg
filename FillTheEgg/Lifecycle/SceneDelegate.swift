@@ -18,41 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.backgroundColor = .white //전체적 배경색 해줄려면 이렇게해야하네..
         
-        //⭐️ 네비게이션 컨트롤러 생성
-        let homeView = UINavigationController(rootViewController: HomeViewController())
-        let repositoryView = UINavigationController(rootViewController: RepositoryViewController())
-        let settingsView = UINavigationController(rootViewController: SettingsViewController())
-        
-        
-//        homeView.navigationBar.backgroundColor = .yellow
-        
-        
-        //⭐️ 탭바 컨트롤러 생성
-        let tabBarVC = UITabBarController()
-        
-        // 탭바로 사용하기 위한 뷰 컨트롤러들 설정
-        tabBarVC.setViewControllers([homeView,repositoryView,settingsView], animated: true)
-        tabBarVC.modalPresentationStyle = .fullScreen
-//        tabBarVC.tabBar.backgroundColor = .gray
-        
-        // 탭바 이름/이미지 설정 (이미지는 애플이 제공하는 것으로 사용)
-        guard let items = tabBarVC.tabBar.items else { return }
-        
-        //HomeViewController
-        items[0].title = "Home"
-        items[0].image = UIImage(systemName: "house")
-        
-        //CalendarHomeViewController
-        items[1].title = "Calendar"
-        items[1].image = UIImage(systemName: "calendar")
-        
-        //SettingsViewController
-        items[2].title = "Settings"
-        items[2].image = UIImage(systemName: "gearshape")
-        
-        
-        
-        window?.rootViewController = tabBarVC
+        // 첫 실행인지 확인
+        if UserDefaults.standard.isFirstLaunch {
+            window?.rootViewController = StartViewController()
+        } else {
+            changeRootViewControllerToHome()
+        }
+
         window?.makeKeyAndVisible() //현재 창을 표시하고 같은 수준 이하의 다른 모든 창 앞에 배치하는 편리한 방법
         
     }
@@ -120,6 +92,53 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+    }
+    
+    
+    // MARK: - Change Root View
+    
+    /// HomeViewController로 루트뷰를 변경합니다.
+    func changeRootViewControllerToHome() {
+        guard let window = self.window else { return }
+        
+        //⭐️ 네비게이션 컨트롤러 생성
+        let homeView = UINavigationController(rootViewController: HomeViewController())
+        let repositoryView = UINavigationController(rootViewController: RepositoryViewController())
+        let settingsView = UINavigationController(rootViewController: SettingsViewController())
+        
+        
+//        homeView.navigationBar.backgroundColor = .yellow
+        
+        
+        //⭐️ 탭바 컨트롤러 생성
+        let tabBarVC = UITabBarController()
+        
+        // 탭바로 사용하기 위한 뷰 컨트롤러들 설정
+        tabBarVC.setViewControllers([homeView,repositoryView,settingsView], animated: true)
+        tabBarVC.modalPresentationStyle = .fullScreen
+//        tabBarVC.tabBar.backgroundColor = .gray
+        
+        // 탭바 이름/이미지 설정 (이미지는 애플이 제공하는 것으로 사용)
+        guard let items = tabBarVC.tabBar.items else { return }
+        
+        //HomeViewController
+        items[0].title = "Home"
+        items[0].image = UIImage(systemName: "house")
+        
+        //CalendarHomeViewController
+        items[1].title = "Calendar"
+        items[1].image = UIImage(systemName: "calendar")
+        
+        //SettingsViewController
+        items[2].title = "Settings"
+        items[2].image = UIImage(systemName: "gearshape")
+        
+        
+        
+        window.rootViewController = tabBarVC
+        
+        // 부드러운 전환을 위한 효과 추가
+//        UIView.transition(with: window, duration: 0.2, options: [.transitionCrossDissolve], animations: nil, completion: nil)
     }
 
 

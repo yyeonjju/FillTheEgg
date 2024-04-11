@@ -21,9 +21,12 @@ public func convertFloatToCGFloat(_ float : Float) -> CGFloat{
 
 public func getTodayDateString() -> String {
     return DateFormatter.forSavingDate.string(from: Date())
-//    return "2024.04.05"
+//    return "2024.04.09"
 }
-
+//4.5 40
+//4.6 80
+//4.7 50
+//4.8 100
 
 // MARK: - Calculate Egg Rate
 
