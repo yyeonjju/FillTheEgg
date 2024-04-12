@@ -8,7 +8,9 @@
 import UIKit
 
 final class FourthOnboardingView : UIView {
-    private let simpleOnboardingPageView = SimpleOnboardingPageView(text: "오전목표를 3개 작성하고 달성하면 \n 성취감은 보너스! (아주 가벼운 목표도 좋아요)", imageWidth: 400, imageHeight: 250, imageName : Assets.Assets.mockImageDailyGoal.name)
+    let imageWidth = UIScreen.main.bounds.width-20
+    let heightRaio = 0.63
+    private lazy var simpleOnboardingPageView = SimpleOnboardingPageView(text: "오전목표를 3개 작성하고 달성하면 \n 성취감은 보너스! (아주 가벼운 목표도 좋아요)", imageWidth: imageWidth, imageHeight: (imageWidth*heightRaio), imageName : Assets.Assets.mockImageDailyGoal.name)
     
     override init(frame : CGRect) {
         super.init(frame: frame)

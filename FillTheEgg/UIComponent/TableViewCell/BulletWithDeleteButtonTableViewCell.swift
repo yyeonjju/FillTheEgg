@@ -15,12 +15,12 @@ final class BulletWithDeleteButtonTableViewCell : BulletTableViewCell {
     
     private let deleteButton : UIButton = {
         let button = UIButton()
-        let imageConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold)
+        let imageConfig = UIImage.SymbolConfiguration(pointSize: 15, weight: .bold)
         let titleImage = UIImage(systemName: "trash", withConfiguration: imageConfig)
         button.setImage(titleImage, for: .normal)
         
-        button.backgroundColor = Assets.Colors.gray4.color
-        button.tintColor = Assets.Colors.gray3.color
+        button.backgroundColor = Assets.Colors.gray5.color
+        button.tintColor = Assets.Colors.gray4.color
         button.layer.cornerRadius = 5
         
         button.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)

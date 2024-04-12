@@ -10,7 +10,7 @@ import UIKit
 final class FirstOnboardingView : UIView {
     private let topLabel : UILabel = {
         let label = UILabel()
-        label.text = "프리렌서나 대학생이신가요? \n 오전시간이 중요한건 알겠는데 어떻게 해야 \n 알차게 보낼 수 있는지 모르시겠나요?"
+        label.text = "프리랜서나 대학생이신가요? \n 오전시간이 중요한건 알겠는데 \n 어떻게 알차게 보낼 수 있는지 모르시겠나요?"
         label.textAlignment = .center
         label.font = FontFamily.Pretendard.bold.font(size: 18)
         label.textColor = Assets.Colors.gray2.color

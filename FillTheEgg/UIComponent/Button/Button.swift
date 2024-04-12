@@ -45,10 +45,10 @@ final class ButtonWithOutLine : UIButton {
     private func setupUI(title : String, color : UIColor, borderColor : CGColor) {
         self.setTitle(title, for: .normal)
         self.setTitleColor(color, for: .normal)
-        self.titleLabel?.font = FontFamily.Pretendard.regular.font(size: 15)
+        self.titleLabel?.font = FontFamily.Pretendard.regular.font(size: 12)
         self.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         
-        self.layer.borderWidth = 1.5
+        self.layer.borderWidth = 1.0
         self.layer.borderColor = borderColor
         self.layer.cornerRadius = 10
     

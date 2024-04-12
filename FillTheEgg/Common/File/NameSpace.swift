@@ -24,7 +24,7 @@ enum FontSize {
     static let homeViewDate = 30.0
     static let homeViewTime = 40.0
     
-    static let mainSectionLabel = 25.0
+    static let mainSectionLabel = 21.0
     
 }
 

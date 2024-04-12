@@ -104,7 +104,7 @@ final class HomeView: UIView {
     
     private let eggRateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: FontFamily.Pretendard.regular.name, size: FontSize.regular)
+        label.font = UIFont(name: FontFamily.Pretendard.semiBold.name, size: FontSize.small)
         label.textColor = Assets.Colors.gray2.color
         label.text = "오늘의 알참지수!"
         return label

@@ -46,7 +46,7 @@ final class OnboardingView : UIView {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            pageControlDotsView.topAnchor.constraint(equalTo: topAnchor, constant: 200),
+            pageControlDotsView.topAnchor.constraint(equalTo: topAnchor, constant: 180),
             pageControlDotsView.widthAnchor.constraint(equalToConstant: 100),
             pageControlDotsView.centerXAnchor.constraint(equalTo: centerXAnchor),
             

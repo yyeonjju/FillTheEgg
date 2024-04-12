@@ -8,7 +8,9 @@
 import UIKit
 
 final class FifthOnboardingView : UIView {
-    private let simpleOnboardingPageView = SimpleOnboardingPageView(text: "캘린더에서 나의 이전 달성률을 한번에 보세요. \n 과거의 나를 통해 자극받아 더 열심히 살기!", imageWidth: 300, imageHeight: 300, imageName : Assets.Assets.mockImageCalendar.name)
+    let imageWidth = UIScreen.main.bounds.width-100
+    let heightRaio = 1.0
+    private lazy var simpleOnboardingPageView = SimpleOnboardingPageView(text: "캘린더에서 나의 이전 달성률을 한번에 보세요. \n 과거의 나를 통해 자극받아 더 열심히 살기!", imageWidth: imageWidth, imageHeight: (imageWidth*heightRaio), imageName : Assets.Assets.mockImageCalendar.name)
     
     let startButton : UIButton = {
        let button = UIButton()

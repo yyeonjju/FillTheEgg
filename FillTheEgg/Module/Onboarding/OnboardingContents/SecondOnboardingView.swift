@@ -8,7 +8,9 @@
 import UIKit
 
 final class SecondOnboardingView : UIView {
-    private let simpleOnboardingPageView = SimpleOnboardingPageView(text: "사진으로 오전 출석을 인증하세요!", imageWidth: 300, imageHeight: 300, imageName : Assets.Assets.mockImageAttendanceCheck.name)
+    let imageWidth = UIScreen.main.bounds.width-100
+    let heightRaio = 1.0
+    private lazy var simpleOnboardingPageView = SimpleOnboardingPageView(text: "사진으로 오전 출석을 인증하세요!", imageWidth: imageWidth, imageHeight: (imageWidth*heightRaio), imageName : Assets.Assets.mockImageAttendanceCheck.name)
     
     override init(frame : CGRect) {
         super.init(frame: frame)

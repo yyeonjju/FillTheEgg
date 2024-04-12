@@ -56,7 +56,7 @@ final class SimpleOnboardingPageView : UIView {
             topLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             topLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             topLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            topLabel.topAnchor.constraint(equalTo: topAnchor, constant: 30),
+            topLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             imageView.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 30),
