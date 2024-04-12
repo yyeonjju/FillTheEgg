@@ -21,6 +21,13 @@ final class OnboardingViewController: UIViewController {
         return [first, second, third, fourth, fifth]
     }()
     
+    var currentIndex: Int {
+        let pageViewController = viewManager.pageViewController
+        guard let viewController = pageViewController.viewControllers?.first else { return 0 }
+        let index = dataViewControllers.firstIndex(of: viewController) ?? 0
+        return index
+    }
+    
     // MARK: - lifecycle
 
     override func loadView() {
@@ -47,7 +54,10 @@ final class OnboardingViewController: UIViewController {
         
         //첫번쨰 화면 설정 : .setViewControllers()로 첫번째 ViewController만 set
         if let firstVC = dataViewControllers.first {
-            pageViewController.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+            pageViewController.setViewControllers([firstVC], direction: .forward, animated: true, completion: {[weak self] _ in
+                guard let self else {return }
+                self.viewManager.pageControlDotsView.switchPage(to: 0)
+            })
         }
     }
 
@@ -76,6 +86,12 @@ extension OnboardingViewController: UIPageViewControllerDataSource, UIPageViewCo
         }
 
         return dataViewControllers[nextIndex]
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            viewManager.pageControlDotsView.switchPage(to: currentIndex)
+        }
     }
 }
 

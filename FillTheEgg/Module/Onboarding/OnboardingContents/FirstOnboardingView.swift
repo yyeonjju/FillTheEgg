@@ -64,7 +64,7 @@ final class FirstOnboardingView : UIView {
             topLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             topLabel.topAnchor.constraint(equalTo: topAnchor, constant: 30),
             
-            eggRateImage.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 20),
+            eggRateImage.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 40),
             eggRateImage.centerXAnchor.constraint(equalTo: centerXAnchor),
             eggRateImage.widthAnchor.constraint(equalToConstant: Size.middleEggWidth),
             eggRateImage.heightAnchor.constraint(equalToConstant: Size.middleEggHeight),
@@ -72,7 +72,7 @@ final class FirstOnboardingView : UIView {
             bottomLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             bottomLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             bottomLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            bottomLabel.topAnchor.constraint(equalTo: eggRateImage.bottomAnchor, constant: 20),
+            bottomLabel.topAnchor.constraint(equalTo: eggRateImage.bottomAnchor, constant: 40),
         ])
     }
 

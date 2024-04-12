@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D1CF11D2BA07A0500C1807A /* BulletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */; };
+		7D1CF7662BC8CABD000A7F5B /* PageControlDotsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CF7652BC8CABD000A7F5B /* PageControlDotsStackView.swift */; };
 		7D2C0C602BC2A412009583E3 /* EggRateDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C0C5F2BC2A412009583E3 /* EggRateDataStore.swift */; };
 		7D2C0C632BC39345009583E3 /* HistoryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C0C622BC39344009583E3 /* HistoryContent.swift */; };
 		7D2E027A2BC66D7A0033CF3E /* FirstOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E02792BC66D790033CF3E /* FirstOnboardingViewController.swift */; };
@@ -94,6 +95,7 @@
 
 /* Begin PBXFileReference section */
 		7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletTableViewCell.swift; sourceTree = "<group>"; };
+		7D1CF7652BC8CABD000A7F5B /* PageControlDotsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlDotsStackView.swift; sourceTree = "<group>"; };
 		7D2C0C5F2BC2A412009583E3 /* EggRateDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggRateDataStore.swift; sourceTree = "<group>"; };
 		7D2C0C622BC39344009583E3 /* HistoryContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryContent.swift; sourceTree = "<group>"; };
 		7D2E02792BC66D790033CF3E /* FirstOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnboardingViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,14 @@
 				7D807EBD2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		7D1CF7642BC8CAAD000A7F5B /* StackView */ = {
+			isa = PBXGroup;
+			children = (
+				7D1CF7652BC8CABD000A7F5B /* PageControlDotsStackView.swift */,
+			);
+			path = StackView;
 			sourceTree = "<group>";
 		};
 		7D2C0C5D2BC2A3F2009583E3 /* EggRate */ = {
@@ -321,6 +331,7 @@
 		7D9007D32B871CFC004B6C3C /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				7D1CF7642BC8CAAD000A7F5B /* StackView */,
 				7D4CF9EF2BA5738C00BC7952 /* UITableVIew */,
 				7DFF9FE32BB536E90043F360 /* ImageView */,
 				7D807EB82BAC0B4D001E6F3A /* TextField */,
@@ -781,6 +792,7 @@
 				7D99A5872BB033D400C81432 /* GratitudeJournalDataStore.swift in Sources */,
 				7DFF9FF72BBBA0960043F360 /* CalendarCell.swift in Sources */,
 				7DB186E42BB3A92600CBEEF5 /* DailyGoalDataStore.swift in Sources */,
+				7D1CF7662BC8CABD000A7F5B /* PageControlDotsStackView.swift in Sources */,
 				7DFF9FF52BBA93AA0043F360 /* UIDate.swift in Sources */,
 				7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */,
 				7D2E027C2BC66D890033CF3E /* SecondOnboardingViewController.swift in Sources */,

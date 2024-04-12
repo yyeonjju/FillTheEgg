@@ -15,9 +15,8 @@ final class OnboardingView : UIView {
         return vc
     }()
     
-    let pageControlDotsView : UIView = {
-        let view = UIView()
-        view.backgroundColor = Assets.Colors.lightBeige.color
+    let pageControlDotsView : PageControlDotsStackView = {
+        let view = PageControlDotsStackView(pageCount: 5)
         return view
     }()
     
@@ -26,7 +25,7 @@ final class OnboardingView : UIView {
     override init(frame : CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = Assets.Colors.eggWhite.color
+        backgroundColor = Assets.Colors.extraBrightBeige.color
         setupAddSubView()
         setupConstraints()
     }
@@ -47,13 +46,12 @@ final class OnboardingView : UIView {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            pageControlDotsView.topAnchor.constraint(equalTo: topAnchor, constant: 150),
-            pageControlDotsView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            pageControlDotsView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            pageControlDotsView.heightAnchor.constraint(equalToConstant: 100),
+            pageControlDotsView.topAnchor.constraint(equalTo: topAnchor, constant: 200),
+            pageControlDotsView.widthAnchor.constraint(equalToConstant: 100),
+            pageControlDotsView.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             
-            pageViewController.view.topAnchor.constraint(equalTo: pageControlDotsView.bottomAnchor, constant: 10),
+            pageViewController.view.topAnchor.constraint(equalTo: pageControlDotsView.bottomAnchor, constant: 30),
             pageViewController.view.leadingAnchor.constraint(equalTo: leadingAnchor),
             pageViewController.view.trailingAnchor.constraint(equalTo: trailingAnchor),
             pageViewController.view.bottomAnchor.constraint(equalTo: bottomAnchor),
