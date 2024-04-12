@@ -9,6 +9,7 @@ import UIKit
 
 class FifthOnboardingViewController: UIViewController {
     private let viewManager = FifthOnboardingView()
+    let timerManager = TimerManager.shared
     
     override func loadView() {
         view = viewManager
@@ -25,7 +26,15 @@ class FifthOnboardingViewController: UIViewController {
     }
     
     @objc private func startButtonTapped() {
-        print("시작하기 버튼!!")
+        UserDefaults.standard.isFirstLaunch = false
+        changeRootView()
+        timerManager.onboardingEggRateTimer.invalidate()
+    }
+    
+    func changeRootView() {
+        // 루트 뷰 컨트롤러 변경
+        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+        sceneDelegate?.changeRootViewControllerToHome()
     }
 
 }

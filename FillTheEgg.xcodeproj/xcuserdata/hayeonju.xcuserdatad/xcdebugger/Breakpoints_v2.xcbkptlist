@@ -94,8 +94,8 @@
             filePath = "FillTheEgg/Common/File/NameSpace.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "Size"
             landmarkType = "13">
          </BreakpointContent>
@@ -257,6 +257,22 @@
             startingLineNumber = "58"
             endingLineNumber = "58"
             landmarkName = "setupAddSubView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69164524-6733-4D32-8727-B60B42ED365E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FillTheEgg/Module/MainHome/HomeVC+Timer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "updateTimeLabel()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

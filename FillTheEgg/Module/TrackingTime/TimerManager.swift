@@ -17,6 +17,7 @@ final class TimerManager {
     /// 날짜 타이머
     var dateTimer: Timer!
     
+    var onboardingEggRateTimer : Timer!
     
 }
 

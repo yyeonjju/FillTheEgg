@@ -43,9 +43,6 @@ final class FirstOnboardingView : UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func draw(_ rect: CGRect) {
-        eggRateImage.ratio = 1.0
-    }
     
     // MARK: - setup
 
@@ -66,8 +63,8 @@ final class FirstOnboardingView : UIView {
             
             eggRateImage.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 40),
             eggRateImage.centerXAnchor.constraint(equalTo: centerXAnchor),
-            eggRateImage.widthAnchor.constraint(equalToConstant: Size.middleEggWidth),
-            eggRateImage.heightAnchor.constraint(equalToConstant: Size.middleEggHeight),
+            eggRateImage.widthAnchor.constraint(equalToConstant: Size.bigEggWidth),
+            eggRateImage.heightAnchor.constraint(equalToConstant: Size.bigEggHeight),
             
             bottomLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             bottomLabel.trailingAnchor.constraint(equalTo: trailingAnchor),

@@ -31,11 +31,14 @@ enum FontSize {
 // MARK: - Size
 enum Size {
     
-    static let microEggWidth = 30.0
+    static let microEggWidth = 30.0 //calendarView
     static let microEggHeight = microEggWidth * 1.1
     
-    static let middleEggWidth = 95.0
+    static let middleEggWidth = 95.0 //HomeView, historyView
     static let middleEggHeight = middleEggWidth * 1.1
+    
+    static let bigEggWidth = 110.0 //FirstOnboardingView
+    static let bigEggHeight = bigEggWidth * 1.1
     
     static let largePhotoImageWidth = 130.0
     
