@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7D1CF11D2BA07A0500C1807A /* BulletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */; };
 		7D1CF7662BC8CABD000A7F5B /* PageControlDotsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CF7652BC8CABD000A7F5B /* PageControlDotsStackView.swift */; };
+		7D1CF7692BCF99C1000A7F5B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CF7682BCF99C1000A7F5B /* SettingsViewController.swift */; };
+		7D1CF76B2BCF9A5C000A7F5B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CF76A2BCF9A5C000A7F5B /* SettingsView.swift */; };
+		7D1CF76D2BCFA8D2000A7F5B /* SettingsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CF76C2BCFA8D2000A7F5B /* SettingsDataManager.swift */; };
 		7D2C0C602BC2A412009583E3 /* EggRateDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C0C5F2BC2A412009583E3 /* EggRateDataStore.swift */; };
 		7D2C0C632BC39345009583E3 /* HistoryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2C0C622BC39344009583E3 /* HistoryContent.swift */; };
 		7D2E027A2BC66D7A0033CF3E /* FirstOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E02792BC66D790033CF3E /* FirstOnboardingViewController.swift */; };
@@ -32,6 +35,7 @@
 		7D4CF9FE2BA932CF00BC7952 /* WritingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF9FD2BA932CF00BC7952 /* WritingPageView.swift */; };
 		7D4CFA012BA9667B00BC7952 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CFA002BA9667B00BC7952 /* BlankView.swift */; };
 		7D4CFA062BAA49CC00BC7952 /* HomeVC+PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CFA052BAA49CC00BC7952 /* HomeVC+PHPicker.swift */; };
+		7D5B3F622BCFAB74009BD95C /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F612BCFAB74009BD95C /* BasicTableViewCell.swift */; };
 		7D807EBA2BAC0B6C001E6F3A /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D807EB92BAC0B6C001E6F3A /* TextFieldView.swift */; };
 		7D807EBC2BAC62BD001E6F3A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D807EBB2BAC62BD001E6F3A /* UIViewController.swift */; };
 		7D807EBE2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D807EBD2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift */; };
@@ -69,8 +73,6 @@
 		7D9B47EC2B7A2A02003451A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9B47EA2B7A2A02003451A2 /* LaunchScreen.storyboard */; };
 		7D9B47FD2B7C4E6C003451A2 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B47FC2B7C4E6C003451A2 /* NameSpace.swift */; };
 		7D9B47FF2B7CC408003451A2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9B47FE2B7CC408003451A2 /* Colors.xcassets */; };
-		7D9B48442B80C29C003451A2 /* SwcondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48432B80C29C003451A2 /* SwcondViewController.swift */; };
-		7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B48472B80C470003451A2 /* SettingsViewController.swift */; };
 		7DB186E42BB3A92600CBEEF5 /* DailyGoalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB186E32BB3A92600CBEEF5 /* DailyGoalDataStore.swift */; };
 		7DB186E62BB3BB8900CBEEF5 /* BasicCoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB186E52BB3BB8900CBEEF5 /* BasicCoreDataStore.swift */; };
 		7DCE10E02B96F39B00197635 /* FilledEggImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE10DF2B96F39B00197635 /* FilledEggImageView.swift */; };
@@ -96,6 +98,9 @@
 /* Begin PBXFileReference section */
 		7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletTableViewCell.swift; sourceTree = "<group>"; };
 		7D1CF7652BC8CABD000A7F5B /* PageControlDotsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlDotsStackView.swift; sourceTree = "<group>"; };
+		7D1CF7682BCF99C1000A7F5B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7D1CF76A2BCF9A5C000A7F5B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7D1CF76C2BCFA8D2000A7F5B /* SettingsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataManager.swift; sourceTree = "<group>"; };
 		7D2C0C5F2BC2A412009583E3 /* EggRateDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggRateDataStore.swift; sourceTree = "<group>"; };
 		7D2C0C622BC39344009583E3 /* HistoryContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryContent.swift; sourceTree = "<group>"; };
 		7D2E02792BC66D790033CF3E /* FirstOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnboardingViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +124,7 @@
 		7D4CF9FD2BA932CF00BC7952 /* WritingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingPageView.swift; sourceTree = "<group>"; };
 		7D4CFA002BA9667B00BC7952 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 		7D4CFA052BAA49CC00BC7952 /* HomeVC+PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+PHPicker.swift"; sourceTree = "<group>"; };
+		7D5B3F612BCFAB74009BD95C /* BasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
 		7D807EB92BAC0B6C001E6F3A /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		7D807EBB2BAC62BD001E6F3A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		7D807EBD2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletWithDeleteButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -158,8 +164,6 @@
 		7D9B47ED2B7A2A02003451A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D9B47FC2B7C4E6C003451A2 /* NameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		7D9B47FE2B7CC408003451A2 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		7D9B48432B80C29C003451A2 /* SwcondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwcondViewController.swift; sourceTree = "<group>"; };
-		7D9B48472B80C470003451A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7DB186E32BB3A92600CBEEF5 /* DailyGoalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalDataStore.swift; sourceTree = "<group>"; };
 		7DB186E52BB3BB8900CBEEF5 /* BasicCoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCoreDataStore.swift; sourceTree = "<group>"; };
 		7DCE10DF2B96F39B00197635 /* FilledEggImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledEggImageView.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 				7D1CF11C2BA07A0500C1807A /* BulletTableViewCell.swift */,
 				7D4CF9F22BA8269500BC7952 /* BulletCheckboxTableViewCell.swift */,
 				7D807EBD2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift */,
+				7D5B3F612BCFAB74009BD95C /* BasicTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -209,6 +214,16 @@
 				7D1CF7652BC8CABD000A7F5B /* PageControlDotsStackView.swift */,
 			);
 			path = StackView;
+			sourceTree = "<group>";
+		};
+		7D1CF7672BCF9998000A7F5B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7D1CF7682BCF99C1000A7F5B /* SettingsViewController.swift */,
+				7D1CF76A2BCF9A5C000A7F5B /* SettingsView.swift */,
+				7D1CF76C2BCFA8D2000A7F5B /* SettingsDataManager.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		7D2C0C5D2BC2A3F2009583E3 /* EggRate */ = {
@@ -465,6 +480,7 @@
 		7D9B47F62B7C4BE8003451A2 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				7D1CF7672BCF9998000A7F5B /* Settings */,
 				7DE8789F2BC64F50001AFA29 /* Onboarding */,
 				7D2C0C5D2BC2A3F2009583E3 /* EggRate */,
 				7D92996E2BBBCF7E00FFF86C /* HistoryDetail */,
@@ -475,8 +491,6 @@
 				7D4CF9FA2BA92BA300BC7952 /* Writing */,
 				7D9007D42B871D49004B6C3C /* TrackingTime */,
 				7D9007CC2B847E63004B6C3C /* MainHome */,
-				7D9B48432B80C29C003451A2 /* SwcondViewController.swift */,
-				7D9B48472B80C470003451A2 /* SettingsViewController.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -750,12 +764,15 @@
 				7DFF9FF92BBBB6740043F360 /* HistoryView.swift in Sources */,
 				7DFF9FEC2BB689D30043F360 /* CalendarView.swift in Sources */,
 				7D2E02982BC7959D0033CF3E /* FifthOnboardingView.swift in Sources */,
+				7D1CF76B2BCF9A5C000A7F5B /* SettingsView.swift in Sources */,
 				7D807EC02BAD256B001E6F3A /* WritingPageVC+TableView.swift in Sources */,
 				7D2E02802BC66DB50033CF3E /* FourthOnboardingViewController.swift in Sources */,
 				7DB186E62BB3BB8900CBEEF5 /* BasicCoreDataStore.swift in Sources */,
+				7D1CF76D2BCFA8D2000A7F5B /* SettingsDataManager.swift in Sources */,
 				7DFF9FF02BB68D650043F360 /* RepositoryView.swift in Sources */,
 				7D4CF9F12BA573A000BC7952 /* AutoResizingTableView.swift in Sources */,
 				7DCE10E22B97101600197635 /* AttendanceCheckView.swift in Sources */,
+				7D5B3F622BCFAB74009BD95C /* BasicTableViewCell.swift in Sources */,
 				7DCE10EC2B9733B500197635 /* Button.swift in Sources */,
 				7DCE10E92B97329700197635 /* DailyGoalsView.swift in Sources */,
 				7D1CF11D2BA07A0500C1807A /* BulletTableViewCell.swift in Sources */,
@@ -777,7 +794,6 @@
 				7D4CFA062BAA49CC00BC7952 /* HomeVC+PHPicker.swift in Sources */,
 				7DFF9FE12BB3ECDC0043F360 /* AttendanceCheckDataStore.swift in Sources */,
 				7D9007CE2B847E7D004B6C3C /* HomeView.swift in Sources */,
-				7D9B48442B80C29C003451A2 /* SwcondViewController.swift in Sources */,
 				7D4CF9F32BA8269500BC7952 /* BulletCheckboxTableViewCell.swift in Sources */,
 				7D2C0C632BC39345009583E3 /* HistoryContent.swift in Sources */,
 				7D9B47DF2B7A2A00003451A2 /* SceneDelegate.swift in Sources */,
@@ -794,7 +810,7 @@
 				7DB186E42BB3A92600CBEEF5 /* DailyGoalDataStore.swift in Sources */,
 				7D1CF7662BC8CABD000A7F5B /* PageControlDotsStackView.swift in Sources */,
 				7DFF9FF52BBA93AA0043F360 /* UIDate.swift in Sources */,
-				7D9B48482B80C470003451A2 /* SettingsViewController.swift in Sources */,
+				7D1CF7692BCF99C1000A7F5B /* SettingsViewController.swift in Sources */,
 				7D2E027C2BC66D890033CF3E /* SecondOnboardingViewController.swift in Sources */,
 				7D9007D62B871D76004B6C3C /* TrackingTime.swift in Sources */,
 				7D9299722BBBCFF400FFF86C /* HistoryDetailView.swift in Sources */,

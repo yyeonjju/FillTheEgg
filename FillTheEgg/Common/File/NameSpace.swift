@@ -84,6 +84,8 @@ enum AdditionalPoint {
 // MARK: - Cell
 
 enum Cell {
+    //Basic
+    static let basicCell = "BasicCell"
     
     //TableViewCell
     static let bulletCell = "bulletCell"
