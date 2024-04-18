@@ -32,21 +32,22 @@ final class BasicButton : UIButton {
 
 final class ButtonWithOutLine : UIButton {
     
-    init(frame: CGRect = .zero, title : String, color : UIColor, borderColor : CGColor) {
+    init(frame: CGRect = .zero, title : String, color : UIColor, borderColor : CGColor, backgroundColor : UIColor = .clear, fontSize : CGFloat = 12) {
         super.init(frame: frame)
         
-        setupUI(title: title, color: color, borderColor: borderColor)
+        setupUI(title: title, color: color, borderColor: borderColor, backgroundColor: backgroundColor, fontSize : fontSize)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setupUI(title : String, color : UIColor, borderColor : CGColor) {
+    private func setupUI(title : String, color : UIColor, borderColor : CGColor, backgroundColor : UIColor, fontSize : CGFloat) {
         self.setTitle(title, for: .normal)
         self.setTitleColor(color, for: .normal)
-        self.titleLabel?.font = FontFamily.Pretendard.regular.font(size: 12)
+        self.titleLabel?.font = FontFamily.Pretendard.regular.font(size: fontSize)
         self.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        self.backgroundColor = backgroundColor
         
         self.layer.borderWidth = 1.0
         self.layer.borderColor = borderColor

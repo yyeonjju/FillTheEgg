@@ -36,6 +36,14 @@
 		7D4CFA012BA9667B00BC7952 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CFA002BA9667B00BC7952 /* BlankView.swift */; };
 		7D4CFA062BAA49CC00BC7952 /* HomeVC+PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CFA052BAA49CC00BC7952 /* HomeVC+PHPicker.swift */; };
 		7D5B3F622BCFAB74009BD95C /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F612BCFAB74009BD95C /* BasicTableViewCell.swift */; };
+		7D5B3F652BD10CDF009BD95C /* ResetDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F642BD10CDF009BD95C /* ResetDataViewController.swift */; };
+		7D5B3F672BD10D00009BD95C /* ResetDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F662BD10D00009BD95C /* ResetDataView.swift */; };
+		7D5B3F6A2BD153EF009BD95C /* DeveloperInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F692BD153EF009BD95C /* DeveloperInfoViewController.swift */; };
+		7D5B3F6C2BD1540A009BD95C /* DeveloperInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F6B2BD1540A009BD95C /* DeveloperInfoView.swift */; };
+		7D5B3F6F2BD160C1009BD95C /* OpenSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F6E2BD160C1009BD95C /* OpenSourceViewController.swift */; };
+		7D5B3F712BD16179009BD95C /* OpenSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F702BD16179009BD95C /* OpenSourceView.swift */; };
+		7D5B3F732BD164D4009BD95C /* OpenSourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F722BD164D4009BD95C /* OpenSourceTableViewCell.swift */; };
+		7D5B3F772BD166A1009BD95C /* OpenSourceDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F762BD166A1009BD95C /* OpenSourceDataStore.swift */; };
 		7D807EBA2BAC0B6C001E6F3A /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D807EB92BAC0B6C001E6F3A /* TextFieldView.swift */; };
 		7D807EBC2BAC62BD001E6F3A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D807EBB2BAC62BD001E6F3A /* UIViewController.swift */; };
 		7D807EBE2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D807EBD2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift */; };
@@ -125,6 +133,14 @@
 		7D4CFA002BA9667B00BC7952 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 		7D4CFA052BAA49CC00BC7952 /* HomeVC+PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+PHPicker.swift"; sourceTree = "<group>"; };
 		7D5B3F612BCFAB74009BD95C /* BasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
+		7D5B3F642BD10CDF009BD95C /* ResetDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetDataViewController.swift; sourceTree = "<group>"; };
+		7D5B3F662BD10D00009BD95C /* ResetDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetDataView.swift; sourceTree = "<group>"; };
+		7D5B3F692BD153EF009BD95C /* DeveloperInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInfoViewController.swift; sourceTree = "<group>"; };
+		7D5B3F6B2BD1540A009BD95C /* DeveloperInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInfoView.swift; sourceTree = "<group>"; };
+		7D5B3F6E2BD160C1009BD95C /* OpenSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewController.swift; sourceTree = "<group>"; };
+		7D5B3F702BD16179009BD95C /* OpenSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceView.swift; sourceTree = "<group>"; };
+		7D5B3F722BD164D4009BD95C /* OpenSourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceTableViewCell.swift; sourceTree = "<group>"; };
+		7D5B3F762BD166A1009BD95C /* OpenSourceDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceDataStore.swift; sourceTree = "<group>"; };
 		7D807EB92BAC0B6C001E6F3A /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		7D807EBB2BAC62BD001E6F3A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		7D807EBD2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletWithDeleteButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,6 +220,7 @@
 				7D4CF9F22BA8269500BC7952 /* BulletCheckboxTableViewCell.swift */,
 				7D807EBD2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift */,
 				7D5B3F612BCFAB74009BD95C /* BasicTableViewCell.swift */,
+				7D5B3F722BD164D4009BD95C /* OpenSourceTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -219,6 +236,9 @@
 		7D1CF7672BCF9998000A7F5B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				7D5B3F6D2BD16035009BD95C /* OpenSource */,
+				7D5B3F682BD153D6009BD95C /* DeveloperInfo */,
+				7D5B3F632BD10CBF009BD95C /* ResetData */,
 				7D1CF7682BCF99C1000A7F5B /* SettingsViewController.swift */,
 				7D1CF76A2BCF9A5C000A7F5B /* SettingsView.swift */,
 				7D1CF76C2BCFA8D2000A7F5B /* SettingsDataManager.swift */,
@@ -293,6 +313,34 @@
 				7D2E02992BC79F3C0033CF3E /* SimpleOnboardingPageView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7D5B3F632BD10CBF009BD95C /* ResetData */ = {
+			isa = PBXGroup;
+			children = (
+				7D5B3F642BD10CDF009BD95C /* ResetDataViewController.swift */,
+				7D5B3F662BD10D00009BD95C /* ResetDataView.swift */,
+			);
+			path = ResetData;
+			sourceTree = "<group>";
+		};
+		7D5B3F682BD153D6009BD95C /* DeveloperInfo */ = {
+			isa = PBXGroup;
+			children = (
+				7D5B3F692BD153EF009BD95C /* DeveloperInfoViewController.swift */,
+				7D5B3F6B2BD1540A009BD95C /* DeveloperInfoView.swift */,
+			);
+			path = DeveloperInfo;
+			sourceTree = "<group>";
+		};
+		7D5B3F6D2BD16035009BD95C /* OpenSource */ = {
+			isa = PBXGroup;
+			children = (
+				7D5B3F6E2BD160C1009BD95C /* OpenSourceViewController.swift */,
+				7D5B3F702BD16179009BD95C /* OpenSourceView.swift */,
+				7D5B3F762BD166A1009BD95C /* OpenSourceDataStore.swift */,
+			);
+			path = OpenSource;
 			sourceTree = "<group>";
 		};
 		7D807EB82BAC0B4D001E6F3A /* TextField */ = {
@@ -747,6 +795,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D9B47E12B7A2A00003451A2 /* HomeViewController.swift in Sources */,
+				7D5B3F672BD10D00009BD95C /* ResetDataView.swift in Sources */,
 				7D2E027E2BC66D9D0033CF3E /* ThirdOnboardingViewController.swift in Sources */,
 				7D2C0C602BC2A412009583E3 /* EggRateDataStore.swift in Sources */,
 				7D4CF9F72BA9280700BC7952 /* HomeVC+Timer.swift in Sources */,
@@ -773,6 +822,7 @@
 				7D4CF9F12BA573A000BC7952 /* AutoResizingTableView.swift in Sources */,
 				7DCE10E22B97101600197635 /* AttendanceCheckView.swift in Sources */,
 				7D5B3F622BCFAB74009BD95C /* BasicTableViewCell.swift in Sources */,
+				7D5B3F772BD166A1009BD95C /* OpenSourceDataStore.swift in Sources */,
 				7DCE10EC2B9733B500197635 /* Button.swift in Sources */,
 				7DCE10E92B97329700197635 /* DailyGoalsView.swift in Sources */,
 				7D1CF11D2BA07A0500C1807A /* BulletTableViewCell.swift in Sources */,
@@ -780,6 +830,7 @@
 				7D2E029A2BC79F3C0033CF3E /* SimpleOnboardingPageView.swift in Sources */,
 				7D2E027A2BC66D7A0033CF3E /* FirstOnboardingViewController.swift in Sources */,
 				7D2E02822BC66DC60033CF3E /* FifthOnboardingViewController.swift in Sources */,
+				7D5B3F652BD10CDF009BD95C /* ResetDataViewController.swift in Sources */,
 				7D807EBC2BAC62BD001E6F3A /* UIViewController.swift in Sources */,
 				7D9B47E72B7A2A00003451A2 /* FillTheEgg.xcdatamodeld in Sources */,
 				7D4CF9FE2BA932CF00BC7952 /* WritingPageView.swift in Sources */,
@@ -791,10 +842,13 @@
 				7D9299742BBBDBBC00FFF86C /* Enum.swift in Sources */,
 				7D9B47FD2B7C4E6C003451A2 /* NameSpace.swift in Sources */,
 				7D4CF9FC2BA92C1800BC7952 /* WritingPageViewController.swift in Sources */,
+				7D5B3F6A2BD153EF009BD95C /* DeveloperInfoViewController.swift in Sources */,
 				7D4CFA062BAA49CC00BC7952 /* HomeVC+PHPicker.swift in Sources */,
 				7DFF9FE12BB3ECDC0043F360 /* AttendanceCheckDataStore.swift in Sources */,
 				7D9007CE2B847E7D004B6C3C /* HomeView.swift in Sources */,
+				7D5B3F6F2BD160C1009BD95C /* OpenSourceViewController.swift in Sources */,
 				7D4CF9F32BA8269500BC7952 /* BulletCheckboxTableViewCell.swift in Sources */,
+				7D5B3F712BD16179009BD95C /* OpenSourceView.swift in Sources */,
 				7D2C0C632BC39345009583E3 /* HistoryContent.swift in Sources */,
 				7D9B47DF2B7A2A00003451A2 /* SceneDelegate.swift in Sources */,
 				7DCE10E52B972E2D00197635 /* Label.swift in Sources */,
@@ -811,10 +865,12 @@
 				7D1CF7662BC8CABD000A7F5B /* PageControlDotsStackView.swift in Sources */,
 				7DFF9FF52BBA93AA0043F360 /* UIDate.swift in Sources */,
 				7D1CF7692BCF99C1000A7F5B /* SettingsViewController.swift in Sources */,
+				7D5B3F732BD164D4009BD95C /* OpenSourceTableViewCell.swift in Sources */,
 				7D2E027C2BC66D890033CF3E /* SecondOnboardingViewController.swift in Sources */,
 				7D9007D62B871D76004B6C3C /* TrackingTime.swift in Sources */,
 				7D9299722BBBCFF400FFF86C /* HistoryDetailView.swift in Sources */,
 				7D2E02922BC795430033CF3E /* SecondOnboardingView.swift in Sources */,
+				7D5B3F6C2BD1540A009BD95C /* DeveloperInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

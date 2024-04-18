@@ -84,6 +84,10 @@ enum AdditionalPoint {
 // MARK: - Cell
 
 enum Cell {
+    
+    //openSourceCell
+    static let openSourceCell = "OpenSourceTableViewCell"
+    
     //Basic
     static let basicCell = "BasicCell"
     

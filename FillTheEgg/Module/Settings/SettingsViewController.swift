@@ -77,17 +77,59 @@ extension SettingsViewController: UITableViewDataSource {
 
 
 extension SettingsViewController: UITableViewDelegate{
-    //섹셕 개수
+    //섹션 개수
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("✅didSelectRowAt")
+        switch indexPath.section {
+        case 0 :
+            if indexPath.row == 0 {
+                resetAllDataCellTapped()
+            }
+        case 1:
+            if indexPath.row == 0 {
+                developerInfoCellTapped()
+            } else if indexPath.row == 1 {
+                openSourceCellTapped()
+            }
+            
+        default:
+            return
+        }
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+}
+
+
+// MARK: - Cell Touch Event Method
+extension SettingsViewController {
+    /// 초기화 셀 클릭 시 호출되는 메서드.
+    func resetAllDataCellTapped() {
+        let resetVC = ResetDataViewController()
+//        resetVC.delegate = self
+        resetVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(resetVC, animated: true)
+    }
+    
+    /// 개발자 정보 셀 클릭 시 호출되는 메서드
+    func developerInfoCellTapped() {
+        let developerVC = DeveloperInfoViewController()
+        developerVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(developerVC, animated: true)
+    }
+    
+    /// 오픈소스 셀 클릭 시 호출되는 메서드
+    func openSourceCellTapped() {
+        let openSourceVC = OpenSourceViewController()
+        openSourceVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(openSourceVC, animated: true)
+    }
+    
+    
 }
 
