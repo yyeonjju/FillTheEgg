@@ -44,6 +44,9 @@
 		7D5B3F712BD16179009BD95C /* OpenSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F702BD16179009BD95C /* OpenSourceView.swift */; };
 		7D5B3F732BD164D4009BD95C /* OpenSourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F722BD164D4009BD95C /* OpenSourceTableViewCell.swift */; };
 		7D5B3F772BD166A1009BD95C /* OpenSourceDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F762BD166A1009BD95C /* OpenSourceDataStore.swift */; };
+		7D5B3F7E2BDE0F91009BD95C /* ConfirmModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F7D2BDE0F91009BD95C /* ConfirmModalViewController.swift */; };
+		7D5B3F802BDE0FB4009BD95C /* ConfirmModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F7F2BDE0FB4009BD95C /* ConfirmModalView.swift */; };
+		7D5B3F822BDE66C0009BD95C /* ActionButtonsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B3F812BDE66C0009BD95C /* ActionButtonsStackView.swift */; };
 		7D807EBA2BAC0B6C001E6F3A /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D807EB92BAC0B6C001E6F3A /* TextFieldView.swift */; };
 		7D807EBC2BAC62BD001E6F3A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D807EBB2BAC62BD001E6F3A /* UIViewController.swift */; };
 		7D807EBE2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D807EBD2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift */; };
@@ -141,6 +144,9 @@
 		7D5B3F702BD16179009BD95C /* OpenSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceView.swift; sourceTree = "<group>"; };
 		7D5B3F722BD164D4009BD95C /* OpenSourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceTableViewCell.swift; sourceTree = "<group>"; };
 		7D5B3F762BD166A1009BD95C /* OpenSourceDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceDataStore.swift; sourceTree = "<group>"; };
+		7D5B3F7D2BDE0F91009BD95C /* ConfirmModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmModalViewController.swift; sourceTree = "<group>"; };
+		7D5B3F7F2BDE0FB4009BD95C /* ConfirmModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmModalView.swift; sourceTree = "<group>"; };
+		7D5B3F812BDE66C0009BD95C /* ActionButtonsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonsStackView.swift; sourceTree = "<group>"; };
 		7D807EB92BAC0B6C001E6F3A /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		7D807EBB2BAC62BD001E6F3A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		7D807EBD2BAD222C001E6F3A /* BulletWithDeleteButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletWithDeleteButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -229,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				7D1CF7652BC8CABD000A7F5B /* PageControlDotsStackView.swift */,
+				7D5B3F812BDE66C0009BD95C /* ActionButtonsStackView.swift */,
 			);
 			path = StackView;
 			sourceTree = "<group>";
@@ -343,6 +350,15 @@
 			path = OpenSource;
 			sourceTree = "<group>";
 		};
+		7D5B3F7C2BDE0F6E009BD95C /* ConfirmModal */ = {
+			isa = PBXGroup;
+			children = (
+				7D5B3F7D2BDE0F91009BD95C /* ConfirmModalViewController.swift */,
+				7D5B3F7F2BDE0FB4009BD95C /* ConfirmModalView.swift */,
+			);
+			path = ConfirmModal;
+			sourceTree = "<group>";
+		};
 		7D807EB82BAC0B4D001E6F3A /* TextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +410,7 @@
 		7D9007D32B871CFC004B6C3C /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				7D5B3F7C2BDE0F6E009BD95C /* ConfirmModal */,
 				7D1CF7642BC8CAAD000A7F5B /* StackView */,
 				7D4CF9EF2BA5738C00BC7952 /* UITableVIew */,
 				7DFF9FE32BB536E90043F360 /* ImageView */,
@@ -815,6 +832,7 @@
 				7D2E02982BC7959D0033CF3E /* FifthOnboardingView.swift in Sources */,
 				7D1CF76B2BCF9A5C000A7F5B /* SettingsView.swift in Sources */,
 				7D807EC02BAD256B001E6F3A /* WritingPageVC+TableView.swift in Sources */,
+				7D5B3F822BDE66C0009BD95C /* ActionButtonsStackView.swift in Sources */,
 				7D2E02802BC66DB50033CF3E /* FourthOnboardingViewController.swift in Sources */,
 				7DB186E62BB3BB8900CBEEF5 /* BasicCoreDataStore.swift in Sources */,
 				7D1CF76D2BCFA8D2000A7F5B /* SettingsDataManager.swift in Sources */,
@@ -823,6 +841,7 @@
 				7DCE10E22B97101600197635 /* AttendanceCheckView.swift in Sources */,
 				7D5B3F622BCFAB74009BD95C /* BasicTableViewCell.swift in Sources */,
 				7D5B3F772BD166A1009BD95C /* OpenSourceDataStore.swift in Sources */,
+				7D5B3F802BDE0FB4009BD95C /* ConfirmModalView.swift in Sources */,
 				7DCE10EC2B9733B500197635 /* Button.swift in Sources */,
 				7DCE10E92B97329700197635 /* DailyGoalsView.swift in Sources */,
 				7D1CF11D2BA07A0500C1807A /* BulletTableViewCell.swift in Sources */,
@@ -830,6 +849,7 @@
 				7D2E029A2BC79F3C0033CF3E /* SimpleOnboardingPageView.swift in Sources */,
 				7D2E027A2BC66D7A0033CF3E /* FirstOnboardingViewController.swift in Sources */,
 				7D2E02822BC66DC60033CF3E /* FifthOnboardingViewController.swift in Sources */,
+				7D5B3F7E2BDE0F91009BD95C /* ConfirmModalViewController.swift in Sources */,
 				7D5B3F652BD10CDF009BD95C /* ResetDataViewController.swift in Sources */,
 				7D807EBC2BAC62BD001E6F3A /* UIViewController.swift in Sources */,
 				7D9B47E72B7A2A00003451A2 /* FillTheEgg.xcdatamodeld in Sources */,
