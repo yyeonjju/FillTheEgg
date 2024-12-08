@@ -29,10 +29,10 @@
 <br/><br/>
 
 ## 📎 기술 스택
-- Database : CoreData
 - UI : UIKit, FSCalendar
+- Architecture : MVC
+- Local DB : CoreData
 - Etc. : SwiftGen
-
 
 
 <br/><br/>
@@ -46,10 +46,14 @@
 
 
 ## ✅ 핵심 기술 구현 사항
-- 이미지 뷰와 함께 캘린더의 셀을 구성하기 위해 FSCalendarCell을 상속한 커스텀 셀 구현
-- 프로젝트에 있는 리소스를 Swift 코드로 자동 생성해서 타입 안정성을 부여하고자 SwiftGen라는 도구 사용하여 빌드되는 시점에 실행될 수 있도록 설계
-- CoreData의 Entity들에 대한 CRUD가 정의된  CoreDataStore클래스 정의 시 불필요한 중복코드를 방지하기 위해 BasicCoreDataStore 생성
+- CoreData의 Entity들에 대한 CRUD가 정의된  CoreDataStore클래스 정의 시 불필요한 중복코드를 방지하기 위해 BasicCoreDataStore 제네릭 타입 생성
 - NSManagedObject을 제네릭타입으로 받는 BasicCoreDataStore를 생성해서 CoreData의 Entity들에 대한 CRUD 정의
+- TabBarProtocol 프로토콜을 통해 TabBar의 각 탭에 필요한 요구사항을 추상화하고, TabBarProtocol을 준수하는 TabViewType 열거형을 통해 각 탭의 
+      루트 뷰컨트롤러, 아이콘 이미지, 타이틀 정의 
+- TabViewType 열거형에 정의된 탭 정보를 바탕으로 탭바가 생성될 수 있도록 UITabBarController을 상속한 제네릭 CustomTabBarController를 생성
+- 로젝트에 있는 리소스를 Swift 코드로 자동 생성해서 타입 안정성을 부여하고자 SwiftGen라는 도구 사용하여 빌드되는 시점에 실행될 수 있도록 설계
+- 이미지 뷰와 함께 캘린더의 셀을 구성하기 위해 FSCalendarCell을 상속한 커스텀 셀 구현
+
 
 
 <br/><br/>
